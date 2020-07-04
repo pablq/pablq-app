@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FEA7EB324B138230010FF91 /* pablq_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB224B138230010FF91 /* pablq_appApp.swift */; };
+		8FEA7EB524B138230010FF91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB424B138230010FF91 /* ContentView.swift */; };
+		8FEA7EB724B138240010FF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB624B138240010FF91 /* Assets.xcassets */; };
+		8FEA7EBA24B138240010FF91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB924B138240010FF91 /* Preview Assets.xcassets */; };
+		8FEA7EC524B138250010FF91 /* pablq_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EC424B138250010FF91 /* pablq_appTests.swift */; };
+		8FEA7ED024B138250010FF91 /* pablq_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7ECF24B138250010FF91 /* pablq_appUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FEA7EC124B138250010FF91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FEA7EA724B138230010FF91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FEA7EAE24B138230010FF91;
+			remoteInfo = "pablq-app";
+		};
+		8FEA7ECC24B138250010FF91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FEA7EA724B138230010FF91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FEA7EAE24B138230010FF91;
+			remoteInfo = "pablq-app";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8FEA7EAF24B138230010FF91 /* pablq-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pablq-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FEA7EB224B138230010FF91 /* pablq_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pablq_appApp.swift; sourceTree = "<group>"; };
+		8FEA7EB424B138230010FF91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8FEA7EB624B138240010FF91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FEA7EB924B138240010FF91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8FEA7EBB24B138240010FF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FEA7EC024B138250010FF91 /* pablq-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pablq-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FEA7EC424B138250010FF91 /* pablq_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pablq_appTests.swift; sourceTree = "<group>"; };
+		8FEA7EC624B138250010FF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FEA7ECB24B138250010FF91 /* pablq-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pablq-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FEA7ECF24B138250010FF91 /* pablq_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pablq_appUITests.swift; sourceTree = "<group>"; };
+		8FEA7ED124B138250010FF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FEA7EAC24B138230010FF91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FEA7EBD24B138250010FF91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FEA7EC824B138250010FF91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FEA7EA624B138230010FF91 = {
+			isa = PBXGroup;
+			children = (
+				8FEA7EB124B138230010FF91 /* pablq-app */,
+				8FEA7EC324B138250010FF91 /* pablq-appTests */,
+				8FEA7ECE24B138250010FF91 /* pablq-appUITests */,
+				8FEA7EB024B138230010FF91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FEA7EB024B138230010FF91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FEA7EAF24B138230010FF91 /* pablq-app.app */,
+				8FEA7EC024B138250010FF91 /* pablq-appTests.xctest */,
+				8FEA7ECB24B138250010FF91 /* pablq-appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FEA7EB124B138230010FF91 /* pablq-app */ = {
+			isa = PBXGroup;
+			children = (
+				8FEA7EB224B138230010FF91 /* pablq_appApp.swift */,
+				8FEA7EB424B138230010FF91 /* ContentView.swift */,
+				8FEA7EB624B138240010FF91 /* Assets.xcassets */,
+				8FEA7EBB24B138240010FF91 /* Info.plist */,
+				8FEA7EB824B138240010FF91 /* Preview Content */,
+			);
+			path = "pablq-app";
+			sourceTree = "<group>";
+		};
+		8FEA7EB824B138240010FF91 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8FEA7EB924B138240010FF91 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8FEA7EC324B138250010FF91 /* pablq-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FEA7EC424B138250010FF91 /* pablq_appTests.swift */,
+				8FEA7EC624B138250010FF91 /* Info.plist */,
+			);
+			path = "pablq-appTests";
+			sourceTree = "<group>";
+		};
+		8FEA7ECE24B138250010FF91 /* pablq-appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8FEA7ECF24B138250010FF91 /* pablq_appUITests.swift */,
+				8FEA7ED124B138250010FF91 /* Info.plist */,
+			);
+			path = "pablq-appUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FEA7EAE24B138230010FF91 /* pablq-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FEA7ED424B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-app" */;
+			buildPhases = (
+				8FEA7EAB24B138230010FF91 /* Sources */,
+				8FEA7EAC24B138230010FF91 /* Frameworks */,
+				8FEA7EAD24B138230010FF91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pablq-app";
+			productName = "pablq-app";
+			productReference = 8FEA7EAF24B138230010FF91 /* pablq-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FEA7EBF24B138250010FF91 /* pablq-appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FEA7ED724B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-appTests" */;
+			buildPhases = (
+				8FEA7EBC24B138250010FF91 /* Sources */,
+				8FEA7EBD24B138250010FF91 /* Frameworks */,
+				8FEA7EBE24B138250010FF91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FEA7EC224B138250010FF91 /* PBXTargetDependency */,
+			);
+			name = "pablq-appTests";
+			productName = "pablq-appTests";
+			productReference = 8FEA7EC024B138250010FF91 /* pablq-appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8FEA7ECA24B138250010FF91 /* pablq-appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FEA7EDA24B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-appUITests" */;
+			buildPhases = (
+				8FEA7EC724B138250010FF91 /* Sources */,
+				8FEA7EC824B138250010FF91 /* Frameworks */,
+				8FEA7EC924B138250010FF91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FEA7ECD24B138250010FF91 /* PBXTargetDependency */,
+			);
+			name = "pablq-appUITests";
+			productName = "pablq-appUITests";
+			productReference = 8FEA7ECB24B138250010FF91 /* pablq-appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FEA7EA724B138230010FF91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					8FEA7EAE24B138230010FF91 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					8FEA7EBF24B138250010FF91 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 8FEA7EAE24B138230010FF91;
+					};
+					8FEA7ECA24B138250010FF91 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 8FEA7EAE24B138230010FF91;
+					};
+				};
+			};
+			buildConfigurationList = 8FEA7EAA24B138230010FF91 /* Build configuration list for PBXProject "pablq-app" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FEA7EA624B138230010FF91;
+			productRefGroup = 8FEA7EB024B138230010FF91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FEA7EAE24B138230010FF91 /* pablq-app */,
+				8FEA7EBF24B138250010FF91 /* pablq-appTests */,
+				8FEA7ECA24B138250010FF91 /* pablq-appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FEA7EAD24B138230010FF91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FEA7EBA24B138240010FF91 /* Preview Assets.xcassets in Resources */,
+				8FEA7EB724B138240010FF91 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FEA7EBE24B138250010FF91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FEA7EC924B138250010FF91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FEA7EAB24B138230010FF91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FEA7EB524B138230010FF91 /* ContentView.swift in Sources */,
+				8FEA7EB324B138230010FF91 /* pablq_appApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FEA7EBC24B138250010FF91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FEA7EC524B138250010FF91 /* pablq_appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FEA7EC724B138250010FF91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FEA7ED024B138250010FF91 /* pablq_appUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FEA7EC224B138250010FF91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FEA7EAE24B138230010FF91 /* pablq-app */;
+			targetProxy = 8FEA7EC124B138250010FF91 /* PBXContainerItemProxy */;
+		};
+		8FEA7ECD24B138250010FF91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FEA7EAE24B138230010FF91 /* pablq-app */;
+			targetProxy = 8FEA7ECC24B138250010FF91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8FEA7ED224B138250010FF91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8FEA7ED324B138250010FF91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FEA7ED524B138250010FF91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"pablq-app/Preview Content\"";
+				DEVELOPMENT_TEAM = QVTTLF22GX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "pablq-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FEA7ED624B138250010FF91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"pablq-app/Preview Content\"";
+				DEVELOPMENT_TEAM = QVTTLF22GX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "pablq-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8FEA7ED824B138250010FF91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QVTTLF22GX;
+				INFOPLIST_FILE = "pablq-appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pablq-app.app/pablq-app";
+			};
+			name = Debug;
+		};
+		8FEA7ED924B138250010FF91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QVTTLF22GX;
+				INFOPLIST_FILE = "pablq-appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pablq-app.app/pablq-app";
+			};
+			name = Release;
+		};
+		8FEA7EDB24B138250010FF91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QVTTLF22GX;
+				INFOPLIST_FILE = "pablq-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "pablq-app";
+			};
+			name = Debug;
+		};
+		8FEA7EDC24B138250010FF91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QVTTLF22GX;
+				INFOPLIST_FILE = "pablq-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "pablq-app";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FEA7EAA24B138230010FF91 /* Build configuration list for PBXProject "pablq-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FEA7ED224B138250010FF91 /* Debug */,
+				8FEA7ED324B138250010FF91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FEA7ED424B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FEA7ED524B138250010FF91 /* Debug */,
+				8FEA7ED624B138250010FF91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FEA7ED724B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FEA7ED824B138250010FF91 /* Debug */,
+				8FEA7ED924B138250010FF91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FEA7EDA24B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FEA7EDB24B138250010FF91 /* Debug */,
+				8FEA7EDC24B138250010FF91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FEA7EA724B138230010FF91 /* Project object */;
+}
