@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+struct GamesListViewConfig {
+    var presented: Bool
+    var sport: Sport
+}
+
 struct SportsListView: View {
     
     private let sports: [Sport] = [
@@ -51,10 +56,9 @@ struct SportsListView: View {
                     Text(link.relativeString).font(.footnote)
                 }
             }
-        }.sheet(item: $selectedSport) { sport in
-            GamesListView(sport: sport).onTapGesture {
-                selectedSport = nil
-            }
+        }
+        .sheet(item: $selectedSport) { _ in
+            GamesListView(sport: $selectedSport)
         }
     }
 }
