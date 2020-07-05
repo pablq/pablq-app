@@ -38,11 +38,11 @@ struct GamesListView: View {
                 List {
                     Text(sport.league.uppercased())
                         .font(.title)
+                        .padding([.top, .bottom])
                     ForEach(games) { game in
                         GameCell(game: game)
                     }
                 }
-                .padding([.top, .bottom])
             }
         }
         .onAppear { loadGames() }
