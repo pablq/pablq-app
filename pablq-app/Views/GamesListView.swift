@@ -41,7 +41,8 @@ struct GamesListView: View {
                     ForEach(games) { game in
                         GameCell(game: game)
                     }
-                }.padding(.top)
+                }
+                .padding([.top, .bottom])
             }
         }
         .onAppear { loadGames() }

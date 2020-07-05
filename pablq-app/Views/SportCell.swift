@@ -17,7 +17,7 @@ struct SportCell: View {
             Image(selected ? sport.activeImageAssetName : sport.imageAssetName)
             Spacer()
         }
-        .padding(.all, 10)
+        .padding(.all)
     }
 }
 
