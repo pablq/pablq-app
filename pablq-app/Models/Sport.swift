@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Sport: Identifiable {
+struct Sport: Identifiable, Equatable {
     var id = UUID()
-    let name: String
+    let league: String
     let imageAssetName: String
     let activeImageAssetName: String
 }

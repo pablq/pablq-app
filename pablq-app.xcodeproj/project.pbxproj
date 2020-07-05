@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FD828DA24B16B2A007D813A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828D924B16B2A007D813A /* Game.swift */; };
+		8FD828DC24B16B6E007D813A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828DB24B16B6E007D813A /* GameCell.swift */; };
+		8FD828DE24B16CD8007D813A /* SportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828DD24B16CD8007D813A /* SportCell.swift */; };
+		8FD828E324B16ECD007D813A /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828E224B16ECD007D813A /* TestData.swift */; };
 		8FEA7EB324B138230010FF91 /* pablq_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB224B138230010FF91 /* pablq_appApp.swift */; };
 		8FEA7EB524B138230010FF91 /* SportsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB424B138230010FF91 /* SportsListView.swift */; };
 		8FEA7EB724B138240010FF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB624B138240010FF91 /* Assets.xcassets */; };
@@ -14,7 +18,6 @@
 		8FEA7EC524B138250010FF91 /* pablq_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EC424B138250010FF91 /* pablq_appTests.swift */; };
 		8FEA7ED024B138250010FF91 /* pablq_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7ECF24B138250010FF91 /* pablq_appUITests.swift */; };
 		8FEA7EE024B159340010FF91 /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EDF24B159340010FF91 /* GamesListView.swift */; };
-		8FEA7EE224B159840010FF91 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EE124B159840010FF91 /* Link.swift */; };
 		8FEA7EE424B159A80010FF91 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EE324B159A80010FF91 /* Sport.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8FD828D924B16B2A007D813A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8FD828DB24B16B6E007D813A /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		8FD828DD24B16CD8007D813A /* SportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCell.swift; sourceTree = "<group>"; };
+		8FD828E224B16ECD007D813A /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		8FEA7EAF24B138230010FF91 /* pablq-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pablq-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEA7EB224B138230010FF91 /* pablq_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pablq_appApp.swift; sourceTree = "<group>"; };
 		8FEA7EB424B138230010FF91 /* SportsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsListView.swift; sourceTree = "<group>"; };
@@ -49,7 +56,6 @@
 		8FEA7ECF24B138250010FF91 /* pablq_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pablq_appUITests.swift; sourceTree = "<group>"; };
 		8FEA7ED124B138250010FF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FEA7EDF24B159340010FF91 /* GamesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
-		8FEA7EE124B159840010FF91 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		8FEA7EE324B159A80010FF91 /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FD828DF24B16DDD007D813A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8FD828E224B16ECD007D813A /* TestData.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		8FEA7EA624B138230010FF91 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +115,8 @@
 		8FEA7EB124B138230010FF91 /* pablq-app */ = {
 			isa = PBXGroup;
 			children = (
+				8FD828DF24B16DDD007D813A /* Constants */,
+				8FEA7EE524B15A6A0010FF91 /* Services */,
 				8FEA7EDE24B158AD0010FF91 /* Views */,
 				8FEA7EDD24B158A40010FF91 /* Models */,
 				8FEA7EB224B138230010FF91 /* pablq_appApp.swift */,
@@ -140,8 +156,8 @@
 		8FEA7EDD24B158A40010FF91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8FEA7EE124B159840010FF91 /* Link.swift */,
 				8FEA7EE324B159A80010FF91 /* Sport.swift */,
+				8FD828D924B16B2A007D813A /* Game.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,8 +167,17 @@
 			children = (
 				8FEA7EB424B138230010FF91 /* SportsListView.swift */,
 				8FEA7EDF24B159340010FF91 /* GamesListView.swift */,
+				8FD828DB24B16B6E007D813A /* GameCell.swift */,
+				8FD828DD24B16CD8007D813A /* SportCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8FEA7EE524B15A6A0010FF91 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,10 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FEA7EE424B159A80010FF91 /* Sport.swift in Sources */,
+				8FD828DA24B16B2A007D813A /* Game.swift in Sources */,
+				8FD828DE24B16CD8007D813A /* SportCell.swift in Sources */,
+				8FD828E324B16ECD007D813A /* TestData.swift in Sources */,
 				8FEA7EE024B159340010FF91 /* GamesListView.swift in Sources */,
 				8FEA7EB524B138230010FF91 /* SportsListView.swift in Sources */,
 				8FEA7EB324B138230010FF91 /* pablq_appApp.swift in Sources */,
-				8FEA7EE224B159840010FF91 /* Link.swift in Sources */,
+				8FD828DC24B16B6E007D813A /* GameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
