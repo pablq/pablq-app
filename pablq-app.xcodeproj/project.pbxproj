@@ -166,9 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				8FEA7EB424B138230010FF91 /* SportsListView.swift */,
+				8FD828DD24B16CD8007D813A /* SportCell.swift */,
 				8FEA7EDF24B159340010FF91 /* GamesListView.swift */,
 				8FD828DB24B16B6E007D813A /* GameCell.swift */,
-				8FD828DD24B16CD8007D813A /* SportCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

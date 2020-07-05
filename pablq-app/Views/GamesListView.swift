@@ -10,9 +10,9 @@ import SwiftUI
 struct GamesListView: View {
     let sport: Sport
     
-    @State private var games: [Game] = []
+    @State private var games: [Game] = [TestData.testGame]
     
-    @State private var isFetchingGames = true
+    @State private var isFetchingGames = false
     
     var body: some View {
         Group {
@@ -24,7 +24,7 @@ struct GamesListView: View {
                                           value: "Fetching games...",
                                           comment: "Placeholder to show user while fetching data from server.")
                     )
-                    .font(.subheadline)
+                    .font(.headline)
                 }
                 
             } else if (games.isEmpty) {
@@ -36,10 +36,12 @@ struct GamesListView: View {
                 .font(.headline)
             } else {
                 List {
+                    Text(sport.league.uppercased())
+                        .font(.title)
                     ForEach(games) { game in
                         GameCell(game: game)
                     }
-                }
+                }.padding(.top)
             }
         }
         .onAppear { loadGames() }

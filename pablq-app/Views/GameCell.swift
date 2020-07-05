@@ -11,11 +11,12 @@ struct GameCell: View {
     let game: Game
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
-            Text(game.headline).font(.headline)
+            Text(game.headline)
+                .font(.headline)
             Text(game.description).font(.body)
             if let url = game.url {
                 Link(destination: url) {
-                    Text("game")
+                    Text(url.relativeString).font(.footnote)
                 }
             }
         }

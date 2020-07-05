@@ -14,7 +14,7 @@ enum TestData {
     static let testGame = Game(isFavorite: true,
                                headline: "Headline",
                                description: "A\nMultiline\nDescription",
-                               url: nil)
+                               url: URL(string: "https://github.com/pablq/pablq-website")!)
 }
 
 
