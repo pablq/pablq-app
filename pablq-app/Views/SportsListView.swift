@@ -10,45 +10,45 @@ import SwiftUI
 struct SportsListView: View {
     
     private let sports: [Sport] = [
-        Sport(name: "mlb", imageAssetName: "baseball", activeImageAssetName: "baseball_active"),
-        Sport(name: "nhl", imageAssetName: "puck", activeImageAssetName: "puck_active"),
-        Sport(name: "nfl", imageAssetName: "football", activeImageAssetName: "football_active"),
-        Sport(name: "nba", imageAssetName: "basketball", activeImageAssetName: "basketball_active")
+        Sport(league: "mlb",
+              imageAssetName: "baseball",
+              activeImageAssetName: "baseball_active"),
+        Sport(league: "nhl",
+              imageAssetName: "puck",
+              activeImageAssetName: "puck_active"),
+        Sport(league: "nfl",
+              imageAssetName: "football",
+              activeImageAssetName: "football_active"),
+        Sport(league: "nba",
+              imageAssetName: "basketball",
+              activeImageAssetName: "basketball_active")
     ]
     
-    private let links: [Link] = [
-        Link(userFacingString: "https://github.com/pablq/pablq-website",
-             url: URL(string: "https://github.com/pablq/pablq-website")),
-        Link(userFacingString: "https://github.com/pablq/pablq-app",
-             url: nil),
-    ]
+    private let link =  URL(string: "https://github.com/pablq/pablq-website")!
     
-    @State var selectedSport: Sport?
+    @State private var selectedSport: Sport? = nil
     
     var body: some View {
         VStack(alignment: .center) {
             List {
+                Text(NSLocalizedString("SportsListViewTitle",
+                                       value: "Latest Scores",
+                                       comment: "The app fetches sports scores."))
+                    .font(.title)
+                    .padding([.top, .bottom])
                 ForEach(sports) { sport in
                     HStack {
                         Spacer()
-                        Image(
-                            selectedSport?.id == sport.id ? sport.activeImageAssetName : sport.imageAssetName)
+                        Image(selectedSport == sport ? sport.activeImageAssetName : sport.imageAssetName)
                         Spacer()
                     }
-                    .padding(.all, 10)
+                    .padding(.all)
                     .onTapGesture {
                         selectedSport = sport
                     }
                 }
-                ForEach(links) { link in
-                    Button(action: {
-                        if let url = link.url {
-                            UIApplication.shared.open(url)
-                        }
-                    }, label: {
-                        Text(link.userFacingString).font(
-                            .footnote)
-                    })
+                Link(destination: link) {
+                    Text(link.relativeString).font(.footnote)
                 }
             }
         }.sheet(item: $selectedSport) { sport in
