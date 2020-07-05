@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SportsListView.swift
 //  pablq-app
 //
 //  Created by Pablo Philipps on 7/4/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SportsListView: View {
     
     private let sports: [Sport] = [
         Sport(name: "mlb", imageAssetName: "baseball", activeImageAssetName: "baseball_active"),
@@ -57,31 +57,10 @@ struct ContentView: View {
             }
         }
     }
- }
-
-struct Link: Identifiable {
-    let id = UUID()
-    let userFacingString: String
-    let url: URL?
-}
-
-struct Sport: Identifiable {
-    var id = UUID()
-    let name: String
-    let imageAssetName: String
-    let activeImageAssetName: String
-}
-
-struct GamesListView: View {
-    let sport: Sport
-    
-    var body: some View {
-        Text(sport.name)
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SportsListView()
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct pablq_appApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SportsListView()
         }
     }
 }
