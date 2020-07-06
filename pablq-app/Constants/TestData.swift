@@ -11,10 +11,21 @@ enum TestData {
     static let testSport = Sport(league: "mlb",
                                  imageAssetName: "baseball",
                                  activeImageAssetName: "baseball_active")
-    static let testGame = Game(isFavorite: true,
-                               headline: "Headline",
-                               description: "A\nMultiline\nDescription",
-                               url: URL(string: "https://github.com/pablq/pablq-website")!)
+    static let testGame = Game(headline: "headline", link: "http://www.pablq.website/", lines: ["line 1", "line 2"])
+    static let testSports = [
+        Sport(league: "mlb",
+              imageAssetName: "baseball",
+              activeImageAssetName: "baseball_active"),
+        Sport(league: "nhl",
+              imageAssetName: "puck",
+              activeImageAssetName: "puck_active"),
+        Sport(league: "nfl",
+              imageAssetName: "football",
+              activeImageAssetName: "football_active"),
+        Sport(league: "nba",
+              imageAssetName: "basketball",
+              activeImageAssetName: "basketball_active")
+    ]
 }
 
 
