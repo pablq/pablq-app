@@ -10,22 +10,32 @@ import SwiftUI
 struct GamesListView: View {
     @Binding var sport: Sport?
     
-    @State private var games: [Game] = [TestData.testGame]
+    @State private var games: [Game] = []
     
     @State private var isFetchingGames = true
     
+    private let httpClient = HttpClient()
+    
     var body: some View {
         VStack {
-            SheetViewHeader(dismissAction: dismiss)
+            SheetToolbarView(dismissAction: dismiss)
             Spacer()
             Group {
                 if isFetchingGames {
-                    GamesListLoading()
-                } else if let sport = sport,
-                          !games.isEmpty {
-                    GamesList(sport: sport, games: games)
+                    LoadingView(message: NSLocalizedString("GamesListViewLoading",
+                                                           value: "Fetching games...",
+                                                           comment: "Shown when games data is being fetched."))
+                } else if let sport = sport, !games.isEmpty {
+                    List {
+                        ListHeaderView(title: sport.league)
+                        ForEach(games) { game in
+                            GameCell(game: game)
+                        }
+                    }
                 } else {
-                    GamesListEmptyState()
+                    EmptyStateView(message: NSLocalizedString("GamesListViewEmptyState",
+                                                              value: "Sorry, couldn't find any games today. :)",
+                                                              comment: "Shown when games data is not available."))
                 }
             }
             Spacer()
@@ -33,84 +43,30 @@ struct GamesListView: View {
         .onAppear { loadGames() }
     }
     
-    func dismiss() {
+    private func dismiss() {
         sport = nil
     }
     
-    func loadGames() {
+    private func loadGames() {
         isFetchingGames = true
         guard let sport = sport else {
             isFetchingGames = false
             return
         }
-        HttpClient().getGames(league: sport.league) {
+        httpClient.getGames(league: sport.league) {
             isFetchingGames = false
             games = $0 ?? []
         }
     }
 }
 
-struct SheetViewHeader: View {
-    let dismissAction: () -> Void
-    var body: some View {
-        HStack {
-            Spacer()
-            Button(action: dismissAction) {
-                Image(systemName: "xmark")
-                    .foregroundColor(Color.black)
-            }
-            .padding([.top, .trailing])
-        }
-    }
-}
-
-struct GamesListLoading: View {
-    var body: some View {
-        VStack(spacing: 25.0) {
-            ProgressView()
-            Text(
-                NSLocalizedString("GamesListViewLoading",
-                                  value: "Fetching games...",
-                                  comment: "Shown when games data is being fetched.")
-            )
-        }
-    }
-}
-
-struct GamesListEmptyState: View {
-    var body: some View {
-        Text(
-            NSLocalizedString("GamesListViewEmptyState",
-                              value: "Sorry, couldn't find any games today. :)",
-                              comment: "Shown when games data is not available.")
-        )
-    }
-}
-
-struct GamesList: View {
-    let sport: Sport
-    let games: [Game]
-    
-    var body: some View {
-        List {
-            if let sport = sport {
-                Text(sport.league.uppercased())
-                    .font(.title)
-                    .padding([.top, .bottom])
-            }
-            ForEach(games) { game in
-                GameCell(game: game)
-            }
-        }
-    }
-}
-
 struct GamesListView_Previews: PreviewProvider {
-    @State static var testSport: Sport? = TestData.testSport
+    @State static var testSport: Sport? = Sport(league: "mlb",
+                                                imageAssetName: "baseball",
+                                                activeImageAssetName: "baseball_active")
     
     static var previews: some View {
         Group {
-            GamesListView(sport: $testSport)
             GamesListView(sport: $testSport)
         }
     }

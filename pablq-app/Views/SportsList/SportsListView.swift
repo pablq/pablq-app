@@ -7,33 +7,27 @@
 
 import SwiftUI
 
-struct GamesListViewConfig {
-    var presented: Bool
-    var sport: Sport
-}
-
 struct SportsListView: View {
     
     let sports: [Sport]
     
-    private let link =  URL(string: "https://github.com/pablq/pablq-website")!
-    
     @State private var selectedSport: Sport? = nil
     
     var body: some View {
-        VStack(alignment: .center) {
-            List {
-                ListHeaderView(title: NSLocalizedString("SportsListViewTitle",
-                                                        value: "Latest Scores",
-                                                        comment: "The app fetches sports scores."))
-                ForEach(sports) { sport in
-                    SportCell(sport: sport, selected: selectedSport == sport)
-                        .onTapGesture {
-                            selectedSport = sport
-                        }
-                }
-                Link(destination: link) {
-                    Text(link.relativeString).font(.footnote)
+        List {
+            ListHeaderView(title: NSLocalizedString("SportsListViewTitle",
+                                                    value: "Latest Scores",
+                                                    comment: "The app fetches sports scores."))
+            ForEach(sports) { sport in
+                SportCell(sport: sport, selected: selectedSport == sport)
+                    .onTapGesture {
+                        selectedSport = sport
+                    }
+            }
+            if let url = URL(string: "https://github.com/pablq/pablq-website") {
+                Link(destination: url) {
+                    Text(url.relativeString)
+                        .font(.footnote)
                 }
             }
         }
@@ -43,18 +37,23 @@ struct SportsListView: View {
     }
 }
 
-struct ListHeaderView: View {
-    let title: String
-    
-    var body: some View {
-        Text(title)
-            .font(.title)
-            .padding([.top, .bottom])
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
+    static let testSports = [
+        Sport(league: "mlb",
+              imageAssetName: "baseball",
+              activeImageAssetName: "baseball_active"),
+        Sport(league: "nhl",
+              imageAssetName: "puck",
+              activeImageAssetName: "puck_active"),
+        Sport(league: "nfl",
+              imageAssetName: "football",
+              activeImageAssetName: "football_active"),
+        Sport(league: "nba",
+              imageAssetName: "basketball",
+              activeImageAssetName: "basketball_active")
+    ]
+    
     static var previews: some View {
-        SportsListView(sports: TestData.testSports)
+        SportsListView(sports: testSports)
     }
 }

@@ -22,10 +22,14 @@ struct SportCell: View {
 }
 
 struct SportCell_Previews: PreviewProvider {
+    static let testSport = Sport(league: "mlb",
+                                 imageAssetName: "baseball",
+                                 activeImageAssetName: "baseball_active")
+    
     static var previews: some View {
         Group {
-            SportCell(sport: TestData.testSport, selected: true)
-            SportCell(sport: TestData.testSport, selected: false)
+            SportCell(sport: testSport, selected: true)
+            SportCell(sport: testSport, selected: false)
         }
     }
 }

@@ -21,8 +21,8 @@ struct Game: Identifiable {
     }
     
     let headline: String
-    
     let id = UUID()
+    
     private let link: String
     private let lines: [String]
     
