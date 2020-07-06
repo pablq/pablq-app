@@ -24,7 +24,7 @@ struct SportsListView: View {
                         selectedSport = sport
                     }
             }
-            if let url = URL(string: "https://github.com/pablq/pablq-website") {
+            if let url = URL(string: "https://github.com/pablq/pablq-app") {
                 Link(destination: url) {
                     Text(url.relativeString)
                         .font(.footnote)
