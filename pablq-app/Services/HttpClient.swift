@@ -24,11 +24,8 @@ class HttpClient {
                     callback(games)
                 }
             }
-            guard let data = data,
-                let gamesData = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] else {
-                return
-            }
-            games = gamesData.compactMap(Game.init)
+            guard let data = data else { return }
+            games = try? JSONDecoder().decode([Game].self, from: data)
         }.resume()
     }
 }

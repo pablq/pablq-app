@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct Game: Identifiable {
+struct Game: Identifiable, Decodable {
+    let id: UUID
+    let headline: String
+    private let link: String
+    private let lines: [String]
+    
     var isFavorite: Bool {
         return headline.lowercased().contains("chicago")
     }
@@ -20,32 +25,29 @@ struct Game: Identifiable {
         return URL(string: link)
     }
     
-    let headline: String
-    let id = UUID()
-    
-    private let link: String
-    private let lines: [String]
-    
-    init?(from json: [String: Any]) {
-        guard let headline = json["headline"] as? String,
-              let lineCount = json["lineCount"] as? Int,
-              let link = json["link"] as? String else {
-            return nil
-        }
-        self.headline = headline
-        self.link = link
-        self.lines = (1...lineCount).reduce([]) { accum, next in
-            if let line = json["p\(next)"] as? String {
-                return accum + [line]
-            } else {
-                return accum
-            }
-        }
-    }
-    
     init(headline: String, link: String, lines: [String]) {
+        id = UUID()
         self.headline = headline
         self.link = link
         self.lines = lines
+    }
+    
+    init(from decoder: Decoder) throws {
+        id = UUID()
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        headline = try values.decode(String.self, forKey: .headline)
+        link = try values.decode(String.self, forKey: .link)
+        let lineCount = try values.decode(Int.self, forKey: .lineCount)
+        lines = try CodingKeys.lineKeys(lineCount: lineCount).map { try values.decode(String.self, forKey: $0) }
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case headline
+        case lineCount
+        case link
+        
+        static func lineKeys(lineCount: Int) -> [CodingKeys] {
+            return (1...lineCount).compactMap { CodingKeys(stringValue: "p\($0)") }
+        }
     }
 }
