@@ -14,7 +14,7 @@ struct SportCell: View {
     var body: some View {
         HStack {
             Spacer()
-            Image(selected ? sport.activeImageAssetName : sport.imageAssetName)
+            Image(selected ? sport.activeImageName : sport.imageName)
             Spacer()
         }
         .padding(.all)
@@ -23,8 +23,8 @@ struct SportCell: View {
 
 struct SportCell_Previews: PreviewProvider {
     static let testSport = Sport(league: "mlb",
-                                 imageAssetName: "baseball",
-                                 activeImageAssetName: "baseball_active")
+                                 imageName: "baseball",
+                                 activeImageName: "baseball_active")
     
     static var previews: some View {
         Group {

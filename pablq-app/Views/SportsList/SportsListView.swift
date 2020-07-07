@@ -40,17 +40,17 @@ struct SportsListView: View {
 struct ContentView_Previews: PreviewProvider {
     static let testSports = [
         Sport(league: "mlb",
-              imageAssetName: "baseball",
-              activeImageAssetName: "baseball_active"),
+              imageName: "baseball",
+              activeImageName: "baseball_active"),
         Sport(league: "nhl",
-              imageAssetName: "puck",
-              activeImageAssetName: "puck_active"),
+              imageName: "puck",
+              activeImageName: "puck_active"),
         Sport(league: "nfl",
-              imageAssetName: "football",
-              activeImageAssetName: "football_active"),
+              imageName: "football",
+              activeImageName: "football_active"),
         Sport(league: "nba",
-              imageAssetName: "basketball",
-              activeImageAssetName: "basketball_active")
+              imageName: "basketball",
+              activeImageName: "basketball_active")
     ]
     
     static var previews: some View {

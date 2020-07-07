@@ -62,8 +62,8 @@ struct GamesListView: View {
 
 struct GamesListView_Previews: PreviewProvider {
     @State static var testSport: Sport? = Sport(league: "mlb",
-                                                imageAssetName: "baseball",
-                                                activeImageAssetName: "baseball_active")
+                                                imageName: "baseball",
+                                                activeImageName: "baseball_active")
     
     static var previews: some View {
         Group {

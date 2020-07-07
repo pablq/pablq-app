@@ -10,6 +10,6 @@ import Foundation
 struct Sport: Identifiable, Equatable {
     var id = UUID()
     let league: String
-    let imageAssetName: String
-    let activeImageAssetName: String
+    let imageName: String
+    let activeImageName: String
 }
