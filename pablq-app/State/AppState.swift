@@ -11,31 +11,23 @@ import UIKit
 
 class AppAppearance {
     init() {
-        UITableView.appearance().backgroundColor = UIColor.gray
+        // TODO: Implement global styles.
     }
 }
 
 class AppState: ObservableObject {
     let allSports: [Sport] = [
-        Sport(league: "mlb",
-              imageName: "baseball",
-              activeImageName: "baseball_active"),
-        Sport(league: "nhl",
-              imageName: "puck",
-              activeImageName: "puck_active"),
-        Sport(league: "nfl",
-              imageName: "football",
-              activeImageName: "football_active"),
-        Sport(league: "nba",
-              imageName: "basketball",
-              activeImageName: "basketball_active")
+        Sport(league: "mlb", imageName: "baseball"),
+        Sport(league: "nhl", imageName: "puck"),
+        Sport(league: "nfl", imageName: "football"),
+        Sport(league: "nba", imageName: "basketball")
     ]
     
     @Published var selectedSport: Sport? = nil
     
     @Published var games: [Game] = []
     
-    @Published var isLoading: Bool = false
+    @Published var isLoading: Bool = true
     
     private let httpClient = HttpClient()
     

@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F09984C24B2AEF400B10AB3 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984B24B2AEF400B10AB3 /* ListHeaderView.swift */; };
-		8F09984E24B2AF2900B10AB3 /* SheetToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984D24B2AF2900B10AB3 /* SheetToolbarView.swift */; };
+		8F09984C24B2AEF400B10AB3 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984B24B2AEF400B10AB3 /* TitleView.swift */; };
+		8F09984E24B2AF2900B10AB3 /* SheetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */; };
 		8F09985024B2B0A700B10AB3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984F24B2B0A700B10AB3 /* LoadingView.swift */; };
 		8F09985224B2B10600B10AB3 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09985124B2B10600B10AB3 /* EmptyStateView.swift */; };
 		8F4418F824B552C30082F83C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
 		8F4418F924B552C30082F83C /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F724B552C30082F83C /* Sport.swift */; };
 		8F4418FB24B552DA0082F83C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FA24B552DA0082F83C /* AppState.swift */; };
+		8F4418FE24B5711F0082F83C /* SportCellButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */; };
 		8F72CF3E24B4032A002CBCD9 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72CF3D24B4032A002CBCD9 /* GameTest.swift */; };
 		8FB59AC324B29C3900ECA2B5 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */; };
 		8FD828DC24B16B6E007D813A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828DB24B16B6E007D813A /* GameCell.swift */; };
@@ -44,13 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8F09984B24B2AEF400B10AB3 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
-		8F09984D24B2AF2900B10AB3 /* SheetToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetToolbarView.swift; sourceTree = "<group>"; };
+		8F09984B24B2AEF400B10AB3 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetHeaderView.swift; sourceTree = "<group>"; };
 		8F09984F24B2B0A700B10AB3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8F09985124B2B10600B10AB3 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		8F4418F624B552C30082F83C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8F4418F724B552C30082F83C /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		8F4418FA24B552DA0082F83C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCellButtonStyle.swift; sourceTree = "<group>"; };
 		8F72CF3D24B4032A002CBCD9 /* GameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
 		8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		8FD828DB24B16B6E007D813A /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				8FEA7EB424B138230010FF91 /* SportsListView.swift */,
 				8FD828DD24B16CD8007D813A /* SportCell.swift */,
+				8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */,
 			);
 			path = SportsList;
 			sourceTree = "<group>";
@@ -132,9 +135,9 @@
 		8FBD86D924B292F900D0ED6C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				8F09984B24B2AEF400B10AB3 /* ListHeaderView.swift */,
+				8F09984B24B2AEF400B10AB3 /* TitleView.swift */,
 				8F09984F24B2B0A700B10AB3 /* LoadingView.swift */,
-				8F09984D24B2AF2900B10AB3 /* SheetToolbarView.swift */,
+				8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */,
 				8F09985124B2B10600B10AB3 /* EmptyStateView.swift */,
 			);
 			path = Shared;
@@ -348,7 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F09984E24B2AF2900B10AB3 /* SheetToolbarView.swift in Sources */,
+				8F09984E24B2AF2900B10AB3 /* SheetHeaderView.swift in Sources */,
 				8FD828DE24B16CD8007D813A /* SportCell.swift in Sources */,
 				8F09985224B2B10600B10AB3 /* EmptyStateView.swift in Sources */,
 				8F09985024B2B0A700B10AB3 /* LoadingView.swift in Sources */,
@@ -356,8 +359,9 @@
 				8FEA7EE024B159340010FF91 /* GamesListView.swift in Sources */,
 				8F4418F824B552C30082F83C /* Game.swift in Sources */,
 				8FEA7EB524B138230010FF91 /* SportsListView.swift in Sources */,
-				8F09984C24B2AEF400B10AB3 /* ListHeaderView.swift in Sources */,
+				8F09984C24B2AEF400B10AB3 /* TitleView.swift in Sources */,
 				8FEA7EB324B138230010FF91 /* pablq_appApp.swift in Sources */,
+				8F4418FE24B5711F0082F83C /* SportCellButtonStyle.swift in Sources */,
 				8F4418FB24B552DA0082F83C /* AppState.swift in Sources */,
 				8F4418F924B552C30082F83C /* Sport.swift in Sources */,
 				8FD828DC24B16B6E007D813A /* GameCell.swift in Sources */,

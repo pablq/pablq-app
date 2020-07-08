@@ -17,5 +17,6 @@ struct LoadingView: View {
                 Text(message)
             }
         }
+        .padding()
     }
 }
