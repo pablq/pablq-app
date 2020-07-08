@@ -17,12 +17,7 @@ struct SheetHeaderView: View {
             }
             HStack {
                 Spacer()
-                Button(action: dismissAction) {
-                    Image(systemName: "xmark")
-                        .renderingMode(.template)
-                        .foregroundColor(Color.black)
-                }
-                .padding()
+                DismissSheetButton(dismissAction: dismissAction)
             }
         }
     }
