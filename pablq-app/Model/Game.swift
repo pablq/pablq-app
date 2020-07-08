@@ -25,13 +25,6 @@ struct Game: Identifiable, Decodable {
         return URL(string: link)
     }
     
-    init(headline: String, link: String, lines: [String]) {
-        id = UUID()
-        self.headline = headline
-        self.link = link
-        self.lines = lines
-    }
-    
     init(from decoder: Decoder) throws {
         id = UUID()
         let values = try decoder.container(keyedBy: CodingKeys.self)
@@ -49,5 +42,13 @@ struct Game: Identifiable, Decodable {
         static func lineKeys(lineCount: Int) -> [CodingKeys] {
             return (1...lineCount).compactMap { CodingKeys(stringValue: "p\($0)") }
         }
+    }
+    
+    /// Convenience initializer for test data
+    init(headline: String, link: String, lines: [String]) {
+        id = UUID()
+        self.headline = headline
+        self.link = link
+        self.lines = lines
     }
 }

@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct LoadingView: View {
-    let message: String
+    let message: String?
     
     var body: some View {
         VStack(spacing: 25.0) {
             ProgressView()
-            Text(message)
+            if let message = message {
+                Text(message)
+            }
         }
     }
 }
