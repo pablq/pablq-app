@@ -16,17 +16,19 @@ struct SportsListView: View {
             ListHeaderView(title: NSLocalizedString("SportsListViewTitle",
                                                     value: "Latest Scores",
                                                     comment: "The app fetches sports scores."))
+                .listRowBackground(Color.clear)
             ForEach(appState.allSports) { sport in
-                SportCell(sport: sport, selected: appState.selectedSport == sport)
-                    .onTapGesture {
-                        appState.selectedSport = sport
-                    }
+                SportCell(sport: sport, action: { appState.selectedSport = sport })
+                    .padding([.leading, .trailing], 15.0)
+                    .padding([.top, .bottom], 10.0)
+                    .listRowBackground(Color.clear)
             }
             if let url = URL(string: "https://github.com/pablq/pablq-app") {
                 Link(destination: url) {
                     Text(url.relativeString)
                         .font(.footnote)
                 }
+                .listRowBackground(Color.clear)
             }
         }
         .sheet(item: $appState.selectedSport) { _ in

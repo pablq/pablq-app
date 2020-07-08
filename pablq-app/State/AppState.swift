@@ -7,6 +7,14 @@
 
 import Foundation
 
+import UIKit
+
+class AppAppearance {
+    init() {
+        UITableView.appearance().backgroundColor = UIColor.gray
+    }
+}
+
 class AppState: ObservableObject {
     let allSports: [Sport] = [
         Sport(league: "mlb",
@@ -30,6 +38,8 @@ class AppState: ObservableObject {
     @Published var isLoading: Bool = false
     
     private let httpClient = HttpClient()
+    
+    private let appAppearance = AppAppearance()
     
     func loadGames() {
         guard let league = selectedSport?.league else { return }
