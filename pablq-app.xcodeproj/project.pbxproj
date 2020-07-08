@@ -118,9 +118,9 @@
 		8FBD86D724B292E600D0ED6C /* SportsList */ = {
 			isa = PBXGroup;
 			children = (
-				8FEA7EB424B138230010FF91 /* SportsListView.swift */,
 				8FD828DD24B16CD8007D813A /* SportCell.swift */,
 				8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */,
+				8FEA7EB424B138230010FF91 /* SportsListView.swift */,
 			);
 			path = SportsList;
 			sourceTree = "<group>";
@@ -128,8 +128,8 @@
 		8FBD86D824B292EF00D0ED6C /* GamesList */ = {
 			isa = PBXGroup;
 			children = (
-				8FEA7EDF24B159340010FF91 /* GamesListView.swift */,
 				8FD828DB24B16B6E007D813A /* GameCell.swift */,
+				8FEA7EDF24B159340010FF91 /* GamesListView.swift */,
 			);
 			path = GamesList;
 			sourceTree = "<group>";
@@ -137,11 +137,11 @@
 		8FBD86D924B292F900D0ED6C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				8F09984B24B2AEF400B10AB3 /* TitleView.swift */,
+				8F4418FF24B5842B0082F83C /* DismissSheetButton.swift */,
+				8F09985124B2B10600B10AB3 /* EmptyStateView.swift */,
 				8F09984F24B2B0A700B10AB3 /* LoadingView.swift */,
 				8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */,
-				8F09985124B2B10600B10AB3 /* EmptyStateView.swift */,
-				8F4418FF24B5842B0082F83C /* DismissSheetButton.swift */,
+				8F09984B24B2AEF400B10AB3 /* TitleView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
