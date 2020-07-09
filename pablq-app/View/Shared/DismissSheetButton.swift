@@ -14,7 +14,6 @@ struct DismissSheetButton: View {
         Button(action: dismissAction) {
             Image(systemName: "xmark")
                 .renderingMode(.template)
-                .foregroundColor(Color.black)
         }
         .padding()
     }

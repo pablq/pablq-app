@@ -31,7 +31,6 @@ struct SportCell_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SportCell(sport: testSport, action: {})
-            SportCell(sport: testSport, action: {})
         }
     }
 }

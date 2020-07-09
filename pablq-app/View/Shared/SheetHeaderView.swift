@@ -18,6 +18,7 @@ struct SheetHeaderView: View {
             HStack {
                 Spacer()
                 DismissSheetButton(dismissAction: dismissAction)
+                    .foregroundColor(.black)
             }
         }
     }

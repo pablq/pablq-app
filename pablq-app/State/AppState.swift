@@ -11,7 +11,7 @@ import UIKit
 
 class AppAppearance {
     init() {
-        // TODO: Implement global styles.
+        UITableView.appearance().backgroundColor = UIColor.clear
     }
 }
 

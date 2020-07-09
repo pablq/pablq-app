@@ -11,7 +11,6 @@ struct SportCellButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .foregroundColor(configuration.isPressed ? Color.red : Color.black)
-            .accentColor(.blue)
             .background(Color.white)
             .cornerRadius(10.0)
             .shadow(color: Color.black,
