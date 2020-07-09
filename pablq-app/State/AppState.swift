@@ -27,7 +27,7 @@ class AppState: ObservableObject {
     
     @Published var games: [Game] = []
     
-    @Published var isLoading: Bool = true
+    @Published var isLoading: Bool = false
     
     private let httpClient = HttpClient()
     
