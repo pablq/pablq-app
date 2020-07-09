@@ -13,7 +13,7 @@ struct GamesListView: View {
     
     var body: some View {
         ZStack {
-            Color.green.edgesIgnoringSafeArea(.all)
+            Color.white.edgesIgnoringSafeArea(.all)
             VStack {
                 SheetHeaderView(title: appState.selectedSport?.league.uppercased()) {
                     appState.selectedSport = nil
@@ -40,6 +40,7 @@ struct GamesListView: View {
                 }
                 Spacer()
             }
+            .foregroundColor(.black)
         }
         .onAppear { appState.loadGames() }
     }

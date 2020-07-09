@@ -13,7 +13,7 @@ struct SportsListView: View {
     
     var body: some View {
         ZStack {
-            Color.pink.edgesIgnoringSafeArea(.all)
+            Color.black.edgesIgnoringSafeArea(.all)
             List {
                 TitleView(title:
                             NSLocalizedString("SportsListViewTitle",
@@ -36,6 +36,7 @@ struct SportsListView: View {
                     .listRowBackground(Color.clear)
                 }
             }
+            .foregroundColor(.white)
         }
         .sheet(item: $appState.selectedSport) { _ in
             GamesListView(appState: appState)
