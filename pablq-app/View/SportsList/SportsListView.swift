@@ -13,7 +13,7 @@ struct SportsListView: View {
     
     var body: some View {
         ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
+            Color.gray.edgesIgnoringSafeArea(.all)
             List {
                 TitleView(title:
                             NSLocalizedString("SportsListViewTitle",
