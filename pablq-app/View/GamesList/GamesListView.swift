@@ -21,14 +21,18 @@ struct GamesListView: View {
                 Spacer()
                 Group {
                     if appState.isLoading {
-                        LoadingView(message: NSLocalizedString("GamesListViewLoading",
-                                                               value: "Fetching games...",
-                                                               comment: "Shown when games data is being fetched."))
+                        LoadingView(message:
+                                        NSLocalizedString("GamesListViewLoading",
+                                                          value: "Fetching games...",
+                                                          comment: "Shown when games data is being fetched.")
+                        )
                         
                     } else if appState.games.isEmpty {
-                        EmptyStateView(message: NSLocalizedString("GamesListViewEmptyState",
-                                                                  value: "Sorry, couldn't find any games today. :)",
-                                                                  comment: "Shown when games data is not available."))
+                        EmptyStateView(message:
+                                        NSLocalizedString("GamesListViewEmptyState",
+                                                          value: "Sorry, couldn't find any games today. :)",
+                                                          comment: "Shown when games data is not available.")
+                        )
                     } else {
                         List {
                             ForEach(appState.games) { game in

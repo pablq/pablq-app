@@ -12,14 +12,11 @@ struct GameCell: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10.0) {
-                Text(game.headline)
-                    .font(.headline)
-                Text(game.description)
-                    .font(.body)
+                Text(game.headline).font(.headline)
+                Text(game.description).font(.body)
                 if let url = game.url {
                     Link(destination: url) {
-                        Text(url.relativeString)
-                            .font(.footnote)
+                        Text(url.relativeString).font(.footnote)
                     }
                 }
             }
@@ -30,8 +27,10 @@ struct GameCell: View {
         .foregroundColor(Color.white)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(game.isFavorite ? Color.red : Color.gray,
-                        lineWidth:  10)
+                .stroke(
+                    game.isFavorite ? Color.red : Color.gray,
+                    lineWidth:  10
+                )
         )
     }
 }
