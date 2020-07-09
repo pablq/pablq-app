@@ -12,11 +12,14 @@ struct GameCell: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10.0) {
-                Text(game.headline).font(.headline)
-                Text(game.description).font(.body)
+                Text(game.headline)
+                    .font(.headline)
+                Text(game.description)
+                    .font(.body)
                 if let url = game.url {
                     Link(destination: url) {
-                        Text(url.relativeString).font(.footnote)
+                        Text(url.relativeString)
+                            .font(.footnote)
                     }
                 }
             }
@@ -36,9 +39,11 @@ struct GameCell: View {
 }
 
 struct GameView_Previews: PreviewProvider {
-    static let testGame = Game(headline: "headline",
-                               link: "http://www.pablq.website/",
-                               lines: ["line 1", "line 2"])
+    static let testGame = Game(
+        headline: "headline",
+        link: "http://www.pablq.website/",
+        lines: ["line 1", "line 2"]
+    )
     
     static var previews: some View {
         GameCell(game: testGame)

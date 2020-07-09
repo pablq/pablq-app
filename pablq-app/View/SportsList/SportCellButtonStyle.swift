@@ -20,8 +20,10 @@ struct SportCellButtonStyle: ButtonStyle {
                 y: configuration.isPressed ? 4.0 : 8.0
             )
             .transformEffect(
-                .init(translationX: 0,
-                      y: configuration.isPressed ? 0.0 : -4.0)
+                .init(
+                    translationX: 0,
+                    y: configuration.isPressed ? 0.0 : -4.0
+                )
             )
             .animation(.default)
     }

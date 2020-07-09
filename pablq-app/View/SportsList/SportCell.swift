@@ -15,7 +15,8 @@ struct SportCell: View {
         Button(action: action) {
             HStack {
                 Spacer()
-                Image(sport.imageName).renderingMode(.template)
+                Image(sport.imageName)
+                    .renderingMode(.template)
                 Spacer()
             }
             .padding(25.0)

@@ -15,10 +15,13 @@ struct SportsListView: View {
         ZStack {
             Color.gray.edgesIgnoringSafeArea(.all)
             List {
-                TitleView(title:
-                            NSLocalizedString("SportsListViewTitle",
-                                              value: "Latest Scores",
-                                              comment: "The app fetches sports scores.")
+                TitleView(
+                    title:
+                        NSLocalizedString(
+                            "SportsListViewTitle",
+                            value: "Latest Scores",
+                            comment: "The app fetches sports scores."
+                        )
                 )
                 .listRowBackground(Color.clear)
                 
@@ -33,7 +36,8 @@ struct SportsListView: View {
                 }
                 if let url = URL(string: "https://github.com/pablq/pablq-app") {
                     Link(destination: url) {
-                        Text(url.relativeString).font(.footnote)
+                        Text(url.relativeString)
+                            .font(.footnote)
                     }
                     .listRowBackground(Color.clear)
                 }

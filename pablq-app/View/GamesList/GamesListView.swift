@@ -21,17 +21,20 @@ struct GamesListView: View {
                 Spacer()
                 Group {
                     if appState.isLoading {
-                        LoadingView(message:
-                                        NSLocalizedString("GamesListViewLoading",
-                                                          value: "Fetching games...",
-                                                          comment: "Shown when games data is being fetched.")
+                        LoadingView(
+                            message: NSLocalizedString(
+                                "GamesListViewLoading",
+                                value: "Fetching games...",
+                                comment: "Shown when games data is being fetched."
+                            )
                         )
-                        
                     } else if appState.games.isEmpty {
-                        EmptyStateView(message:
-                                        NSLocalizedString("GamesListViewEmptyState",
-                                                          value: "Sorry, couldn't find any games today. :)",
-                                                          comment: "Shown when games data is not available.")
+                        EmptyStateView(
+                            message: NSLocalizedString(
+                                "GamesListViewEmptyState",
+                                value: "Sorry, couldn't find any games today. :)",
+                                comment: "Shown when games data is not available."
+                            )
                         )
                     } else {
                         List {
@@ -66,9 +69,13 @@ struct GamesListView_Previews: PreviewProvider {
         case .loading:
             isLoading = true
         case .data:
-            games = [Game(headline: "Headline",
-                          link: "http://www.google.com",
-                          lines: ["line1", "line2"])]
+            games = [
+                Game(
+                    headline: "Headline",
+                    link: "http://www.google.com",
+                    lines: ["line1", "line2"]
+                )
+            ]
         }
         
         let appState = AppState()
