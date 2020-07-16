@@ -35,11 +35,8 @@ struct SportsListView: View {
                     .padding([.top, .bottom], 10.0)
                 }
                 if let url = URL(string: "https://github.com/pablq/pablq-app") {
-                    Link(destination: url) {
-                        Text(url.relativeString)
-                            .font(.footnote)
-                    }
-                    .listRowBackground(Color.clear)
+                    FooterView(url: url)
+                        .listRowBackground(Color.clear)
                 }
             }
             .foregroundColor(.white)

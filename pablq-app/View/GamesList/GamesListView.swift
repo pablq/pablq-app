@@ -46,6 +46,8 @@ struct GamesListView: View {
                     }
                 }
                 Spacer()
+                Spacer()
+                Spacer()
             }
             .foregroundColor(.black)
         }
