@@ -31,16 +31,27 @@ struct Game: Identifiable, Decodable {
         headline = try values.decode(String.self, forKey: .headline)
         link = try values.decode(String.self, forKey: .link)
         let lineCount = try values.decode(Int.self, forKey: .lineCount)
-        lines = try CodingKeys.lineKeys(lineCount: lineCount).map { try values.decode(String.self, forKey: $0) }
+        lines = try CodingKeys.lines(lineCount: lineCount).map { try values.decode(String.self, forKey: $0)}
     }
     
-    enum CodingKeys: String, CodingKey {
-        case headline
-        case lineCount
-        case link
+    struct CodingKeys: CodingKey {
+        static let headline = Self.init(stringValue: "headline")!
+        static let lineCount = Self.init(stringValue: "lineCount")!
+        static let link = Self.init(stringValue: "link")!
+        static func lines(lineCount: Int) -> [CodingKeys] {
+            return lineCount < 1 ? [] : (1...lineCount).compactMap { Self.init(stringValue: "p\($0)") }
+        }
         
-        static func lineKeys(lineCount: Int) -> [CodingKeys] {
-            return (1...lineCount).compactMap { CodingKeys(stringValue: "p\($0)") }
+        var stringValue: String
+        
+        init?(stringValue: String) {
+            self.stringValue = stringValue
+        }
+        
+        var intValue: Int?
+        
+        init?(intValue: Int) {
+            return nil
         }
     }
     

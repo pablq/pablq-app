@@ -55,12 +55,17 @@ class GameTest: XCTestCase {
                 "link": "http://www.pablq.website/",
                 "p1": "This is the first line",
                 "p2": "This is the second line"
+            },
+            {
+                "headline": "The Third Game Headline",
+                "lineCount": 0,
+                "link": "http://www.pablq.website/",
             }
         ]
         """.data(using: .utf8)!
         
         let games = try? JSONDecoder().decode([Game].self, from: json)
-        XCTAssertEqual(games?.count, 2)
+        XCTAssertEqual(games?.count, 3)
     }
     
     func testIsFavorite_whenHeadlineIncludesChicago_returnsTrue() {
