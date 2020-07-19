@@ -13,7 +13,7 @@ struct GamesListView: View {
     
     var body: some View {
         ZStack {
-            Color.white.edgesIgnoringSafeArea(.all)
+            Color.black.edgesIgnoringSafeArea(.all)
             VStack {
                 SheetHeaderView(title: appState.selectedSport?.league.uppercased()) {
                     appState.selectedSport = nil
@@ -42,6 +42,7 @@ struct GamesListView: View {
                                 GameCell(game: game)
                                     .listRowBackground(Color.clear)
                             }
+                            .padding(.bottom, 25)
                         }
                     }
                 }
@@ -49,7 +50,7 @@ struct GamesListView: View {
                 Spacer()
                 Spacer()
             }
-            .foregroundColor(.black)
+            .foregroundColor(.white)
         }
         .onAppear { appState.loadGames() }
     }
@@ -73,9 +74,19 @@ struct GamesListView_Previews: PreviewProvider {
         case .data:
             games = [
                 Game(
-                    headline: "Headline",
+                    headline: "Headline 0",
                     link: "http://www.google.com",
                     lines: ["line1", "line2"]
+                ),
+                Game(
+                    headline: "Headline 1",
+                    link: "http://www.google.com",
+                    lines: ["line1", "line2", "line3"]
+                ),
+                Game(
+                    headline: "Headline 3",
+                    link: "http://www.google.com",
+                    lines: []
                 )
             ]
         }
