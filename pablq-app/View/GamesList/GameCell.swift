@@ -14,8 +14,10 @@ struct GameCell: View {
             VStack(alignment: .leading, spacing: 10.0) {
                 Text(game.headline)
                     .font(.headline)
-                Text(game.description)
-                    .font(.body)
+                if (!game.description.isEmpty) {
+                    Text(game.description)
+                        .font(.body)
+                }
                 if let url = game.url {
                     Link(destination: url) {
                         Text(url.relativeString)
