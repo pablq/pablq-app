@@ -42,7 +42,7 @@ struct GamesListView: View {
                                 GameCell(game: game)
                                     .listRowBackground(Color.clear)
                             }
-                            .padding(.bottom, 25)
+                            .padding(10)
                         }
                     }
                 }
