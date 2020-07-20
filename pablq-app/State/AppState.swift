@@ -18,7 +18,7 @@ class AppAppearance {
 class AppState: ObservableObject {
     let allSports: [Sport] = [
         Sport(league: "mlb", imageName: "baseball"),
-        Sport(league: "nhl", imageName: "puck"),
+        Sport(league: "nhl", imageName: "hockey puck"),
         Sport(league: "nfl", imageName: "football"),
         Sport(league: "nba", imageName: "basketball")
     ]
