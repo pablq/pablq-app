@@ -40,7 +40,7 @@ struct GamesListView: View {
                         List {
                             ForEach(appState.games) { game in
                                 GameCell(game: game)
-                                    .listRowBackground(Color.clear)
+                                    .listRowBackground(Color.black)
                             }
                             .padding(10)
                         }

@@ -23,20 +23,20 @@ struct SportsListView: View {
                             comment: "The app fetches sports scores."
                         )
                 )
-                .listRowBackground(Color.clear)
+                .listRowBackground(Color.gray)
                 
                 ForEach(appState.allSports) { sport in
                     SportCell(
                         sport: sport,
                         action: { appState.selectedSport = sport }
                     )
-                    .listRowBackground(Color.clear)
+                    .listRowBackground(Color.gray)
                     .padding([.leading, .trailing], 15.0)
                     .padding([.top, .bottom], 10.0)
                 }
                 if let url = URL(string: "https://github.com/pablq/pablq-app") {
                     FooterView(url: url)
-                        .listRowBackground(Color.clear)
+                        .listRowBackground(Color.gray)
                 }
             }
             .foregroundColor(.white)
