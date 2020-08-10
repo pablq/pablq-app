@@ -41,4 +41,8 @@ class AppState: ObservableObject {
             games = $0 ?? []
         }
     }
+    
+    func wakeup() {
+        httpClient.wakeup()
+    }
 }

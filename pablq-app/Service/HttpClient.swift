@@ -28,4 +28,10 @@ class HttpClient {
             games = try? JSONDecoder().decode([Game].self, from: data)
         }.resume()
     }
+    
+    func wakeup() {
+        if let url = URL(string: baseUrlString) {
+            urlSession.dataTask(with: url).resume()
+        }
+    }
 }
