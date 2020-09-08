@@ -12,7 +12,8 @@ struct LoadingView: View {
     
     var body: some View {
         VStack(spacing: 25.0) {
-            ProgressView()
+            // TODO: Upgrade to latest Xcode Beta and uncomment.
+            // ProgressView()
             if let message = message {
                 Text(message)
             }
