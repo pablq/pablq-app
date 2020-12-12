@@ -12,8 +12,11 @@ class HttpClient {
     private let baseUrlString = "http://www.pablq.website"
 
     func getGames(league: String, callback: @escaping ([Game]?) -> Void) {
-        let urlString = "\(baseUrlString)/sports/\(league)"
-        guard let url = URL(string: urlString) else {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "http"
+        urlComponents.host = "www.pablq.website"
+        urlComponents.path = "/sports/\(league)"
+        guard let url = urlComponents.url else {
             callback(nil)
             return
         }
