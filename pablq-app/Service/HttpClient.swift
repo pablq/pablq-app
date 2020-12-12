@@ -9,12 +9,13 @@ import Foundation
 
 class HttpClient {
     private let urlSession = URLSession.shared
-    private let baseUrlString = "http://www.pablq.website"
+    private let kScheme = "http"
+    private let kHost = "www.pablq.website"
 
     func getGames(league: String, callback: @escaping ([Game]?) -> Void) {
         var urlComponents = URLComponents()
-        urlComponents.scheme = "http"
-        urlComponents.host = "www.pablq.website"
+        urlComponents.scheme = kScheme
+        urlComponents.host = kHost
         urlComponents.path = "/sports/\(league)"
         guard let url = urlComponents.url else {
             callback(nil)
@@ -33,7 +34,10 @@ class HttpClient {
     }
     
     func wakeup() {
-        if let url = URL(string: baseUrlString) {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = kScheme
+        urlComponents.host = kHost
+        if let url = urlComponents.url {
             urlSession.dataTask(with: url).resume()
         }
     }
