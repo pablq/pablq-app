@@ -17,6 +17,8 @@ struct SportCell: View {
                 Spacer()
                 Image(sport.imageName)
                     .renderingMode(.template)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                 Spacer()
             }
             .padding(25.0)

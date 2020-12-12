@@ -34,6 +34,7 @@ struct SportsListView: View {
                     .padding([.leading, .trailing], 15.0)
                     .padding([.top, .bottom], 10.0)
                 }
+                .frame(height: 180.0)
                 if let url = URL(string: "https://github.com/pablq/pablq-app") {
                     FooterView(url: url)
                         .listRowBackground(Color.gray)
