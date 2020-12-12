@@ -11,6 +11,15 @@
 		8F09984E24B2AF2900B10AB3 /* SheetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */; };
 		8F09985024B2B0A700B10AB3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984F24B2B0A700B10AB3 /* LoadingView.swift */; };
 		8F09985224B2B10600B10AB3 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09985124B2B10600B10AB3 /* EmptyStateView.swift */; };
+		8F27AC4D258553C000A1C3C3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
+		8F27AC5A2585791500A1C3C3 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */; };
+		8F29870025854A4A00EEE688 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2986FF25854A4A00EEE688 /* WidgetKit.framework */; };
+		8F29870225854A4A00EEE688 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F29870125854A4A00EEE688 /* SwiftUI.framework */; };
+		8F29870525854A4A00EEE688 /* team_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870425854A4A00EEE688 /* team_widget.swift */; };
+		8F29870825854A4F00EEE688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F29870725854A4F00EEE688 /* Assets.xcassets */; };
+		8F29870A25854A4F00EEE688 /* team_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* team_widget.intentdefinition */; };
+		8F29870B25854A4F00EEE688 /* team_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* team_widget.intentdefinition */; };
+		8F29870E25854A4F00EEE688 /* team-widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F2986FD25854A4A00EEE688 /* team-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8F4418F824B552C30082F83C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
 		8F4418F924B552C30082F83C /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F724B552C30082F83C /* Sport.swift */; };
 		8F4418FB24B552DA0082F83C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FA24B552DA0082F83C /* AppState.swift */; };
@@ -30,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8F29870C25854A4F00EEE688 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FEA7EA724B138230010FF91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F2986FC25854A4A00EEE688;
+			remoteInfo = "team-widgetExtension";
+		};
 		8FEA7EC124B138250010FF91 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8FEA7EA724B138230010FF91 /* Project object */;
@@ -46,11 +62,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8F29870F25854A4F00EEE688 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8F29870E25854A4F00EEE688 /* team-widgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8F09984B24B2AEF400B10AB3 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetHeaderView.swift; sourceTree = "<group>"; };
 		8F09984F24B2B0A700B10AB3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8F09985124B2B10600B10AB3 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		8F2986FD25854A4A00EEE688 /* team-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "team-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F2986FF25854A4A00EEE688 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		8F29870125854A4A00EEE688 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		8F29870425854A4A00EEE688 /* team_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = team_widget.swift; sourceTree = "<group>"; };
+		8F29870625854A4A00EEE688 /* team_widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = team_widget.intentdefinition; sourceTree = "<group>"; };
+		8F29870725854A4F00EEE688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F29870925854A4F00EEE688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F4418F624B552C30082F83C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8F4418F724B552C30082F83C /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		8F4418FA24B552DA0082F83C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -76,6 +113,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8F2986FA25854A4A00EEE688 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F29870225854A4A00EEE688 /* SwiftUI.framework in Frameworks */,
+				8F29870025854A4A00EEE688 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FEA7EAC24B138230010FF91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +146,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F2986FE25854A4A00EEE688 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F2986FF25854A4A00EEE688 /* WidgetKit.framework */,
+				8F29870125854A4A00EEE688 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F29870325854A4A00EEE688 /* team-widget */ = {
+			isa = PBXGroup;
+			children = (
+				8F29870425854A4A00EEE688 /* team_widget.swift */,
+				8F29870625854A4A00EEE688 /* team_widget.intentdefinition */,
+				8F29870725854A4F00EEE688 /* Assets.xcassets */,
+				8F29870925854A4F00EEE688 /* Info.plist */,
+			);
+			path = "team-widget";
+			sourceTree = "<group>";
+		};
 		8F4418F524B552C30082F83C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +221,8 @@
 				8FEA7EB124B138230010FF91 /* pablq-app */,
 				8FEA7EC324B138250010FF91 /* pablq-appTests */,
 				8FEA7ECE24B138250010FF91 /* pablq-appUITests */,
+				8F29870325854A4A00EEE688 /* team-widget */,
+				8F2986FE25854A4A00EEE688 /* Frameworks */,
 				8FEA7EB024B138230010FF91 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,6 +233,7 @@
 				8FEA7EAF24B138230010FF91 /* pablq-app.app */,
 				8FEA7EC024B138250010FF91 /* pablq-appTests.xctest */,
 				8FEA7ECB24B138250010FF91 /* pablq-appUITests.xctest */,
+				8F2986FD25854A4A00EEE688 /* team-widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,6 +300,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8F2986FC25854A4A00EEE688 /* team-widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F29871225854A4F00EEE688 /* Build configuration list for PBXNativeTarget "team-widgetExtension" */;
+			buildPhases = (
+				8F2986F925854A4A00EEE688 /* Sources */,
+				8F2986FA25854A4A00EEE688 /* Frameworks */,
+				8F2986FB25854A4A00EEE688 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "team-widgetExtension";
+			productName = "team-widgetExtension";
+			productReference = 8F2986FD25854A4A00EEE688 /* team-widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8FEA7EAE24B138230010FF91 /* pablq-app */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FEA7ED424B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-app" */;
@@ -238,10 +324,12 @@
 				8FEA7EAB24B138230010FF91 /* Sources */,
 				8FEA7EAC24B138230010FF91 /* Frameworks */,
 				8FEA7EAD24B138230010FF91 /* Resources */,
+				8F29870F25854A4F00EEE688 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8F29870D25854A4F00EEE688 /* PBXTargetDependency */,
 			);
 			name = "pablq-app";
 			productName = "pablq-app";
@@ -290,9 +378,12 @@
 		8FEA7EA724B138230010FF91 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					8F2986FC25854A4A00EEE688 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					8FEA7EAE24B138230010FF91 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -322,11 +413,20 @@
 				8FEA7EAE24B138230010FF91 /* pablq-app */,
 				8FEA7EBF24B138250010FF91 /* pablq-appTests */,
 				8FEA7ECA24B138250010FF91 /* pablq-appUITests */,
+				8F2986FC25854A4A00EEE688 /* team-widgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8F2986FB25854A4A00EEE688 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F29870825854A4F00EEE688 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FEA7EAD24B138230010FF91 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,11 +453,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8F2986F925854A4A00EEE688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F29870525854A4A00EEE688 /* team_widget.swift in Sources */,
+				8F29870A25854A4F00EEE688 /* team_widget.intentdefinition in Sources */,
+				8F27AC5A2585791500A1C3C3 /* HttpClient.swift in Sources */,
+				8F27AC4D258553C000A1C3C3 /* Game.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FEA7EAB24B138230010FF91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8F09984E24B2AF2900B10AB3 /* SheetHeaderView.swift in Sources */,
+				8F29870B25854A4F00EEE688 /* team_widget.intentdefinition in Sources */,
 				8FD828DE24B16CD8007D813A /* SportCell.swift in Sources */,
 				8F44190024B5842B0082F83C /* DismissSheetButton.swift in Sources */,
 				8F09985224B2B10600B10AB3 /* EmptyStateView.swift in Sources */,
@@ -395,6 +507,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8F29870D25854A4F00EEE688 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F2986FC25854A4A00EEE688 /* team-widgetExtension */;
+			targetProxy = 8F29870C25854A4F00EEE688 /* PBXContainerItemProxy */;
+		};
 		8FEA7EC224B138250010FF91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8FEA7EAE24B138230010FF91 /* pablq-app */;
@@ -408,6 +525,50 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8F29871025854A4F00EEE688 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QVTTLF22GX;
+				INFOPLIST_FILE = "team-widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-app.team-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F29871125854A4F00EEE688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QVTTLF22GX;
+				INFOPLIST_FILE = "team-widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-app.team-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8FEA7ED224B138250010FF91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -527,6 +688,7 @@
 		8FEA7ED524B138250010FF91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -549,6 +711,7 @@
 		8FEA7ED624B138250010FF91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -655,6 +818,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8F29871225854A4F00EEE688 /* Build configuration list for PBXNativeTarget "team-widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F29871025854A4F00EEE688 /* Debug */,
+				8F29871125854A4F00EEE688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8FEA7EAA24B138230010FF91 /* Build configuration list for PBXProject "pablq-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
