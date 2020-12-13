@@ -11,9 +11,6 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     
-    private let kCalendar = Calendar(identifier: .gregorian)
-    private let kChicagoStandardTime = TimeZone(abbreviation: "CST")!
-    private let kNfl = "nfl"
     private let kExampleGame = Game(
         headline: "Houston at Chicago (1:00 PM ET)",
         link: "",
@@ -55,6 +52,8 @@ struct Provider: IntentTimelineProvider {
             completion(entry)
         }
     }
+    
+    private let kNfl = "nfl"
 
     func getTimeline(
         for configuration: ConfigurationIntent,
@@ -105,6 +104,9 @@ struct Provider: IntentTimelineProvider {
     private func getDateAfter(minutes: Int) -> Date {
         return Date().addingTimeInterval(60 * Double(minutes))
     }
+    
+    private let kCalendar = Calendar(identifier: .gregorian)
+    private let kChicagoStandardTime = TimeZone(abbreviation: "CST")!
     
     private func getNext11amChicagoTime() -> Date {
         let now = Date()
@@ -167,7 +169,10 @@ struct TeamWidgetEntryView : View {
                             .font(.body)
                     }
                     Spacer()
-                    WidgetDetailsFooterView(configuration: entry.configuration)
+                    WidgetFooterView(
+                        configuration: entry.configuration,
+                        lastUpdated: entry.date
+                    )
                 }
                 .padding()
                 .foregroundColor(Color("foreground"))
@@ -176,10 +181,19 @@ struct TeamWidgetEntryView : View {
                 Color("background")
                 VStack {
                     Spacer()
-                    Text("No games today. :)")
+                    Text(
+                        NSLocalizedString(
+                            "WidgetEmptyState",
+                            value: "No games today. :)",
+                            comment: "Shown when games data is not available."
+                        )
+                    )
                         .font(.body)
                     Spacer()
-                    WidgetDetailsFooterView(configuration: entry.configuration)
+                    WidgetFooterView(
+                        configuration: entry.configuration,
+                        lastUpdated: entry.date
+                    )
                 }
                 .padding()
                 .foregroundColor(Color("foreground"))
@@ -189,7 +203,19 @@ struct TeamWidgetEntryView : View {
     }
 }
 
-struct WidgetDetailsFooterView: View {
+struct WidgetFooterView: View {
+    let configuration: ConfigurationIntent
+    let lastUpdated: Date
+    
+    var body: some View {
+        VStack {
+            WidgetConfigurationDetailsView(configuration: configuration)
+            WidgetLastUpdatedView(date: lastUpdated)
+        }
+    }
+}
+
+struct WidgetConfigurationDetailsView: View {
     
     let configuration: ConfigurationIntent
     
@@ -199,9 +225,25 @@ struct WidgetDetailsFooterView: View {
                 Text("\(league.uppercased()) - \(teamName)")
                     .font(.footnote)
         } else {
-            Text("Widget not configured.")
-                .font(.title)
+            Text(
+                NSLocalizedString(
+                    "WidgetNotConfigured",
+                    value: "Widget not configured.",
+                    comment: "Shown when widget is not configured."
+                )
+            )
+            .font(.title)
         }
+    }
+}
+
+struct WidgetLastUpdatedView: View {
+    let date: Date
+    
+    var body: some View {
+        Text(date, style: .time)
+            .font(.footnote)
+            .fontWeight(.ultraLight)
     }
 }
 
@@ -217,8 +259,20 @@ struct TeamWidget: Widget {
         ) { entry in
             TeamWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("Latest Scores Widget")
-        .description("See today's scores from your favorite team.")
+        .configurationDisplayName(
+            NSLocalizedString(
+                "WidgetConfigurationDisplayName",
+                value: "Latest Scores Widget",
+                comment: "Title that what the widget does."
+            )
+        )
+        .description(
+            NSLocalizedString(
+                "WidgetConfigurationDescription",
+                value: "See today's scores from your favorite team.",
+                comment: "Description of what the widget does."
+            )
+        )
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
