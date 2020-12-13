@@ -17,6 +17,18 @@ struct Game: Identifiable, Decodable {
         return headline.lowercased().contains("chicago")
     }
     
+    var isLive: Bool {
+        return !isUpcoming && !isOver
+    }
+    
+    var isUpcoming: Bool {
+        return !headline.lowercased().contains("et)")
+    }
+    
+    var isOver: Bool {
+        return !headline.lowercased().contains("(final)")
+    }
+    
     var description: String {
         return lines.joined(separator: "\n")
     }
