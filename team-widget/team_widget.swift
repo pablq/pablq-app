@@ -155,23 +155,87 @@ struct TeamWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        if entry.games.isEmpty {
-            Text("No games today. :)").widgetURL(entry.deepLinkUrl)
-        } else {
-            VStack {
-                Spacer()
-                Text(entry.games.first!.headline)
-                Spacer()
-                HStack {
-                    Text("Updated:")
-                    Text(entry.date, style: .time)
+        if let game = entry.games.first {
+            HStack {
+                VStack(alignment: .leading, spacing: 10.0) {
+                    Text(game.headline)
+                        .font(.headline)
+                    if (!game.description.isEmpty) {
+                        Text(game.description)
+                            .font(.body)
+                    }
                 }
                 Spacer()
             }
+            .padding(25.0)
+            .background(Color.black)
+            .foregroundColor(Color.white)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(
+                        getStroke(game: game),
+                        lineWidth:  10
+                    )
+            )
             .widgetURL(entry.deepLinkUrl)
+        } else {
+            Text("No games today. :)")
+                .widgetURL(entry.deepLinkUrl)
         }
     }
+    
+    private func getStroke(game: Game) -> Color {
+        if game.isLive { return Color.green }
+        if game.isUpcoming { return Color.blue }
+        return Color.gray
+    }
 }
+
+/*
+ struct GameCell: View {
+     let game: Game
+     let isFavorite: Bool
+     var body: some View {
+         HStack {
+             VStack(alignment: .leading, spacing: 10.0) {
+                 Text(game.headline)
+                     .font(.headline)
+                 if (!game.description.isEmpty) {
+                     Text(game.description)
+                         .font(.body)
+                 }
+                 if let url = game.url {
+                     Link(destination: url) {
+                         Text(url.relativeString)
+                             .font(.footnote)
+                     }
+                 }
+             }
+             Spacer()
+             if isFavorite {
+                 VStack {
+                     Image(systemName: "star.fill")
+                         .renderingMode(.template)
+                         .colorMultiply(Color.yellow)
+                     Spacer()
+                 }
+             }
+         }
+         .padding(25.0)
+         .background(Color.black)
+         .foregroundColor(Color.white)
+         .overlay(
+             RoundedRectangle(cornerRadius: 10)
+                 .stroke(
+                     getStroke(),
+                     lineWidth:  10
+                 )
+         )
+     }
+     
+
+ }
+ */
 
 @main
 struct TeamWidget: Widget {

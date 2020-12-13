@@ -32,7 +32,7 @@ struct GamesListView: View {
                         EmptyStateView(
                             message: NSLocalizedString(
                                 "GamesListViewEmptyState",
-                                value: "Sorry, couldn't find any games today. :)",
+                                value: "No games today. :)",
                                 comment: "Shown when games data is not available."
                             )
                         )

@@ -27,6 +27,14 @@ struct GameCell: View {
                 }
             }
             Spacer()
+            if isFavorite {
+                VStack {
+                    Image(systemName: "star.fill")
+                        .renderingMode(.template)
+                        .colorMultiply(Color.yellow)
+                    Spacer()
+                }
+            }
         }
         .padding(25.0)
         .background(Color.black)
@@ -41,7 +49,6 @@ struct GameCell: View {
     }
     
     private func getStroke() -> Color {
-        if isFavorite { return Color.red }
         if game.isLive { return Color.green }
         if game.isUpcoming { return Color.blue }
         return Color.gray
