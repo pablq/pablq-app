@@ -13,20 +13,16 @@ struct Game: Identifiable, Decodable {
     private let link: String
     private let lines: [String]
     
-    var isFavorite: Bool {
-        return headline.lowercased().contains("chicago")
-    }
-    
     var isLive: Bool {
         return !isUpcoming && !isOver
     }
     
     var isUpcoming: Bool {
-        return !headline.lowercased().contains("et)")
+        return headline.lowercased().contains("et)")
     }
     
     var isOver: Bool {
-        return !headline.lowercased().contains("(final)")
+        return headline.lowercased().contains("(final)")
     }
     
     var description: String {

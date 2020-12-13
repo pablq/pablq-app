@@ -33,6 +33,14 @@ class HttpClient {
         }.resume()
     }
     
+    func getGames(league: String, teamName: String, callback: @escaping ([Game]?) -> Void) {
+        let internalCallback: ([Game]?) -> Void = { games in
+            let filtered = games?.filter { $0.headline.lowercased().contains(teamName.lowercased()) }
+            callback(filtered)
+        }
+        getGames(league: league, callback: internalCallback)
+    }
+    
     func wakeup() {
         var urlComponents = URLComponents()
         urlComponents.scheme = kScheme

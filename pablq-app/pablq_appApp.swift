@@ -15,6 +15,7 @@ struct pablq_appApp: App {
     var body: some Scene {
         WindowGroup {
             SportsListView(appState: state)
+                .onOpenURL { state.processDeepLink(url: $0) }
         }
         .onChange(of: scenePhase) {
             if $0 == .active {

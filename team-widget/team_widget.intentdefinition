@@ -19,8 +19,6 @@
 		<dict>
 			<key>INIntentCategory</key>
 			<string>information</string>
-			<key>INIntentDescription</key>
-			<string>League and Team Name for this widget.</string>
 			<key>INIntentDescriptionID</key>
 			<string>tVvJ9c</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -28,12 +26,14 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>6</integer>
+			<integer>8</integer>
 			<key>INIntentName</key>
 			<string>Configuration</string>
 			<key>INIntentParameters</key>
 			<array>
 				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
 					<key>INIntentParameterDisplayName</key>
 					<string>League</string>
 					<key>INIntentParameterDisplayNameID</key>
@@ -43,20 +43,24 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataCapitalization</key>
-						<string>Sentences</string>
+						<string>AllCharacters</string>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>NHL</string>
 						<key>INIntentParameterMetadataDefaultValueID</key>
-						<string>AsIfuh</string>
+						<string>GNqi2f</string>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>league</string>
 					<key>INIntentParameterTag</key>
-					<integer>6</integer>
+					<integer>8</integer>
 					<key>INIntentParameterType</key>
 					<string>String</string>
 				</dict>
 				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Team Name</string>
+					<string>Search Text</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>CA0KvP</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -64,7 +68,9 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataCapitalization</key>
-						<string>Sentences</string>
+						<string>Words</string>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>Chicago</string>
 						<key>INIntentParameterMetadataDefaultValueID</key>
 						<string>rtvlzf</string>
 					</dict>
@@ -93,7 +99,7 @@
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>League and Team Name</string>
+			<string>Select League and Search Text</string>
 			<key>INIntentTitleID</key>
 			<string>gpCwrM</string>
 			<key>INIntentType</key>

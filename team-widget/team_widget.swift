@@ -11,11 +11,21 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     
+    private let kCalendar = Calendar(identifier: .gregorian)
+    private let kChicagoStandardTime = TimeZone(abbreviation: "CST")!
+    private let kNfl = "nfl"
+    private let kExampleGame = Game(
+        headline: "Houston at Chicago (1:00 PM ET)",
+        link: "",
+        lines: []
+    )
+    
     func placeholder(in context: Context) -> GameStatusEntry {
-        GameStatusEntry(
+        return GameStatusEntry(
             date: Date(),
-            games: [],
-            configuration: ConfigurationIntent())
+            games: [kExampleGame],
+            configuration: ConfigurationIntent()
+        )
     }
 
     func getSnapshot(
@@ -24,23 +34,25 @@ struct Provider: IntentTimelineProvider {
         completion: @escaping (GameStatusEntry) -> ()
     ) {
         
-        if context.isPreview {
+        guard let league = configuration.league?.lowercased(),
+              let teamName = configuration.teamName,
+              !context.isPreview else {
             let entry = GameStatusEntry(
                 date: Date(),
-                games: [],
+                games: [kExampleGame],
                 configuration: configuration
             )
             completion(entry)
-        } else {
-            HttpClient().getGames(league: "nfl") { games in
-                let favorites = games?.filter { $0.isFavorite }
-                let entry = GameStatusEntry(
-                    date: Date(),
-                    games: favorites ?? [],
-                    configuration: configuration
-                )
-                completion(entry)
-            }
+            return
+        }
+
+        HttpClient().getGames(league: league, teamName: teamName) { result in
+            let entry = GameStatusEntry(
+                date: Date(),
+                games: result ?? [],
+                configuration: configuration
+            )
+            completion(entry)
         }
     }
 
@@ -49,18 +61,29 @@ struct Provider: IntentTimelineProvider {
         in context: Context,
         completion: @escaping (Timeline<Entry>) -> ()
     ) {
-        HttpClient().getGames(league: "nfl") { games in
-            let games = games?.filter { $0.isFavorite } ?? []
-            let entry = GameStatusEntry(date: Date(),
-                                        games: games,
-                                        configuration: configuration)
-    
+        guard let league = configuration.league?.lowercased(),
+              let teamName = configuration.teamName else {
+            let entry = Entry(
+                date: Date(),
+                games: [],
+                configuration: configuration
+            )
+            completion(
+                Timeline(
+                    entries: [entry],
+                    policy: .after(getNext11amChicagoTime())
+                )
+            )
+            return
+        }
+        HttpClient().getGames(league: league, teamName: teamName) { result in
+            let games = result ?? []
             let nextRefresh: Date
             if (games.isEmpty || games.allSatisfy { $0.isOver }) {
                 nextRefresh = getNext11amChicagoTime()
             } else if (games.contains { $0.isLive }) {
                 nextRefresh = getDateAfter(minutes: 7)
-            } else if configuration.league == "nfl" {
+            } else if league == kNfl {
                 if isNflGameday() {
                     nextRefresh = getDateAfter(minutes: 60)
                 } else {
@@ -70,6 +93,9 @@ struct Provider: IntentTimelineProvider {
                 nextRefresh = getDateAfter(minutes: 60)
             }
             
+            let entry = GameStatusEntry(date: Date(),
+                                        games: games,
+                                        configuration: configuration)
             let timeline = Timeline(entries: [entry],
                                     policy: .after(nextRefresh))
             completion(timeline)
@@ -82,21 +108,18 @@ struct Provider: IntentTimelineProvider {
     
     private func getNext11amChicagoTime() -> Date {
         let now = Date()
-        let dateComponents = calendar.dateComponents(in: chicagoStandardTime, from: now)
+        let dateComponents = kCalendar.dateComponents(in: kChicagoStandardTime, from: now)
         if dateComponents.hour ?? 0 < 11 {
-            return calendar.date(bySettingHour: 11, minute: 0, second: 0, of: now)!
+            return kCalendar.date(bySettingHour: 11, minute: 0, second: 0, of: now)!
         } else {
-            let todayAt11 = calendar.date(bySettingHour: 11, minute: 0, second: 0, of: now)!
-            return calendar.date(byAdding: .day, value: 1, to: todayAt11)!
+            let todayAt11 = kCalendar.date(bySettingHour: 11, minute: 0, second: 0, of: now)!
+            return kCalendar.date(byAdding: .day, value: 1, to: todayAt11)!
         }
     }
     
-    private let calendar = Calendar(identifier: .gregorian)
-    private let chicagoStandardTime = TimeZone(abbreviation: "CST")!
-    
     private func isNflGameday() -> Bool {
         let now = Date()
-        let dateComponents = calendar.dateComponents(in: chicagoStandardTime, from: now)
+        let dateComponents = kCalendar.dateComponents(in: kChicagoStandardTime, from: now)
         guard let dayOfWeek = dateComponents.weekday else {
             return false
         }
@@ -108,6 +131,23 @@ struct GameStatusEntry: TimelineEntry {
     let date: Date
     let games: [Game]
     let configuration: ConfigurationIntent
+    
+    var deepLinkUrl: URL? {
+        guard let league = configuration.league?.lowercased(),
+              let teamName = configuration.teamName else {
+            return nil
+        }
+        
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "pablq-widget"
+        urlComponents.host = "com.pablq.pablq-app.widget"
+        let queryItems = [
+            URLQueryItem(name: "league", value: league),
+            URLQueryItem(name: "team-name", value: teamName)
+        ]
+        urlComponents.queryItems = queryItems
+        return urlComponents.url
+    }
 }
 
 struct TeamWidgetEntryView : View {
@@ -116,7 +156,7 @@ struct TeamWidgetEntryView : View {
 
     var body: some View {
         if entry.games.isEmpty {
-            Text("No games")
+            Text("No games today. :)").widgetURL(entry.deepLinkUrl)
         } else {
             VStack {
                 Spacer()
@@ -128,6 +168,7 @@ struct TeamWidgetEntryView : View {
                 }
                 Spacer()
             }
+            .widgetURL(entry.deepLinkUrl)
         }
     }
 }
@@ -144,8 +185,8 @@ struct TeamWidget: Widget {
         ) { entry in
             TeamWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Latest Scores Widget")
+        .description("See today's scores from your favorite team.")
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 }

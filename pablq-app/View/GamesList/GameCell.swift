@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameCell: View {
     let game: Game
+    let isFavorite: Bool
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 10.0) {
@@ -33,10 +34,17 @@ struct GameCell: View {
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(
-                    game.isFavorite ? Color.red : Color.gray,
+                    getStroke(),
                     lineWidth:  10
                 )
         )
+    }
+    
+    private func getStroke() -> Color {
+        if isFavorite { return Color.red }
+        if game.isLive { return Color.green }
+        if game.isUpcoming { return Color.blue }
+        return Color.gray
     }
 }
 
@@ -48,6 +56,6 @@ struct GameView_Previews: PreviewProvider {
     )
     
     static var previews: some View {
-        GameCell(game: testGame)
+        GameCell(game: testGame, isFavorite: true)
     }
 }

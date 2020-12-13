@@ -29,6 +29,8 @@ class AppState: ObservableObject {
     
     @Published var isLoading: Bool = false
     
+    @Published private(set) var teamName: String? = "chicago"
+    
     private let httpClient = HttpClient()
     
     private let appAppearance = AppAppearance()
@@ -44,5 +46,16 @@ class AppState: ObservableObject {
     
     func wakeup() {
         httpClient.wakeup()
+    }
+    
+    func processDeepLink(url: URL) {
+        if let components = URLComponents(url: url, resolvingAgainstBaseURL: true) {
+            if components.scheme == "pablq-widget" && components.host == "com.pablq.pablq-app.widget" {
+                teamName = components.queryItems?.first { $0.name == "team-name" }?.value
+                if let league = components.queryItems?.first(where: { $0.name == "league" })?.value {
+                    selectedSport = allSports.first { $0.league == league }
+                }
+            }
+        }
     }
 }
