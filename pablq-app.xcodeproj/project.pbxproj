@@ -13,6 +13,7 @@
 		8F09985224B2B10600B10AB3 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09985124B2B10600B10AB3 /* EmptyStateView.swift */; };
 		8F27AC4D258553C000A1C3C3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
 		8F27AC5A2585791500A1C3C3 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */; };
+		8F27AC842585CF7F00A1C3C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB624B138240010FF91 /* Assets.xcassets */; };
 		8F29870025854A4A00EEE688 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2986FF25854A4A00EEE688 /* WidgetKit.framework */; };
 		8F29870225854A4A00EEE688 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F29870125854A4A00EEE688 /* SwiftUI.framework */; };
 		8F29870525854A4A00EEE688 /* team_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870425854A4A00EEE688 /* team_widget.swift */; };
@@ -423,6 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F27AC842585CF7F00A1C3C3 /* Assets.xcassets in Resources */,
 				8F29870825854A4F00EEE688 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

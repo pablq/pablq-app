@@ -155,87 +155,54 @@ struct TeamWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        if let game = entry.games.first {
-            HStack {
-                VStack(alignment: .leading, spacing: 10.0) {
+        ZStack {
+            Color.black
+            if let game = entry.games.first {
+                VStack {
+                    Spacer()
                     Text(game.headline)
                         .font(.headline)
                     if (!game.description.isEmpty) {
                         Text(game.description)
                             .font(.body)
                     }
+                    Spacer()
+                    WidgetDetailsFooterView(configuration: entry.configuration)
                 }
-                Spacer()
-            }
-            .padding(25.0)
-            .background(Color.black)
-            .foregroundColor(Color.white)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(
-                        getStroke(game: game),
-                        lineWidth:  10
-                    )
-            )
-            .widgetURL(entry.deepLinkUrl)
-        } else {
-            Text("No games today. :)")
+                .padding()
+                .foregroundColor(Color.white)
                 .widgetURL(entry.deepLinkUrl)
+            } else {
+                VStack {
+                    Spacer()
+                    Text("No games today. :)")
+                        .font(.body)
+                    Spacer()
+                    WidgetDetailsFooterView(configuration: entry.configuration)
+                }
+                .padding()
+                .foregroundColor(Color.white)
+                .widgetURL(entry.deepLinkUrl)
+            }
         }
-    }
-    
-    private func getStroke(game: Game) -> Color {
-        if game.isLive { return Color.green }
-        if game.isUpcoming { return Color.blue }
-        return Color.gray
     }
 }
 
-/*
- struct GameCell: View {
-     let game: Game
-     let isFavorite: Bool
-     var body: some View {
-         HStack {
-             VStack(alignment: .leading, spacing: 10.0) {
-                 Text(game.headline)
-                     .font(.headline)
-                 if (!game.description.isEmpty) {
-                     Text(game.description)
-                         .font(.body)
-                 }
-                 if let url = game.url {
-                     Link(destination: url) {
-                         Text(url.relativeString)
-                             .font(.footnote)
-                     }
-                 }
-             }
-             Spacer()
-             if isFavorite {
-                 VStack {
-                     Image(systemName: "star.fill")
-                         .renderingMode(.template)
-                         .colorMultiply(Color.yellow)
-                     Spacer()
-                 }
-             }
-         }
-         .padding(25.0)
-         .background(Color.black)
-         .foregroundColor(Color.white)
-         .overlay(
-             RoundedRectangle(cornerRadius: 10)
-                 .stroke(
-                     getStroke(),
-                     lineWidth:  10
-                 )
-         )
-     }
-     
-
- }
- */
+struct WidgetDetailsFooterView: View {
+    
+    let configuration: ConfigurationIntent
+    
+    var body: some View {
+        if let league = configuration.league,
+           let teamName = configuration.teamName {
+                Text("\(league.uppercased()) - \(teamName)")
+                    .font(.footnote)
+        } else {
+            Text("Widget not configured.")
+                .font(.title)
+        }
+    }
+}
 
 @main
 struct TeamWidget: Widget {
