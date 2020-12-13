@@ -13,14 +13,14 @@
 		8F09985224B2B10600B10AB3 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09985124B2B10600B10AB3 /* EmptyStateView.swift */; };
 		8F27AC4D258553C000A1C3C3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
 		8F27AC5A2585791500A1C3C3 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */; };
-		8F27AC842585CF7F00A1C3C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB624B138240010FF91 /* Assets.xcassets */; };
 		8F29870025854A4A00EEE688 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2986FF25854A4A00EEE688 /* WidgetKit.framework */; };
 		8F29870225854A4A00EEE688 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F29870125854A4A00EEE688 /* SwiftUI.framework */; };
 		8F29870525854A4A00EEE688 /* pablqAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870425854A4A00EEE688 /* pablqAppWidget.swift */; };
-		8F29870825854A4F00EEE688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F29870725854A4F00EEE688 /* Assets.xcassets */; };
 		8F29870A25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */; };
 		8F29870B25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */; };
 		8F29870E25854A4F00EEE688 /* pablq-app-widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F2986FD25854A4A00EEE688 /* pablq-app-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8F2DC60D2585F5F700522FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2DC60C2585F5F700522FBE /* Assets.xcassets */; };
+		8F2DC6162585F66C00522FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB624B138240010FF91 /* Assets.xcassets */; };
 		8F4418F824B552C30082F83C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
 		8F4418F924B552C30082F83C /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F724B552C30082F83C /* Sport.swift */; };
 		8F4418FB24B552DA0082F83C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FA24B552DA0082F83C /* AppState.swift */; };
@@ -87,8 +87,8 @@
 		8F29870125854A4A00EEE688 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		8F29870425854A4A00EEE688 /* pablqAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pablqAppWidget.swift; sourceTree = "<group>"; };
 		8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = pablqAppWidget.intentdefinition; sourceTree = "<group>"; };
-		8F29870725854A4F00EEE688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F29870925854A4F00EEE688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F2DC60C2585F5F700522FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F4418F624B552C30082F83C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8F4418F724B552C30082F83C /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		8F4418FA24B552DA0082F83C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 			children = (
 				8F29870425854A4A00EEE688 /* pablqAppWidget.swift */,
 				8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */,
-				8F29870725854A4F00EEE688 /* Assets.xcassets */,
 				8F29870925854A4F00EEE688 /* Info.plist */,
+				8F2DC60C2585F5F700522FBE /* Assets.xcassets */,
 			);
 			path = "pablq-app-widget";
 			sourceTree = "<group>";
@@ -424,8 +424,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F27AC842585CF7F00A1C3C3 /* Assets.xcassets in Resources */,
-				8F29870825854A4F00EEE688 /* Assets.xcassets in Resources */,
+				8F2DC6162585F66C00522FBE /* Assets.xcassets in Resources */,
+				8F2DC60D2585F5F700522FBE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

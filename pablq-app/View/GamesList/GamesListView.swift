@@ -13,7 +13,7 @@ struct GamesListView: View {
     
     var body: some View {
         ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
+            Color("background").edgesIgnoringSafeArea(.all)
             VStack {
                 SheetHeaderView(title: appState.selectedSport?.league.uppercased()) {
                     appState.selectedSport = nil
@@ -40,7 +40,7 @@ struct GamesListView: View {
                         List {
                             ForEach(appState.games) { game in
                                 GameCell(game: game, isFavorite: isFavorite(game: game))
-                                    .listRowBackground(Color.black)
+                                    .listRowBackground(Color("background"))
                             }
                             .padding(10)
                         }

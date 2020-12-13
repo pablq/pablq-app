@@ -11,47 +11,46 @@ struct GameCell: View {
     let game: Game
     let isFavorite: Bool
     var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 10.0) {
+        VStack {
+            HStack {
+                Spacer()
                 Text(game.headline)
                     .font(.headline)
-                if (!game.description.isEmpty) {
-                    Text(game.description)
-                        .font(.body)
-                }
-                if let url = game.url {
-                    Link(destination: url) {
-                        Text(url.relativeString)
-                            .font(.footnote)
-                    }
-                }
+                Spacer()
+            }
+            if (!game.description.isEmpty) {
+                Text(game.description)
+                    .font(.body)
             }
             Spacer()
-            if isFavorite {
-                VStack {
-                    Image(systemName: "star.fill")
-                        .renderingMode(.template)
-                        .colorMultiply(Color.yellow)
-                    Spacer()
+            if let url = game.url {
+                Link(destination: url) {
+                    Text(getLinkText())
+                        .font(.footnote)
                 }
             }
         }
-        .padding(25.0)
-        .background(Color.black)
-        .foregroundColor(Color.white)
+        .padding()
+        .foregroundColor(Color("foreground"))
+        .background(isFavorite ? Color("background-special") : Color("background"))
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(
                     getStroke(),
-                    lineWidth:  10
+                    lineWidth:  7
                 )
         )
     }
     
+    private func getLinkText() -> String {
+        if game.isUpcoming { return "See preview" }
+        return "See box score"
+    }
+    
     private func getStroke() -> Color {
-        if game.isLive { return Color.green }
-        if game.isUpcoming { return Color.blue }
-        return Color.gray
+        if game.isLive { return Color("accent-ongoing") }
+        if game.isUpcoming { return Color("accent-upcoming") }
+        return Color("accent-past")
     }
 }
 

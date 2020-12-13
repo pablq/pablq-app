@@ -13,7 +13,7 @@ struct SportsListView: View {
     
     var body: some View {
         ZStack {
-            Color.gray.edgesIgnoringSafeArea(.all)
+            Color("background-neutral").edgesIgnoringSafeArea(.all)
             List {
                 TitleView(
                     title:
@@ -23,21 +23,21 @@ struct SportsListView: View {
                             comment: "The app fetches sports scores."
                         )
                 )
-                .listRowBackground(Color.gray)
+                .listRowBackground(Color("background-neutral"))
                 
                 ForEach(appState.allSports) { sport in
                     SportCell(
                         sport: sport,
                         action: { appState.selectedSport = sport }
                     )
-                    .listRowBackground(Color.gray)
+                    .listRowBackground(Color("background-neutral"))
                     .padding([.leading, .trailing], 15.0)
                     .padding([.top, .bottom], 10.0)
                 }
                 .frame(height: 180.0)
                 if let url = URL(string: "https://github.com/pablq/pablq-app") {
                     FooterView(url: url)
-                        .listRowBackground(Color.gray)
+                        .listRowBackground(Color("background-neutral"))
                 }
             }
             .foregroundColor(.white)

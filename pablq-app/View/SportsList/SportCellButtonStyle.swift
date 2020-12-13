@@ -10,11 +10,11 @@ import SwiftUI
 struct SportCellButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .foregroundColor(configuration.isPressed ? Color.red : Color.black)
-            .background(Color.white)
+            .foregroundColor(configuration.isPressed ? Color("accent-action") : Color("background"))
+            .background(Color("foreground"))
             .cornerRadius(10.0)
             .shadow(
-                color: Color.black,
+                color: Color("background"),
                 radius: 5.0,
                 x: 0,
                 y: configuration.isPressed ? 4.0 : 8.0

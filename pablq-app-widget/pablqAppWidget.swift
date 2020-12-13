@@ -156,8 +156,8 @@ struct TeamWidgetEntryView : View {
 
     var body: some View {
         ZStack {
-            Color.black
             if let game = entry.games.first {
+                game.isLive ? Color("accent-ongoing") : Color("background")
                 VStack {
                     Spacer()
                     Text(game.headline)
@@ -170,9 +170,10 @@ struct TeamWidgetEntryView : View {
                     WidgetDetailsFooterView(configuration: entry.configuration)
                 }
                 .padding()
-                .foregroundColor(Color.white)
+                .foregroundColor(Color("foreground"))
                 .widgetURL(entry.deepLinkUrl)
             } else {
+                Color("background")
                 VStack {
                     Spacer()
                     Text("No games today. :)")
@@ -181,7 +182,7 @@ struct TeamWidgetEntryView : View {
                     WidgetDetailsFooterView(configuration: entry.configuration)
                 }
                 .padding()
-                .foregroundColor(Color.white)
+                .foregroundColor(Color("foreground"))
                 .widgetURL(entry.deepLinkUrl)
             }
         }
