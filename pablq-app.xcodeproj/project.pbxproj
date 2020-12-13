@@ -16,11 +16,11 @@
 		8F27AC842585CF7F00A1C3C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB624B138240010FF91 /* Assets.xcassets */; };
 		8F29870025854A4A00EEE688 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2986FF25854A4A00EEE688 /* WidgetKit.framework */; };
 		8F29870225854A4A00EEE688 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F29870125854A4A00EEE688 /* SwiftUI.framework */; };
-		8F29870525854A4A00EEE688 /* team_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870425854A4A00EEE688 /* team_widget.swift */; };
+		8F29870525854A4A00EEE688 /* pablqAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870425854A4A00EEE688 /* pablqAppWidget.swift */; };
 		8F29870825854A4F00EEE688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F29870725854A4F00EEE688 /* Assets.xcassets */; };
-		8F29870A25854A4F00EEE688 /* team_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* team_widget.intentdefinition */; };
-		8F29870B25854A4F00EEE688 /* team_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* team_widget.intentdefinition */; };
-		8F29870E25854A4F00EEE688 /* team-widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F2986FD25854A4A00EEE688 /* team-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8F29870A25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */; };
+		8F29870B25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */; };
+		8F29870E25854A4F00EEE688 /* pablq-app-widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F2986FD25854A4A00EEE688 /* pablq-app-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8F4418F824B552C30082F83C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
 		8F4418F924B552C30082F83C /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F724B552C30082F83C /* Sport.swift */; };
 		8F4418FB24B552DA0082F83C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FA24B552DA0082F83C /* AppState.swift */; };
@@ -70,7 +70,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8F29870E25854A4F00EEE688 /* team-widgetExtension.appex in Embed App Extensions */,
+				8F29870E25854A4F00EEE688 /* pablq-app-widgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,11 +82,11 @@
 		8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetHeaderView.swift; sourceTree = "<group>"; };
 		8F09984F24B2B0A700B10AB3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8F09985124B2B10600B10AB3 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
-		8F2986FD25854A4A00EEE688 /* team-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "team-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F2986FD25854A4A00EEE688 /* pablq-app-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "pablq-app-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2986FF25854A4A00EEE688 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		8F29870125854A4A00EEE688 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		8F29870425854A4A00EEE688 /* team_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = team_widget.swift; sourceTree = "<group>"; };
-		8F29870625854A4A00EEE688 /* team_widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = team_widget.intentdefinition; sourceTree = "<group>"; };
+		8F29870425854A4A00EEE688 /* pablqAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pablqAppWidget.swift; sourceTree = "<group>"; };
+		8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = pablqAppWidget.intentdefinition; sourceTree = "<group>"; };
 		8F29870725854A4F00EEE688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F29870925854A4F00EEE688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F4418F624B552C30082F83C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -156,15 +156,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8F29870325854A4A00EEE688 /* team-widget */ = {
+		8F29870325854A4A00EEE688 /* pablq-app-widget */ = {
 			isa = PBXGroup;
 			children = (
-				8F29870425854A4A00EEE688 /* team_widget.swift */,
-				8F29870625854A4A00EEE688 /* team_widget.intentdefinition */,
+				8F29870425854A4A00EEE688 /* pablqAppWidget.swift */,
+				8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */,
 				8F29870725854A4F00EEE688 /* Assets.xcassets */,
 				8F29870925854A4F00EEE688 /* Info.plist */,
 			);
-			path = "team-widget";
+			path = "pablq-app-widget";
 			sourceTree = "<group>";
 		};
 		8F4418F524B552C30082F83C /* Model */ = {
@@ -222,7 +222,7 @@
 				8FEA7EB124B138230010FF91 /* pablq-app */,
 				8FEA7EC324B138250010FF91 /* pablq-appTests */,
 				8FEA7ECE24B138250010FF91 /* pablq-appUITests */,
-				8F29870325854A4A00EEE688 /* team-widget */,
+				8F29870325854A4A00EEE688 /* pablq-app-widget */,
 				8F2986FE25854A4A00EEE688 /* Frameworks */,
 				8FEA7EB024B138230010FF91 /* Products */,
 			);
@@ -234,7 +234,7 @@
 				8FEA7EAF24B138230010FF91 /* pablq-app.app */,
 				8FEA7EC024B138250010FF91 /* pablq-appTests.xctest */,
 				8FEA7ECB24B138250010FF91 /* pablq-appUITests.xctest */,
-				8F2986FD25854A4A00EEE688 /* team-widgetExtension.appex */,
+				8F2986FD25854A4A00EEE688 /* pablq-app-widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,9 +301,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F2986FC25854A4A00EEE688 /* team-widgetExtension */ = {
+		8F2986FC25854A4A00EEE688 /* pablq-app-widgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F29871225854A4F00EEE688 /* Build configuration list for PBXNativeTarget "team-widgetExtension" */;
+			buildConfigurationList = 8F29871225854A4F00EEE688 /* Build configuration list for PBXNativeTarget "pablq-app-widgetExtension" */;
 			buildPhases = (
 				8F2986F925854A4A00EEE688 /* Sources */,
 				8F2986FA25854A4A00EEE688 /* Frameworks */,
@@ -313,9 +313,9 @@
 			);
 			dependencies = (
 			);
-			name = "team-widgetExtension";
+			name = "pablq-app-widgetExtension";
 			productName = "team-widgetExtension";
-			productReference = 8F2986FD25854A4A00EEE688 /* team-widgetExtension.appex */;
+			productReference = 8F2986FD25854A4A00EEE688 /* pablq-app-widgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		8FEA7EAE24B138230010FF91 /* pablq-app */ = {
@@ -414,7 +414,7 @@
 				8FEA7EAE24B138230010FF91 /* pablq-app */,
 				8FEA7EBF24B138250010FF91 /* pablq-appTests */,
 				8FEA7ECA24B138250010FF91 /* pablq-appUITests */,
-				8F2986FC25854A4A00EEE688 /* team-widgetExtension */,
+				8F2986FC25854A4A00EEE688 /* pablq-app-widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -459,8 +459,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F29870525854A4A00EEE688 /* team_widget.swift in Sources */,
-				8F29870A25854A4F00EEE688 /* team_widget.intentdefinition in Sources */,
+				8F29870525854A4A00EEE688 /* pablqAppWidget.swift in Sources */,
+				8F29870A25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */,
 				8F27AC5A2585791500A1C3C3 /* HttpClient.swift in Sources */,
 				8F27AC4D258553C000A1C3C3 /* Game.swift in Sources */,
 			);
@@ -471,7 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F09984E24B2AF2900B10AB3 /* SheetHeaderView.swift in Sources */,
-				8F29870B25854A4F00EEE688 /* team_widget.intentdefinition in Sources */,
+				8F29870B25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */,
 				8FD828DE24B16CD8007D813A /* SportCell.swift in Sources */,
 				8F44190024B5842B0082F83C /* DismissSheetButton.swift in Sources */,
 				8F09985224B2B10600B10AB3 /* EmptyStateView.swift in Sources */,
@@ -511,7 +511,7 @@
 /* Begin PBXTargetDependency section */
 		8F29870D25854A4F00EEE688 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8F2986FC25854A4A00EEE688 /* team-widgetExtension */;
+			target = 8F2986FC25854A4A00EEE688 /* pablq-app-widgetExtension */;
 			targetProxy = 8F29870C25854A4F00EEE688 /* PBXContainerItemProxy */;
 		};
 		8FEA7EC224B138250010FF91 /* PBXTargetDependency */ = {
@@ -534,7 +534,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
-				INFOPLIST_FILE = "team-widget/Info.plist";
+				INFOPLIST_FILE = "pablq-app-widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,7 +556,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
-				INFOPLIST_FILE = "team-widget/Info.plist";
+				INFOPLIST_FILE = "pablq-app-widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -820,7 +820,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F29871225854A4F00EEE688 /* Build configuration list for PBXNativeTarget "team-widgetExtension" */ = {
+		8F29871225854A4F00EEE688 /* Build configuration list for PBXNativeTarget "pablq-app-widgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F29871025854A4F00EEE688 /* Debug */,

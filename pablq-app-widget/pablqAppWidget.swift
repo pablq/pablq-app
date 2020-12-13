@@ -1,5 +1,5 @@
 //
-//  team_widget.swift
+//  pablqAppWidget.swift
 //  team-widget
 //
 //  Created by Pablo Philipps on 12/12/20.
