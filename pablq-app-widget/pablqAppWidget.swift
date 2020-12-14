@@ -21,7 +21,8 @@ struct Provider: IntentTimelineProvider {
         return GameStatusEntry(
             date: Date(),
             games: [kExampleGame],
-            configuration: ConfigurationIntent()
+            configuration: ConfigurationIntent(),
+            sizeClass: context.family
         )
     }
 
@@ -30,14 +31,14 @@ struct Provider: IntentTimelineProvider {
         in context: Context,
         completion: @escaping (GameStatusEntry) -> ()
     ) {
-        
         guard let league = configuration.league?.lowercased(),
               let teamName = configuration.teamName,
               !context.isPreview else {
             let entry = GameStatusEntry(
                 date: Date(),
                 games: [kExampleGame],
-                configuration: configuration
+                configuration: configuration,
+                sizeClass: context.family
             )
             completion(entry)
             return
@@ -47,7 +48,8 @@ struct Provider: IntentTimelineProvider {
             let entry = GameStatusEntry(
                 date: Date(),
                 games: result ?? [],
-                configuration: configuration
+                configuration: configuration,
+                sizeClass: context.family
             )
             completion(entry)
         }
@@ -65,7 +67,8 @@ struct Provider: IntentTimelineProvider {
             let entry = Entry(
                 date: Date(),
                 games: [],
-                configuration: configuration
+                configuration: configuration,
+                sizeClass: context.family
             )
             completion(
                 Timeline(
@@ -92,9 +95,12 @@ struct Provider: IntentTimelineProvider {
                 nextRefresh = getDateAfter(minutes: 60)
             }
             
-            let entry = GameStatusEntry(date: Date(),
-                                        games: games,
-                                        configuration: configuration)
+            let entry = GameStatusEntry(
+                date: Date(),
+                games: games,
+                configuration: configuration,
+                sizeClass: context.family
+            )
             let timeline = Timeline(entries: [entry],
                                     policy: .after(nextRefresh))
             completion(timeline)
@@ -133,6 +139,13 @@ struct GameStatusEntry: TimelineEntry {
     let date: Date
     let games: [Game]
     let configuration: ConfigurationIntent
+    let sizeClass: WidgetFamily
+    
+    var mostRelevantGame: Game? {
+        return games.first { $0.isLive } ??
+            games.first { $0.isUpcoming } ??
+            games.first
+    }
     
     var deepLinkUrl: URL? {
         guard let league = configuration.league?.lowercased(),
@@ -154,19 +167,23 @@ struct GameStatusEntry: TimelineEntry {
 
 struct TeamWidgetEntryView : View {
     
-    var entry: Provider.Entry
+    let entry: Provider.Entry
 
     var body: some View {
         ZStack {
-            if let game = entry.games.first {
+            if let game = entry.mostRelevantGame {
                 game.isLive ? Color("accent-ongoing") : Color("background")
                 VStack {
                     Spacer()
                     Text(game.headline)
                         .font(.headline)
-                    if (!game.description.isEmpty) {
+                        .lineLimit(3)
+                        .minimumScaleFactor(0.5)
+                    if (!game.description.isEmpty && entry.sizeClass == .systemMedium) {
                         Text(game.description)
                             .font(.body)
+                            .lineLimit(2)
+                            .minimumScaleFactor(0.5)
                     }
                     Spacer()
                     WidgetFooterView(
@@ -285,7 +302,8 @@ struct TeamWidget_Previews: PreviewProvider {
                 GameStatusEntry(
                     date: Date(),
                     games: [],
-                    configuration: ConfigurationIntent()
+                    configuration: ConfigurationIntent(),
+                    sizeClass: .systemSmall
                 )
         )
         .previewContext(WidgetPreviewContext(family: .systemSmall))
