@@ -106,6 +106,7 @@
 		8F41F3AD25BCC54B00AD50FA /* WidgetTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTimelineProvider.swift; sourceTree = "<group>"; };
 		8F41F3C725BCC74200AD50FA /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		8F41F3CD25BCC77300AD50FA /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
+		8F41F3F925BCDD5000AD50FA /* pablq-app-widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pablq-app-widgetExtension.entitlements"; sourceTree = "<group>"; };
 		8F4418F624B552C30082F83C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8F4418FA24B552DA0082F83C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCellButtonStyle.swift; sourceTree = "<group>"; };
@@ -267,6 +268,7 @@
 		8FEA7EA624B138230010FF91 = {
 			isa = PBXGroup;
 			children = (
+				8F41F3F925BCDD5000AD50FA /* pablq-app-widgetExtension.entitlements */,
 				8FEA7EB124B138230010FF91 /* pablq-app */,
 				8FEA7EC324B138250010FF91 /* pablq-appTests */,
 				8FEA7ECE24B138250010FF91 /* pablq-appUITests */,
@@ -588,6 +590,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "pablq-app-widgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
 				INFOPLIST_FILE = "pablq-app-widget/Info.plist";
@@ -597,7 +600,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-app.widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablq.PablqApp.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -610,6 +613,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "pablq-app-widgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
 				INFOPLIST_FILE = "pablq-app-widget/Info.plist";
@@ -619,7 +623,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-app.widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablq.PablqApp.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -749,6 +753,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"pablq-app/Preview Content\"";
 				DEVELOPMENT_TEAM = QVTTLF22GX;
@@ -759,8 +764,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablq.PablqApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -772,6 +778,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"pablq-app/Preview Content\"";
 				DEVELOPMENT_TEAM = QVTTLF22GX;
@@ -782,8 +789,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablq.PablqApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
