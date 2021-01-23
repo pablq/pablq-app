@@ -7,55 +7,84 @@
 
 import Foundation
 
-import UIKit
-
-class AppAppearance {
-    init() {
-        UITableView.appearance().backgroundColor = UIColor.clear
-    }
-}
-
 class AppState: ObservableObject {
-    let allSports: [Sport] = [
-        Sport(league: "mlb", imageName: "baseball"),
-        Sport(league: "nhl", imageName: "hockey puck"),
-        Sport(league: "nfl", imageName: "football"),
-        Sport(league: "nba", imageName: "basketball")
-    ]
+    let allLeagues = League.allCases
     
-    @Published var selectedSport: Sport? = nil
+    @Published fileprivate(set) var selectedLeague: League? = nil
     
-    @Published var games: [Game] = []
+    @Published fileprivate(set) var games: [Game] = []
     
-    @Published var isLoading: Bool = false
+    @Published fileprivate(set) var isLoading: Bool = false
     
-    @Published private(set) var teamName: String? = "chicago"
+    @Published fileprivate(set) var teamName: String? = "chicago"
+    
+    /// Do not set directly, always use `dispatch` to update state.
+    @Published var isGamesListPresented: Bool = false
+    
+    func dispatch(action: AppAction) {
+        switch action {
+        case .appBecameActive:
+            wakeup()
+        case .appLaunchedWithDeepLink(let url):
+            handleAppLaunchedWithDeepLink(url: url)
+        case .gamesListAppeared:
+            loadGames()
+        case .userSelectedLeague(let league):
+            selectedLeague = league
+            isGamesListPresented = true
+        case .userDismissedLeague:
+            selectedLeague = nil
+            isGamesListPresented = false
+        }
+    }
     
     private let httpClient = HttpClient()
     
-    private let appAppearance = AppAppearance()
+    private func wakeup() {
+        httpClient.pingServer()
+    }
     
-    func loadGames() {
-        guard let league = selectedSport?.league else { return }
+    private func handleAppLaunchedWithDeepLink(url: URL) {
+        if let components = URLComponents(url: url, resolvingAgainstBaseURL: true) {
+            if components.scheme == "pablq-widget" && components.host == "com.pablq.pablq-app.widget" {
+                teamName = components.queryItems?.first { $0.name == "team-name" }?.value
+                if let leagueString = components.queryItems?.first(where: { $0.name == "league"  })?.value,
+                   let league = League(rawValue: leagueString) {
+                    selectedLeague = league
+                    if !isGamesListPresented {
+                        isGamesListPresented = true
+                    } else {
+                        loadGames()
+                    }
+                }
+            }
+        }
+    }
+    
+    private func loadGames() {
+        guard let league = selectedLeague else { return }
         isLoading = true
-        httpClient.getGames(league: league) { [unowned self] in
+        httpClient.getGames(league: league.rawValue) { [unowned self] in
             isLoading = false
             games = $0 ?? []
         }
     }
-    
-    func wakeup() {
-        httpClient.wakeup()
+}
+
+class TestAppState: AppState {
+    func setSelectedSport(_ league: League?) {
+        self.selectedLeague = league
     }
     
-    func processDeepLink(url: URL) {
-        if let components = URLComponents(url: url, resolvingAgainstBaseURL: true) {
-            if components.scheme == "pablq-widget" && components.host == "com.pablq.pablq-app.widget" {
-                teamName = components.queryItems?.first { $0.name == "team-name" }?.value
-                if let league = components.queryItems?.first(where: { $0.name == "league" })?.value {
-                    selectedSport = allSports.first { $0.league == league }
-                }
-            }
-        }
+    func setGames(_ games: [Game]) {
+        self.games = games
+    }
+    
+    func setIsLoading(_ isLoading: Bool) {
+        self.isLoading = isLoading
+    }
+    
+    func setTeamName(_ teamName: String?) {
+        self.teamName = teamName
     }
 }

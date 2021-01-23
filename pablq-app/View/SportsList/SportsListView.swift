@@ -25,10 +25,10 @@ struct SportsListView: View {
                 )
                 .listRowBackground(Color("background-neutral"))
                 
-                ForEach(appState.allSports) { sport in
+                ForEach(appState.allLeagues) { sport in
                     SportCell(
-                        sport: sport,
-                        action: { appState.selectedSport = sport }
+                        league: sport,
+                        action: { appState.dispatch(action: .userSelectedLeague(sport)) }
                     )
                     .listRowBackground(Color("background-neutral"))
                     .padding([.leading, .trailing], 15.0)
@@ -42,7 +42,7 @@ struct SportsListView: View {
             }
             .foregroundColor(.white)
         }
-        .sheet(item: $appState.selectedSport) { _ in
+        .sheet(isPresented: $appState.isGamesListPresented) {
             GamesListView(appState: appState)
         }
     }

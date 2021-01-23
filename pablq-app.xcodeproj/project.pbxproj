@@ -21,8 +21,16 @@
 		8F29870E25854A4F00EEE688 /* pablq-app-widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F2986FD25854A4A00EEE688 /* pablq-app-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8F2DC60D2585F5F700522FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2DC60C2585F5F700522FBE /* Assets.xcassets */; };
 		8F2DC6162585F66C00522FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB624B138240010FF91 /* Assets.xcassets */; };
+		8F41F37E25BCAEE600AD50FA /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F37D25BCAEE600AD50FA /* League.swift */; };
+		8F41F38B25BCC45300AD50FA /* GameStatusEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F38A25BCC45300AD50FA /* GameStatusEntry.swift */; };
+		8F41F39525BCC48F00AD50FA /* WidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F39425BCC48F00AD50FA /* WidgetEntryView.swift */; };
+		8F41F39B25BCC4B300AD50FA /* WidgetFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F39A25BCC4B300AD50FA /* WidgetFooterView.swift */; };
+		8F41F3A125BCC4E100AD50FA /* WidgetConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F3A025BCC4E100AD50FA /* WidgetConfigurationView.swift */; };
+		8F41F3A725BCC52400AD50FA /* WidgetLastUpdatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F3A625BCC52400AD50FA /* WidgetLastUpdatedView.swift */; };
+		8F41F3AE25BCC54B00AD50FA /* WidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F3AD25BCC54B00AD50FA /* WidgetTimelineProvider.swift */; };
+		8F41F3C825BCC74300AD50FA /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F3C725BCC74200AD50FA /* AppAction.swift */; };
+		8F41F3CE25BCC77300AD50FA /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F3CD25BCC77300AD50FA /* AppAppearance.swift */; };
 		8F4418F824B552C30082F83C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
-		8F4418F924B552C30082F83C /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F724B552C30082F83C /* Sport.swift */; };
 		8F4418FB24B552DA0082F83C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FA24B552DA0082F83C /* AppState.swift */; };
 		8F4418FE24B5711F0082F83C /* SportCellButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */; };
 		8F44190024B5842B0082F83C /* DismissSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FF24B5842B0082F83C /* DismissSheetButton.swift */; };
@@ -89,8 +97,16 @@
 		8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = pablqAppWidget.intentdefinition; sourceTree = "<group>"; };
 		8F29870925854A4F00EEE688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F2DC60C2585F5F700522FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F41F37D25BCAEE600AD50FA /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		8F41F38A25BCC45300AD50FA /* GameStatusEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatusEntry.swift; sourceTree = "<group>"; };
+		8F41F39425BCC48F00AD50FA /* WidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEntryView.swift; sourceTree = "<group>"; };
+		8F41F39A25BCC4B300AD50FA /* WidgetFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetFooterView.swift; sourceTree = "<group>"; };
+		8F41F3A025BCC4E100AD50FA /* WidgetConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetConfigurationView.swift; sourceTree = "<group>"; };
+		8F41F3A625BCC52400AD50FA /* WidgetLastUpdatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetLastUpdatedView.swift; sourceTree = "<group>"; };
+		8F41F3AD25BCC54B00AD50FA /* WidgetTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTimelineProvider.swift; sourceTree = "<group>"; };
+		8F41F3C725BCC74200AD50FA /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		8F41F3CD25BCC77300AD50FA /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		8F4418F624B552C30082F83C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		8F4418F724B552C30082F83C /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		8F4418FA24B552DA0082F83C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCellButtonStyle.swift; sourceTree = "<group>"; };
 		8F4418FF24B5842B0082F83C /* DismissSheetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissSheetButton.swift; sourceTree = "<group>"; };
@@ -159,6 +175,9 @@
 		8F29870325854A4A00EEE688 /* pablq-app-widget */ = {
 			isa = PBXGroup;
 			children = (
+				8F41F3AC25BCC53A00AD50FA /* Timeline */,
+				8F41F38925BCC2FA00AD50FA /* Model */,
+				8F41F38825BCC2F300AD50FA /* View */,
 				8F29870425854A4A00EEE688 /* pablqAppWidget.swift */,
 				8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */,
 				8F29870925854A4F00EEE688 /* Info.plist */,
@@ -167,11 +186,38 @@
 			path = "pablq-app-widget";
 			sourceTree = "<group>";
 		};
+		8F41F38825BCC2F300AD50FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F41F39425BCC48F00AD50FA /* WidgetEntryView.swift */,
+				8F41F39A25BCC4B300AD50FA /* WidgetFooterView.swift */,
+				8F41F3A025BCC4E100AD50FA /* WidgetConfigurationView.swift */,
+				8F41F3A625BCC52400AD50FA /* WidgetLastUpdatedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F41F38925BCC2FA00AD50FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F41F38A25BCC45300AD50FA /* GameStatusEntry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F41F3AC25BCC53A00AD50FA /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				8F41F3AD25BCC54B00AD50FA /* WidgetTimelineProvider.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
 		8F4418F524B552C30082F83C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8F4418F624B552C30082F83C /* Game.swift */,
-				8F4418F724B552C30082F83C /* Sport.swift */,
+				8F41F37D25BCAEE600AD50FA /* League.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				8F4418FA24B552DA0082F83C /* AppState.swift */,
+				8F41F3C725BCC74200AD50FA /* AppAction.swift */,
+				8F41F3CD25BCC77300AD50FA /* AppAppearance.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -459,10 +507,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F41F39525BCC48F00AD50FA /* WidgetEntryView.swift in Sources */,
 				8F29870525854A4A00EEE688 /* pablqAppWidget.swift in Sources */,
+				8F41F38B25BCC45300AD50FA /* GameStatusEntry.swift in Sources */,
 				8F29870A25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */,
 				8F27AC5A2585791500A1C3C3 /* HttpClient.swift in Sources */,
+				8F41F39B25BCC4B300AD50FA /* WidgetFooterView.swift in Sources */,
+				8F41F3A725BCC52400AD50FA /* WidgetLastUpdatedView.swift in Sources */,
 				8F27AC4D258553C000A1C3C3 /* Game.swift in Sources */,
+				8F41F3AE25BCC54B00AD50FA /* WidgetTimelineProvider.swift in Sources */,
+				8F41F3A125BCC4E100AD50FA /* WidgetConfigurationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F09984E24B2AF2900B10AB3 /* SheetHeaderView.swift in Sources */,
+				8F41F3CE25BCC77300AD50FA /* AppAppearance.swift in Sources */,
 				8F29870B25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */,
 				8FD828DE24B16CD8007D813A /* SportCell.swift in Sources */,
 				8F44190024B5842B0082F83C /* DismissSheetButton.swift in Sources */,
@@ -480,12 +535,13 @@
 				8FB59AC324B29C3900ECA2B5 /* HttpClient.swift in Sources */,
 				8FEA7EE024B159340010FF91 /* GamesListView.swift in Sources */,
 				8F4418F824B552C30082F83C /* Game.swift in Sources */,
+				8F41F37E25BCAEE600AD50FA /* League.swift in Sources */,
 				8FEA7EB524B138230010FF91 /* SportsListView.swift in Sources */,
 				8F09984C24B2AEF400B10AB3 /* TitleView.swift in Sources */,
+				8F41F3C825BCC74300AD50FA /* AppAction.swift in Sources */,
 				8FEA7EB324B138230010FF91 /* pablq_appApp.swift in Sources */,
 				8F4418FE24B5711F0082F83C /* SportCellButtonStyle.swift in Sources */,
 				8F4418FB24B552DA0082F83C /* AppState.swift in Sources */,
-				8F4418F924B552C30082F83C /* Sport.swift in Sources */,
 				8FD828DC24B16B6E007D813A /* GameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

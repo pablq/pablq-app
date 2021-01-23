@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct SportCell: View {
-    let sport: Sport
+    let league: League
     let action: () -> Void
     
     var body: some View {
         Button(action: action) {
             HStack {
                 Spacer()
-                Image(sport.imageName)
+                Image(league.imageName)
                     .renderingMode(.template)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -28,11 +28,9 @@ struct SportCell: View {
 }
 
 struct SportCell_Previews: PreviewProvider {
-    static let testSport = Sport(league: "mlb", imageName: "baseball")
-    
     static var previews: some View {
         Group {
-            SportCell(sport: testSport, action: {})
+            SportCell(league: .mlb, action: {})
         }
     }
 }

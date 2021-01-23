@@ -32,7 +32,7 @@ struct SportCellButtonStyle: ButtonStyle {
 struct SportCellButtonStyle_Previews: PreviewProvider {
     static var previews: some View {
         Button(action: {}) {
-            Image("baseball")
+            Image(League.mlb.imageName)
         }
         .buttonStyle(SportCellButtonStyle())
     }

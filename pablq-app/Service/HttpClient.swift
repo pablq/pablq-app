@@ -8,9 +8,13 @@
 import Foundation
 
 class HttpClient {
-    private let urlSession = URLSession.shared
+    private let urlSession: URLSession
     private let kScheme = "http"
     private let kHost = "www.pablq.website"
+    
+    init(urlSession: URLSession = URLSession.shared) {
+        self.urlSession = urlSession
+    }
 
     func getGames(league: String, callback: @escaping ([Game]?) -> Void) {
         var urlComponents = URLComponents()
@@ -41,7 +45,7 @@ class HttpClient {
         getGames(league: league, callback: internalCallback)
     }
     
-    func wakeup() {
+    func pingServer() {
         var urlComponents = URLComponents()
         urlComponents.scheme = kScheme
         urlComponents.host = kHost

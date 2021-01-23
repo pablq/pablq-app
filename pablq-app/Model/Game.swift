@@ -8,7 +8,7 @@
 import Foundation
 
 struct Game: Identifiable, Decodable {
-    let id: UUID
+    let id = UUID()
     let headline: String
     private let link: String
     private let lines: [String]
@@ -18,7 +18,7 @@ struct Game: Identifiable, Decodable {
     }
     
     var isUpcoming: Bool {
-        return headline.lowercased().contains("et)")
+        return headline.lowercased().contains("et)") || headline.lowercased().contains("(delayed)")
     }
     
     var isOver: Bool {
@@ -31,15 +31,6 @@ struct Game: Identifiable, Decodable {
     
     var url: URL? {
         return URL(string: link)
-    }
-    
-    init(from decoder: Decoder) throws {
-        id = UUID()
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        headline = try values.decode(String.self, forKey: .headline)
-        link = try values.decode(String.self, forKey: .link)
-        let lineCount = try values.decode(Int.self, forKey: .lineCount)
-        lines = try CodingKeys.lines(lineCount: lineCount).map { try values.decode(String.self, forKey: $0)}
     }
     
     struct CodingKeys: CodingKey {
@@ -63,9 +54,16 @@ struct Game: Identifiable, Decodable {
         }
     }
     
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        headline = try values.decode(String.self, forKey: .headline)
+        link = try values.decode(String.self, forKey: .link)
+        let lineCount = try values.decode(Int.self, forKey: .lineCount)
+        lines = try CodingKeys.lines(lineCount: lineCount).map { try values.decode(String.self, forKey: $0)}
+    }
+    
     /// Convenience initializer for test data
     init(headline: String, link: String, lines: [String]) {
-        id = UUID()
         self.headline = headline
         self.link = link
         self.lines = lines

@@ -15,8 +15,8 @@ struct GamesListView: View {
         ZStack {
             Color("background").edgesIgnoringSafeArea(.all)
             VStack {
-                SheetHeaderView(title: appState.selectedSport?.league.uppercased()) {
-                    appState.selectedSport = nil
+                SheetHeaderView(title: appState.selectedLeague?.rawValue.uppercased()) {
+                    appState.dispatch(action: .userDismissedLeague)
                 }
                 Spacer()
                 Group {
@@ -52,7 +52,7 @@ struct GamesListView: View {
             }
             .foregroundColor(.white)
         }
-        .onAppear { appState.loadGames() }
+        .onAppear { appState.dispatch(action: .gamesListAppeared) }
     }
     
     private func isFavorite(game: Game) -> Bool {
@@ -96,9 +96,9 @@ struct GamesListView_Previews: PreviewProvider {
             ]
         }
         
-        let appState = AppState()
-        appState.games = games
-        appState.isLoading = isLoading
+        let appState = TestAppState()
+        appState.setGames(games)
+        appState.setIsLoading(isLoading)
         return appState
     }
     
