@@ -30,8 +30,8 @@ struct WidgetTimelineProvider: IntentTimelineProvider {
         in context: Context,
         completion: @escaping (GameStatusEntry) -> ()
     ) {
-        guard let league = configuration.league?.lowercased(),
-              let teamName = configuration.teamName,
+        guard let league = configuration.leagueStringValue,
+              let teamName = configuration.teamStringValue,
               !context.isPreview else {
             let entry = GameStatusEntry(
                 date: Date(),
@@ -61,8 +61,8 @@ struct WidgetTimelineProvider: IntentTimelineProvider {
         in context: Context,
         completion: @escaping (Timeline<GameStatusEntry>) -> ()
     ) {
-        guard let league = configuration.league?.lowercased(),
-              let teamName = configuration.teamName else {
+        guard let league = configuration.leagueStringValue,
+              let teamName = configuration.teamStringValue else {
             let entry = Entry(
                 date: Date(),
                 games: [],
@@ -77,6 +77,7 @@ struct WidgetTimelineProvider: IntentTimelineProvider {
             )
             return
         }
+        
         HttpClient().getGames(league: league, teamName: teamName) { result in
             let games = result ?? []
             let nextRefresh: Date

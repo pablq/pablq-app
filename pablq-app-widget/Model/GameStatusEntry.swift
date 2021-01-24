@@ -20,8 +20,8 @@ struct GameStatusEntry: TimelineEntry {
     }
     
     var deepLinkUrl: URL? {
-        guard let league = configuration.league?.lowercased(),
-              let teamName = configuration.teamName else {
+        guard let league = configuration.leagueStringValue,
+              let teamName = configuration.teamStringValue else {
             return nil
         }
         

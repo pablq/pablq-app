@@ -30,6 +30,13 @@
 		8F41F3AE25BCC54B00AD50FA /* WidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F3AD25BCC54B00AD50FA /* WidgetTimelineProvider.swift */; };
 		8F41F3C825BCC74300AD50FA /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F3C725BCC74200AD50FA /* AppAction.swift */; };
 		8F41F3CE25BCC77300AD50FA /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F3CD25BCC77300AD50FA /* AppAppearance.swift */; };
+		8F41F42325BD16A600AD50FA /* ConfigNBATeam+StringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F42225BD16A600AD50FA /* ConfigNBATeam+StringValue.swift */; };
+		8F41F42825BD170C00AD50FA /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F37D25BCAEE600AD50FA /* League.swift */; };
+		8F41F42E25BD1CF000AD50FA /* ConfigLeague+League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F42D25BD1CF000AD50FA /* ConfigLeague+League.swift */; };
+		8F41F43825BD1D2600AD50FA /* ConfigNFLTeam+StringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F43725BD1D2600AD50FA /* ConfigNFLTeam+StringValue.swift */; };
+		8F41F43E25BD1D5000AD50FA /* ConfigMLBTeam+StringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F43D25BD1D5000AD50FA /* ConfigMLBTeam+StringValue.swift */; };
+		8F41F44425BD1D7900AD50FA /* ConfigNHLTeam+StringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F44325BD1D7900AD50FA /* ConfigNHLTeam+StringValue.swift */; };
+		8F41F46125BD1E3400AD50FA /* ConfigurationIntent+StringValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F46025BD1E3400AD50FA /* ConfigurationIntent+StringValues.swift */; };
 		8F4418F824B552C30082F83C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
 		8F4418FB24B552DA0082F83C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FA24B552DA0082F83C /* AppState.swift */; };
 		8F4418FE24B5711F0082F83C /* SportCellButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */; };
@@ -107,6 +114,12 @@
 		8F41F3C725BCC74200AD50FA /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		8F41F3CD25BCC77300AD50FA /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		8F41F3F925BCDD5000AD50FA /* pablq-app-widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pablq-app-widgetExtension.entitlements"; sourceTree = "<group>"; };
+		8F41F42225BD16A600AD50FA /* ConfigNBATeam+StringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNBATeam+StringValue.swift"; sourceTree = "<group>"; };
+		8F41F42D25BD1CF000AD50FA /* ConfigLeague+League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigLeague+League.swift"; sourceTree = "<group>"; };
+		8F41F43725BD1D2600AD50FA /* ConfigNFLTeam+StringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNFLTeam+StringValue.swift"; sourceTree = "<group>"; };
+		8F41F43D25BD1D5000AD50FA /* ConfigMLBTeam+StringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigMLBTeam+StringValue.swift"; sourceTree = "<group>"; };
+		8F41F44325BD1D7900AD50FA /* ConfigNHLTeam+StringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNHLTeam+StringValue.swift"; sourceTree = "<group>"; };
+		8F41F46025BD1E3400AD50FA /* ConfigurationIntent+StringValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigurationIntent+StringValues.swift"; sourceTree = "<group>"; };
 		8F4418F624B552C30082F83C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8F4418FA24B552DA0082F83C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCellButtonStyle.swift; sourceTree = "<group>"; };
@@ -176,11 +189,11 @@
 		8F29870325854A4A00EEE688 /* pablq-app-widget */ = {
 			isa = PBXGroup;
 			children = (
+				8F41F44E25BD1DD300AD50FA /* Config */,
 				8F41F3AC25BCC53A00AD50FA /* Timeline */,
 				8F41F38925BCC2FA00AD50FA /* Model */,
 				8F41F38825BCC2F300AD50FA /* View */,
 				8F29870425854A4A00EEE688 /* pablqAppWidget.swift */,
-				8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */,
 				8F29870925854A4F00EEE688 /* Info.plist */,
 				8F2DC60C2585F5F700522FBE /* Assets.xcassets */,
 			);
@@ -212,6 +225,20 @@
 				8F41F3AD25BCC54B00AD50FA /* WidgetTimelineProvider.swift */,
 			);
 			path = Timeline;
+			sourceTree = "<group>";
+		};
+		8F41F44E25BD1DD300AD50FA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8F41F42D25BD1CF000AD50FA /* ConfigLeague+League.swift */,
+				8F41F43D25BD1D5000AD50FA /* ConfigMLBTeam+StringValue.swift */,
+				8F41F43725BD1D2600AD50FA /* ConfigNFLTeam+StringValue.swift */,
+				8F41F44325BD1D7900AD50FA /* ConfigNHLTeam+StringValue.swift */,
+				8F41F42225BD16A600AD50FA /* ConfigNBATeam+StringValue.swift */,
+				8F41F46025BD1E3400AD50FA /* ConfigurationIntent+StringValues.swift */,
+				8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		8F4418F524B552C30082F83C /* Model */ = {
@@ -513,11 +540,18 @@
 				8F29870525854A4A00EEE688 /* pablqAppWidget.swift in Sources */,
 				8F41F38B25BCC45300AD50FA /* GameStatusEntry.swift in Sources */,
 				8F29870A25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */,
+				8F41F43825BD1D2600AD50FA /* ConfigNFLTeam+StringValue.swift in Sources */,
+				8F41F43E25BD1D5000AD50FA /* ConfigMLBTeam+StringValue.swift in Sources */,
 				8F27AC5A2585791500A1C3C3 /* HttpClient.swift in Sources */,
 				8F41F39B25BCC4B300AD50FA /* WidgetFooterView.swift in Sources */,
+				8F41F44425BD1D7900AD50FA /* ConfigNHLTeam+StringValue.swift in Sources */,
 				8F41F3A725BCC52400AD50FA /* WidgetLastUpdatedView.swift in Sources */,
+				8F41F42325BD16A600AD50FA /* ConfigNBATeam+StringValue.swift in Sources */,
 				8F27AC4D258553C000A1C3C3 /* Game.swift in Sources */,
+				8F41F46125BD1E3400AD50FA /* ConfigurationIntent+StringValues.swift in Sources */,
 				8F41F3AE25BCC54B00AD50FA /* WidgetTimelineProvider.swift in Sources */,
+				8F41F42E25BD1CF000AD50FA /* ConfigLeague+League.swift in Sources */,
+				8F41F42825BD170C00AD50FA /* League.swift in Sources */,
 				8F41F3A125BCC4E100AD50FA /* WidgetConfigurationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

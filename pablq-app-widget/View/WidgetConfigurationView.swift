@@ -12,9 +12,9 @@ struct WidgetConfigurationDetailsView: View {
     let configuration: ConfigurationIntent
     
     var body: some View {
-        if let league = configuration.league,
-           let teamName = configuration.teamName {
-            Text("\(league.uppercased()) - \(teamName)")
+        if let league = configuration.userFacingLeagueName,
+           let teamName = configuration.userFacingTeamName {
+            Text("\(league) - \(teamName)")
                 .font(.footnote)
         } else {
             Text(
