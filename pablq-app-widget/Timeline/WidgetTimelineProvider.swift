@@ -54,8 +54,6 @@ struct WidgetTimelineProvider: IntentTimelineProvider {
         }
     }
     
-    private let kNfl = "nfl"
-    
     func getTimeline(
         for configuration: ConfigurationIntent,
         in context: Context,
@@ -72,24 +70,31 @@ struct WidgetTimelineProvider: IntentTimelineProvider {
             completion(
                 Timeline(
                     entries: [entry],
-                    policy: .after(getNext11amChicagoTime())
+                    policy: .after(getNextDefaultUpdate())
                 )
             )
             return
         }
         
         HttpClient().getGames(league: league, teamName: teamName) { result in
-            let games = result ?? []
+            guard let games = result else {
+                let tryAgainTimeline = Timeline(
+                    entries: [] as [GameStatusEntry],
+                    policy: .after(getDateAfter(minutes: 60))
+                )
+                completion(tryAgainTimeline)
+                return
+            }
             let nextRefresh: Date
             if (games.isEmpty || games.allSatisfy { $0.isOver }) {
-                nextRefresh = getNext11amChicagoTime()
+                nextRefresh = getNextDefaultUpdate()
             } else if (games.contains { $0.isLive }) {
                 nextRefresh = getDateAfter(minutes: 7)
-            } else if league == kNfl {
+            } else if configuration.league == .nfl {
                 if isNflGameday() {
                     nextRefresh = getDateAfter(minutes: 60)
                 } else {
-                    nextRefresh = getNext11amChicagoTime()
+                    nextRefresh = getNextDefaultUpdate()
                 }
             } else {
                 nextRefresh = getDateAfter(minutes: 60)
@@ -101,8 +106,10 @@ struct WidgetTimelineProvider: IntentTimelineProvider {
                 configuration: configuration,
                 sizeClass: context.family
             )
-            let timeline = Timeline(entries: [entry],
-                                    policy: .after(nextRefresh))
+            let timeline = Timeline(
+                entries: [entry],
+                policy: .after(nextRefresh)
+            )
             completion(timeline)
         }
     }
@@ -111,23 +118,30 @@ struct WidgetTimelineProvider: IntentTimelineProvider {
         return Date().addingTimeInterval(60 * Double(minutes))
     }
     
-    private let kCalendar = Calendar(identifier: .gregorian)
-    private let kChicagoStandardTime = TimeZone(abbreviation: "CST")!
+    private static let kCalendar = Calendar(identifier: .gregorian)
+    private static let kChicagoStandardTime = TimeZone(abbreviation: "CST")!
     
-    private func getNext11amChicagoTime() -> Date {
+    private func getNextDefaultUpdate(
+        calendar: Calendar = kCalendar,
+        timeZone: TimeZone = kChicagoStandardTime,
+        hourOfFirstUpdate: Int = 11
+    ) -> Date {
         let now = Date()
-        let dateComponents = kCalendar.dateComponents(in: kChicagoStandardTime, from: now)
-        if dateComponents.hour ?? 0 < 11 {
-            return kCalendar.date(bySettingHour: 11, minute: 0, second: 0, of: now)!
+        let dateComponents = calendar.dateComponents(in: timeZone, from: now)
+        if dateComponents.hour ?? 0 < hourOfFirstUpdate {
+            return calendar.date(bySettingHour: hourOfFirstUpdate, minute: 0, second: 0, of: now)!
         } else {
-            let todayAt11 = kCalendar.date(bySettingHour: 11, minute: 0, second: 0, of: now)!
-            return kCalendar.date(byAdding: .day, value: 1, to: todayAt11)!
+            let todayAtHour = calendar.date(bySettingHour: hourOfFirstUpdate, minute: 0, second: 0, of: now)!
+            return calendar.date(byAdding: .day, value: 1, to: todayAtHour)!
         }
     }
     
-    private func isNflGameday() -> Bool {
+    private func isNflGameday(
+        calendar: Calendar = kCalendar,
+        timeZone: TimeZone = kChicagoStandardTime
+    ) -> Bool {
         let now = Date()
-        let dateComponents = kCalendar.dateComponents(in: kChicagoStandardTime, from: now)
+        let dateComponents = calendar.dateComponents(in: timeZone, from: now)
         guard let dayOfWeek = dateComponents.weekday else {
             return false
         }

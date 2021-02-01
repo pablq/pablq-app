@@ -22,7 +22,7 @@ struct Game: Identifiable, Decodable {
     }
     
     var isOver: Bool {
-        return headline.lowercased().contains("(final)")
+        return headline.lowercased().contains("(final")
     }
     
     var description: String {

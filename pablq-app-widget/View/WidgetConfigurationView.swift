@@ -24,7 +24,7 @@ struct WidgetConfigurationDetailsView: View {
                     comment: "Shown when widget is not configured."
                 )
             )
-            .font(.title)
+            .font(.footnote)
         }
     }
 }
