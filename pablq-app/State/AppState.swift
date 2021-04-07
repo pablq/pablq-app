@@ -24,7 +24,7 @@ class AppState: ObservableObject {
     func dispatch(action: AppAction) {
         switch action {
         case .appBecameActive:
-            wakeup()
+            break
         case .appLaunchedWithDeepLink(let url):
             handleAppLaunchedWithDeepLink(url: url)
         case .gamesListAppeared:
@@ -38,11 +38,11 @@ class AppState: ObservableObject {
         }
     }
     
-    private let httpClient = HttpClient()
-    
-    private func wakeup() {
-        httpClient.pingServer()
+    init(httpClient: HttpClient = HttpClient()) {
+        self.httpClient = httpClient
     }
+    
+    private let httpClient: HttpClient
     
     private func handleAppLaunchedWithDeepLink(url: URL) {
         if let components = URLComponents(url: url, resolvingAgainstBaseURL: true) {

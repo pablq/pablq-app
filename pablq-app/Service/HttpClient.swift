@@ -9,8 +9,8 @@ import Foundation
 
 class HttpClient {
     private let urlSession: URLSession
-    private let kScheme = "http"
-    private let kHost = "www.pablq.website"
+    private let kScheme = "https"
+    private let kHost = "pablq.website"
     
     init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
