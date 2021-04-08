@@ -15,10 +15,10 @@
 		8F27AC5A2585791500A1C3C3 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */; };
 		8F29870025854A4A00EEE688 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2986FF25854A4A00EEE688 /* WidgetKit.framework */; };
 		8F29870225854A4A00EEE688 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F29870125854A4A00EEE688 /* SwiftUI.framework */; };
-		8F29870525854A4A00EEE688 /* pablqAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870425854A4A00EEE688 /* pablqAppWidget.swift */; };
-		8F29870A25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */; };
-		8F29870B25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */; };
-		8F29870E25854A4F00EEE688 /* pablq-app-widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F2986FD25854A4A00EEE688 /* pablq-app-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8F29870525854A4A00EEE688 /* LatestScoresWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870425854A4A00EEE688 /* LatestScoresWidget.swift */; };
+		8F29870A25854A4F00EEE688 /* LatestScoresWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* LatestScoresWidget.intentdefinition */; };
+		8F29870B25854A4F00EEE688 /* LatestScoresWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 8F29870625854A4A00EEE688 /* LatestScoresWidget.intentdefinition */; };
+		8F29870E25854A4F00EEE688 /* LatestScoresWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F2986FD25854A4A00EEE688 /* LatestScoresWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8F2DC60D2585F5F700522FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2DC60C2585F5F700522FBE /* Assets.xcassets */; };
 		8F2DC6162585F66C00522FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB624B138240010FF91 /* Assets.xcassets */; };
 		8F41F37E25BCAEE600AD50FA /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F37D25BCAEE600AD50FA /* League.swift */; };
@@ -46,11 +46,11 @@
 		8FB7729F24BFED0D002B8CD4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB7729E24BFED0D002B8CD4 /* FooterView.swift */; };
 		8FD828DC24B16B6E007D813A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828DB24B16B6E007D813A /* GameCell.swift */; };
 		8FD828DE24B16CD8007D813A /* SportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828DD24B16CD8007D813A /* SportCell.swift */; };
-		8FEA7EB324B138230010FF91 /* pablq_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB224B138230010FF91 /* pablq_appApp.swift */; };
+		8FEA7EB324B138230010FF91 /* LatestScoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB224B138230010FF91 /* LatestScoresApp.swift */; };
 		8FEA7EB524B138230010FF91 /* SportsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB424B138230010FF91 /* SportsListView.swift */; };
 		8FEA7EB724B138240010FF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB624B138240010FF91 /* Assets.xcassets */; };
 		8FEA7EBA24B138240010FF91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB924B138240010FF91 /* Preview Assets.xcassets */; };
-		8FEA7ED024B138250010FF91 /* pablq_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7ECF24B138250010FF91 /* pablq_appUITests.swift */; };
+		8FEA7ED024B138250010FF91 /* LatestScoresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7ECF24B138250010FF91 /* LatestScoresUITests.swift */; };
 		8FEA7EE024B159340010FF91 /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EDF24B159340010FF91 /* GamesListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +85,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8F29870E25854A4F00EEE688 /* pablq-app-widgetExtension.appex in Embed App Extensions */,
+				8F29870E25854A4F00EEE688 /* LatestScoresWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,11 +97,11 @@
 		8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetHeaderView.swift; sourceTree = "<group>"; };
 		8F09984F24B2B0A700B10AB3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8F09985124B2B10600B10AB3 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
-		8F2986FD25854A4A00EEE688 /* pablq-app-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "pablq-app-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F2986FD25854A4A00EEE688 /* LatestScoresWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LatestScoresWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2986FF25854A4A00EEE688 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		8F29870125854A4A00EEE688 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		8F29870425854A4A00EEE688 /* pablqAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pablqAppWidget.swift; sourceTree = "<group>"; };
-		8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = pablqAppWidget.intentdefinition; sourceTree = "<group>"; };
+		8F29870425854A4A00EEE688 /* LatestScoresWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestScoresWidget.swift; sourceTree = "<group>"; };
+		8F29870625854A4A00EEE688 /* LatestScoresWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LatestScoresWidget.intentdefinition; sourceTree = "<group>"; };
 		8F29870925854A4F00EEE688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F2DC60C2585F5F700522FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F41F37D25BCAEE600AD50FA /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		8F41F3AD25BCC54B00AD50FA /* WidgetTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTimelineProvider.swift; sourceTree = "<group>"; };
 		8F41F3C725BCC74200AD50FA /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		8F41F3CD25BCC77300AD50FA /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
-		8F41F3F925BCDD5000AD50FA /* pablq-app-widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "pablq-app-widgetExtension.entitlements"; sourceTree = "<group>"; };
+		8F41F3F925BCDD5000AD50FA /* LatestScoresWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LatestScoresWidgetExtension.entitlements; sourceTree = "<group>"; };
 		8F41F42225BD16A600AD50FA /* ConfigNBATeam+StringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNBATeam+StringValue.swift"; sourceTree = "<group>"; };
 		8F41F42D25BD1CF000AD50FA /* ConfigLeague+League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigLeague+League.swift"; sourceTree = "<group>"; };
 		8F41F43725BD1D2600AD50FA /* ConfigNFLTeam+StringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNFLTeam+StringValue.swift"; sourceTree = "<group>"; };
@@ -129,16 +129,16 @@
 		8FB7729E24BFED0D002B8CD4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		8FD828DB24B16B6E007D813A /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		8FD828DD24B16CD8007D813A /* SportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCell.swift; sourceTree = "<group>"; };
-		8FEA7EAF24B138230010FF91 /* pablq-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pablq-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FEA7EB224B138230010FF91 /* pablq_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pablq_appApp.swift; sourceTree = "<group>"; };
+		8FEA7EAF24B138230010FF91 /* LatestScores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LatestScores.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FEA7EB224B138230010FF91 /* LatestScoresApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestScoresApp.swift; sourceTree = "<group>"; };
 		8FEA7EB424B138230010FF91 /* SportsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsListView.swift; sourceTree = "<group>"; };
 		8FEA7EB624B138240010FF91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FEA7EB924B138240010FF91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8FEA7EBB24B138240010FF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FEA7EC024B138250010FF91 /* pablq-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pablq-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FEA7EC024B138250010FF91 /* LatestScoresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LatestScoresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEA7EC624B138250010FF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FEA7ECB24B138250010FF91 /* pablq-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pablq-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FEA7ECF24B138250010FF91 /* pablq_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pablq_appUITests.swift; sourceTree = "<group>"; };
+		8FEA7ECB24B138250010FF91 /* LatestScoresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LatestScoresUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FEA7ECF24B138250010FF91 /* LatestScoresUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestScoresUITests.swift; sourceTree = "<group>"; };
 		8FEA7ED124B138250010FF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FEA7EDF24B159340010FF91 /* GamesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,18 +186,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8F29870325854A4A00EEE688 /* pablq-app-widget */ = {
+		8F29870325854A4A00EEE688 /* LatestScoresWidget */ = {
 			isa = PBXGroup;
 			children = (
 				8F41F44E25BD1DD300AD50FA /* Config */,
 				8F41F3AC25BCC53A00AD50FA /* Timeline */,
 				8F41F38925BCC2FA00AD50FA /* Model */,
 				8F41F38825BCC2F300AD50FA /* View */,
-				8F29870425854A4A00EEE688 /* pablqAppWidget.swift */,
+				8F29870425854A4A00EEE688 /* LatestScoresWidget.swift */,
 				8F29870925854A4F00EEE688 /* Info.plist */,
 				8F2DC60C2585F5F700522FBE /* Assets.xcassets */,
 			);
-			path = "pablq-app-widget";
+			path = LatestScoresWidget;
 			sourceTree = "<group>";
 		};
 		8F41F38825BCC2F300AD50FA /* View */ = {
@@ -236,7 +236,7 @@
 				8F41F44325BD1D7900AD50FA /* ConfigNHLTeam+StringValue.swift */,
 				8F41F42225BD16A600AD50FA /* ConfigNBATeam+StringValue.swift */,
 				8F41F46025BD1E3400AD50FA /* ConfigurationIntent+StringValues.swift */,
-				8F29870625854A4A00EEE688 /* pablqAppWidget.intentdefinition */,
+				8F29870625854A4A00EEE688 /* LatestScoresWidget.intentdefinition */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -295,11 +295,11 @@
 		8FEA7EA624B138230010FF91 = {
 			isa = PBXGroup;
 			children = (
-				8F41F3F925BCDD5000AD50FA /* pablq-app-widgetExtension.entitlements */,
-				8FEA7EB124B138230010FF91 /* pablq-app */,
-				8FEA7EC324B138250010FF91 /* pablq-appTests */,
-				8FEA7ECE24B138250010FF91 /* pablq-appUITests */,
-				8F29870325854A4A00EEE688 /* pablq-app-widget */,
+				8F41F3F925BCDD5000AD50FA /* LatestScoresWidgetExtension.entitlements */,
+				8FEA7EB124B138230010FF91 /* LatestScores */,
+				8FEA7EC324B138250010FF91 /* LatestScoresTests */,
+				8FEA7ECE24B138250010FF91 /* LatestScoresUITests */,
+				8F29870325854A4A00EEE688 /* LatestScoresWidget */,
 				8F2986FE25854A4A00EEE688 /* Frameworks */,
 				8FEA7EB024B138230010FF91 /* Products */,
 			);
@@ -308,27 +308,27 @@
 		8FEA7EB024B138230010FF91 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8FEA7EAF24B138230010FF91 /* pablq-app.app */,
-				8FEA7EC024B138250010FF91 /* pablq-appTests.xctest */,
-				8FEA7ECB24B138250010FF91 /* pablq-appUITests.xctest */,
-				8F2986FD25854A4A00EEE688 /* pablq-app-widgetExtension.appex */,
+				8FEA7EAF24B138230010FF91 /* LatestScores.app */,
+				8FEA7EC024B138250010FF91 /* LatestScoresTests.xctest */,
+				8FEA7ECB24B138250010FF91 /* LatestScoresUITests.xctest */,
+				8F2986FD25854A4A00EEE688 /* LatestScoresWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8FEA7EB124B138230010FF91 /* pablq-app */ = {
+		8FEA7EB124B138230010FF91 /* LatestScores */ = {
 			isa = PBXGroup;
 			children = (
 				8FA1FF0F24B5521400290496 /* State */,
 				8FEA7EE524B15A6A0010FF91 /* Service */,
 				8FEA7EDE24B158AD0010FF91 /* View */,
 				8F4418F524B552C30082F83C /* Model */,
-				8FEA7EB224B138230010FF91 /* pablq_appApp.swift */,
+				8FEA7EB224B138230010FF91 /* LatestScoresApp.swift */,
 				8FEA7EB624B138240010FF91 /* Assets.xcassets */,
 				8FEA7EBB24B138240010FF91 /* Info.plist */,
 				8FEA7EB824B138240010FF91 /* Preview Content */,
 			);
-			path = "pablq-app";
+			path = LatestScores;
 			sourceTree = "<group>";
 		};
 		8FEA7EB824B138240010FF91 /* Preview Content */ = {
@@ -339,22 +339,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8FEA7EC324B138250010FF91 /* pablq-appTests */ = {
+		8FEA7EC324B138250010FF91 /* LatestScoresTests */ = {
 			isa = PBXGroup;
 			children = (
 				8F72CF3D24B4032A002CBCD9 /* GameTest.swift */,
 				8FEA7EC624B138250010FF91 /* Info.plist */,
 			);
-			path = "pablq-appTests";
+			path = LatestScoresTests;
 			sourceTree = "<group>";
 		};
-		8FEA7ECE24B138250010FF91 /* pablq-appUITests */ = {
+		8FEA7ECE24B138250010FF91 /* LatestScoresUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8FEA7ECF24B138250010FF91 /* pablq_appUITests.swift */,
+				8FEA7ECF24B138250010FF91 /* LatestScoresUITests.swift */,
 				8FEA7ED124B138250010FF91 /* Info.plist */,
 			);
-			path = "pablq-appUITests";
+			path = LatestScoresUITests;
 			sourceTree = "<group>";
 		};
 		8FEA7EDE24B158AD0010FF91 /* View */ = {
@@ -378,9 +378,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F2986FC25854A4A00EEE688 /* pablq-app-widgetExtension */ = {
+		8F2986FC25854A4A00EEE688 /* LatestScoresWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F29871225854A4F00EEE688 /* Build configuration list for PBXNativeTarget "pablq-app-widgetExtension" */;
+			buildConfigurationList = 8F29871225854A4F00EEE688 /* Build configuration list for PBXNativeTarget "LatestScoresWidgetExtension" */;
 			buildPhases = (
 				8F2986F925854A4A00EEE688 /* Sources */,
 				8F2986FA25854A4A00EEE688 /* Frameworks */,
@@ -390,15 +390,16 @@
 			);
 			dependencies = (
 			);
-			name = "pablq-app-widgetExtension";
+			name = LatestScoresWidgetExtension;
 			productName = "team-widgetExtension";
-			productReference = 8F2986FD25854A4A00EEE688 /* pablq-app-widgetExtension.appex */;
+			productReference = 8F2986FD25854A4A00EEE688 /* LatestScoresWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		8FEA7EAE24B138230010FF91 /* pablq-app */ = {
+		8FEA7EAE24B138230010FF91 /* LatestScores */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FEA7ED424B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-app" */;
+			buildConfigurationList = 8FEA7ED424B138250010FF91 /* Build configuration list for PBXNativeTarget "LatestScores" */;
 			buildPhases = (
+				8F0A519A261E9E010073792F /* Swiftlint */,
 				8FEA7EAB24B138230010FF91 /* Sources */,
 				8FEA7EAC24B138230010FF91 /* Frameworks */,
 				8FEA7EAD24B138230010FF91 /* Resources */,
@@ -409,14 +410,14 @@
 			dependencies = (
 				8F29870D25854A4F00EEE688 /* PBXTargetDependency */,
 			);
-			name = "pablq-app";
+			name = LatestScores;
 			productName = "pablq-app";
-			productReference = 8FEA7EAF24B138230010FF91 /* pablq-app.app */;
+			productReference = 8FEA7EAF24B138230010FF91 /* LatestScores.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FEA7EBF24B138250010FF91 /* pablq-appTests */ = {
+		8FEA7EBF24B138250010FF91 /* LatestScoresTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FEA7ED724B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-appTests" */;
+			buildConfigurationList = 8FEA7ED724B138250010FF91 /* Build configuration list for PBXNativeTarget "LatestScoresTests" */;
 			buildPhases = (
 				8FEA7EBC24B138250010FF91 /* Sources */,
 				8FEA7EBD24B138250010FF91 /* Frameworks */,
@@ -427,14 +428,14 @@
 			dependencies = (
 				8FEA7EC224B138250010FF91 /* PBXTargetDependency */,
 			);
-			name = "pablq-appTests";
+			name = LatestScoresTests;
 			productName = "pablq-appTests";
-			productReference = 8FEA7EC024B138250010FF91 /* pablq-appTests.xctest */;
+			productReference = 8FEA7EC024B138250010FF91 /* LatestScoresTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8FEA7ECA24B138250010FF91 /* pablq-appUITests */ = {
+		8FEA7ECA24B138250010FF91 /* LatestScoresUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FEA7EDA24B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-appUITests" */;
+			buildConfigurationList = 8FEA7EDA24B138250010FF91 /* Build configuration list for PBXNativeTarget "LatestScoresUITests" */;
 			buildPhases = (
 				8FEA7EC724B138250010FF91 /* Sources */,
 				8FEA7EC824B138250010FF91 /* Frameworks */,
@@ -445,9 +446,9 @@
 			dependencies = (
 				8FEA7ECD24B138250010FF91 /* PBXTargetDependency */,
 			);
-			name = "pablq-appUITests";
+			name = LatestScoresUITests;
 			productName = "pablq-appUITests";
-			productReference = 8FEA7ECB24B138250010FF91 /* pablq-appUITests.xctest */;
+			productReference = 8FEA7ECB24B138250010FF91 /* LatestScoresUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -488,10 +489,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8FEA7EAE24B138230010FF91 /* pablq-app */,
-				8FEA7EBF24B138250010FF91 /* pablq-appTests */,
-				8FEA7ECA24B138250010FF91 /* pablq-appUITests */,
-				8F2986FC25854A4A00EEE688 /* pablq-app-widgetExtension */,
+				8FEA7EAE24B138230010FF91 /* LatestScores */,
+				8FEA7EBF24B138250010FF91 /* LatestScoresTests */,
+				8FEA7ECA24B138250010FF91 /* LatestScoresUITests */,
+				8F2986FC25854A4A00EEE688 /* LatestScoresWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -531,15 +532,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8F0A519A261E9E010073792F /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F2986F925854A4A00EEE688 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8F41F39525BCC48F00AD50FA /* WidgetEntryView.swift in Sources */,
-				8F29870525854A4A00EEE688 /* pablqAppWidget.swift in Sources */,
+				8F29870525854A4A00EEE688 /* LatestScoresWidget.swift in Sources */,
 				8F41F38B25BCC45300AD50FA /* GameStatusEntry.swift in Sources */,
-				8F29870A25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */,
+				8F29870A25854A4F00EEE688 /* LatestScoresWidget.intentdefinition in Sources */,
 				8F41F43825BD1D2600AD50FA /* ConfigNFLTeam+StringValue.swift in Sources */,
 				8F41F43E25BD1D5000AD50FA /* ConfigMLBTeam+StringValue.swift in Sources */,
 				8F27AC5A2585791500A1C3C3 /* HttpClient.swift in Sources */,
@@ -562,7 +584,7 @@
 			files = (
 				8F09984E24B2AF2900B10AB3 /* SheetHeaderView.swift in Sources */,
 				8F41F3CE25BCC77300AD50FA /* AppAppearance.swift in Sources */,
-				8F29870B25854A4F00EEE688 /* pablqAppWidget.intentdefinition in Sources */,
+				8F29870B25854A4F00EEE688 /* LatestScoresWidget.intentdefinition in Sources */,
 				8FD828DE24B16CD8007D813A /* SportCell.swift in Sources */,
 				8F44190024B5842B0082F83C /* DismissSheetButton.swift in Sources */,
 				8F09985224B2B10600B10AB3 /* EmptyStateView.swift in Sources */,
@@ -575,7 +597,7 @@
 				8FEA7EB524B138230010FF91 /* SportsListView.swift in Sources */,
 				8F09984C24B2AEF400B10AB3 /* TitleView.swift in Sources */,
 				8F41F3C825BCC74300AD50FA /* AppAction.swift in Sources */,
-				8FEA7EB324B138230010FF91 /* pablq_appApp.swift in Sources */,
+				8FEA7EB324B138230010FF91 /* LatestScoresApp.swift in Sources */,
 				8F4418FE24B5711F0082F83C /* SportCellButtonStyle.swift in Sources */,
 				8F4418FB24B552DA0082F83C /* AppState.swift in Sources */,
 				8FD828DC24B16B6E007D813A /* GameCell.swift in Sources */,
@@ -594,7 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FEA7ED024B138250010FF91 /* pablq_appUITests.swift in Sources */,
+				8FEA7ED024B138250010FF91 /* LatestScoresUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,17 +625,17 @@
 /* Begin PBXTargetDependency section */
 		8F29870D25854A4F00EEE688 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8F2986FC25854A4A00EEE688 /* pablq-app-widgetExtension */;
+			target = 8F2986FC25854A4A00EEE688 /* LatestScoresWidgetExtension */;
 			targetProxy = 8F29870C25854A4F00EEE688 /* PBXContainerItemProxy */;
 		};
 		8FEA7EC224B138250010FF91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8FEA7EAE24B138230010FF91 /* pablq-app */;
+			target = 8FEA7EAE24B138230010FF91 /* LatestScores */;
 			targetProxy = 8FEA7EC124B138250010FF91 /* PBXContainerItemProxy */;
 		};
 		8FEA7ECD24B138250010FF91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8FEA7EAE24B138230010FF91 /* pablq-app */;
+			target = 8FEA7EAE24B138230010FF91 /* LatestScores */;
 			targetProxy = 8FEA7ECC24B138250010FF91 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -624,11 +646,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = "pablq-app-widgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = LatestScoresWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
-				INFOPLIST_FILE = "pablq-app-widget/Info.plist";
+				INFOPLIST_FILE = LatestScoresWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,11 +671,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = "pablq-app-widgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = LatestScoresWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
-				INFOPLIST_FILE = "pablq-app-widget/Info.plist";
+				INFOPLIST_FILE = LatestScoresWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -794,10 +816,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"pablq-app/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LatestScores/Preview Content\"";
 				DEVELOPMENT_TEAM = QVTTLF22GX;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "pablq-app/Info.plist";
+				INFOPLIST_FILE = LatestScores/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -821,10 +843,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"pablq-app/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LatestScores/Preview Content\"";
 				DEVELOPMENT_TEAM = QVTTLF22GX;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "pablq-app/Info.plist";
+				INFOPLIST_FILE = LatestScores/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -846,18 +868,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
-				INFOPLIST_FILE = "pablq-appTests/Info.plist";
+				INFOPLIST_FILE = LatestScoresTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-appTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablq.LatestScoresTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pablq-app.app/pablq-app";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LatestScores.app/LatestScores";
 			};
 			name = Debug;
 		};
@@ -868,18 +890,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
-				INFOPLIST_FILE = "pablq-appTests/Info.plist";
+				INFOPLIST_FILE = LatestScoresTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-appTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablq.LatestScoresTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pablq-app.app/pablq-app";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LatestScores.app/LatestScores";
 			};
 			name = Release;
 		};
@@ -889,17 +911,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
-				INFOPLIST_FILE = "pablq-appUITests/Info.plist";
+				INFOPLIST_FILE = LatestScoresUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-appUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablq.LatestScoresUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "pablq-app";
+				TEST_TARGET_NAME = LatestScores;
 			};
 			name = Debug;
 		};
@@ -909,24 +931,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
-				INFOPLIST_FILE = "pablq-appUITests/Info.plist";
+				INFOPLIST_FILE = LatestScoresUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pablq.pablq-appUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablq.LatestScoresUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "pablq-app";
+				TEST_TARGET_NAME = LatestScores;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F29871225854A4F00EEE688 /* Build configuration list for PBXNativeTarget "pablq-app-widgetExtension" */ = {
+		8F29871225854A4F00EEE688 /* Build configuration list for PBXNativeTarget "LatestScoresWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F29871025854A4F00EEE688 /* Debug */,
@@ -944,7 +966,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FEA7ED424B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-app" */ = {
+		8FEA7ED424B138250010FF91 /* Build configuration list for PBXNativeTarget "LatestScores" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FEA7ED524B138250010FF91 /* Debug */,
@@ -953,7 +975,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FEA7ED724B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-appTests" */ = {
+		8FEA7ED724B138250010FF91 /* Build configuration list for PBXNativeTarget "LatestScoresTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FEA7ED824B138250010FF91 /* Debug */,
@@ -962,7 +984,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FEA7EDA24B138250010FF91 /* Build configuration list for PBXNativeTarget "pablq-appUITests" */ = {
+		8FEA7EDA24B138250010FF91 /* Build configuration list for PBXNativeTarget "LatestScoresUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FEA7EDB24B138250010FF91 /* Debug */,

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FEA7EAE24B138230010FF91"
-               BuildableName = "pablq-app.app"
-               BlueprintName = "pablq-app"
+               BuildableName = "LatestScores.app"
+               BlueprintName = "LatestScores"
                ReferencedContainer = "container:pablq-app.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FEA7EBF24B138250010FF91"
-               BuildableName = "pablq-appTests.xctest"
-               BlueprintName = "pablq-appTests"
+               BuildableName = "LatestScoresTests.xctest"
+               BlueprintName = "LatestScoresTests"
                ReferencedContainer = "container:pablq-app.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,8 +43,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FEA7ECA24B138250010FF91"
-               BuildableName = "pablq-appUITests.xctest"
-               BlueprintName = "pablq-appUITests"
+               BuildableName = "LatestScoresUITests.xctest"
+               BlueprintName = "LatestScoresUITests"
                ReferencedContainer = "container:pablq-app.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FEA7EAE24B138230010FF91"
-            BuildableName = "pablq-app.app"
-            BlueprintName = "pablq-app"
+            BuildableName = "LatestScores.app"
+            BlueprintName = "LatestScores"
             ReferencedContainer = "container:pablq-app.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -82,8 +82,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FEA7EAE24B138230010FF91"
-            BuildableName = "pablq-app.app"
-            BlueprintName = "pablq-app"
+            BuildableName = "LatestScores.app"
+            BlueprintName = "LatestScores"
             ReferencedContainer = "container:pablq-app.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
