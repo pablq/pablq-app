@@ -43,9 +43,8 @@ struct GameCell: View {
     }
 
     private func getLinkText() -> String {
-        // TODO: Localize me.
-        if game.isUpcoming { return "See preview" }
-        return "See box score"
+        if game.isUpcoming { return NSLocalizedString("gameCellPreviewText", value: "See preview", comment: "") }
+        return NSLocalizedString("gameCellBoxScoreText", value: "See box score", comment: "")
     }
 
     private func getStroke() -> Color {
