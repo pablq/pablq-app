@@ -14,5 +14,8 @@ struct EmptyStateView: View {
         Text(
             message
         )
+        Spacer()
+        Spacer()
+        Spacer()
     }
 }

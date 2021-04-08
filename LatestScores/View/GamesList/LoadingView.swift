@@ -12,11 +12,17 @@ struct LoadingView: View {
 
     var body: some View {
         VStack(spacing: 25.0) {
-             ProgressView()
+            ProgressView()
+                .progressViewStyle(
+                    CircularProgressViewStyle(tint: Color(.foreground))
+                )
             if let message = message {
                 Text(message)
             }
         }
         .padding()
+        Spacer()
+        Spacer()
+        Spacer()
     }
 }

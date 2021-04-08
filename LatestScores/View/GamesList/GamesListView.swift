@@ -28,8 +28,6 @@ struct GamesListView: View {
                                 comment: "Shown when games data is being fetched."
                             )
                         )
-                        Spacer()
-                        Spacer()
                     } else if appState.games.isEmpty {
                         EmptyStateView(
                             message: NSLocalizedString(
@@ -38,8 +36,6 @@ struct GamesListView: View {
                                 comment: "Shown when games data is not available."
                             )
                         )
-                        Spacer()
-                        Spacer()
                     } else {
                         List {
                             ForEach(appState.games) { game in
