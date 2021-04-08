@@ -15,7 +15,7 @@ struct SportCell: View {
         Button(action: action) {
             HStack {
                 Spacer()
-                Image(league.imageName)
+                Image(league.imageAsset)
                     .renderingMode(.template)
                     .resizable()
                     .aspectRatio(contentMode: .fit)

@@ -13,7 +13,7 @@ struct GamesListView: View {
 
     var body: some View {
         ZStack {
-            Color("background").edgesIgnoringSafeArea(.all)
+            Color(.background).edgesIgnoringSafeArea(.all)
             VStack {
                 SheetHeaderView(title: appState.selectedLeague?.rawValue.uppercased()) {
                     appState.dispatch(action: .userDismissedLeague)
@@ -40,7 +40,7 @@ struct GamesListView: View {
                         List {
                             ForEach(appState.games) { game in
                                 GameCell(game: game, isFavorite: isFavorite(game: game))
-                                    .listRowBackground(Color("background"))
+                                    .listRowBackground(Color(.background))
                             }
                             .padding(10)
                         }
@@ -50,7 +50,7 @@ struct GamesListView: View {
                 Spacer()
                 Spacer()
             }
-            .foregroundColor(.white)
+            .foregroundColor(Color(.foreground))
         }
         .onAppear { appState.dispatch(action: .gamesListAppeared) }
     }

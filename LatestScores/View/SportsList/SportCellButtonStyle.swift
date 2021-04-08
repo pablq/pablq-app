@@ -10,11 +10,11 @@ import SwiftUI
 struct SportCellButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .foregroundColor(configuration.isPressed ? Color("accent-action") : Color("background"))
-            .background(Color("foreground"))
+            .foregroundColor(configuration.isPressed ? Color(.accentAction) : Color(.background))
+            .background(Color(.foreground))
             .cornerRadius(10.0)
             .shadow(
-                color: Color("background"),
+                color: Color(.background),
                 radius: 5.0,
                 x: 0,
                 y: configuration.isPressed ? 4.0 : 8.0
@@ -33,7 +33,7 @@ struct SportCellButtonStyle_Previews: PreviewProvider {
     static var previews: some View {
         Button(
             action: {},
-            label: { Image(League.mlb.imageName) }
+            label: { Image(League.mlb.imageAsset) }
         )
         .buttonStyle(SportCellButtonStyle())
     }

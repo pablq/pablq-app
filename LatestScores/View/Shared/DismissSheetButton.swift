@@ -12,7 +12,7 @@ struct DismissSheetButton: View {
 
     var body: some View {
         Button(action: dismissAction) {
-            Image(systemName: "xmark")
+            Image(.xmark)
                 .renderingMode(.template)
                 .accessibility(label:
                     Text(

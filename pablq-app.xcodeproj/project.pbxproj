@@ -11,6 +11,7 @@
 		8F09984E24B2AF2900B10AB3 /* SheetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */; };
 		8F09985024B2B0A700B10AB3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984F24B2B0A700B10AB3 /* LoadingView.swift */; };
 		8F09985224B2B10600B10AB3 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09985124B2B10600B10AB3 /* EmptyStateView.swift */; };
+		8F117B0D261EAB8200B77985 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F117B0C261EAB8200B77985 /* Assets.swift */; };
 		8F27AC4D258553C000A1C3C3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
 		8F27AC5A2585791500A1C3C3 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */; };
 		8F29870025854A4A00EEE688 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2986FF25854A4A00EEE688 /* WidgetKit.framework */; };
@@ -41,6 +42,10 @@
 		8F4418FB24B552DA0082F83C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FA24B552DA0082F83C /* AppState.swift */; };
 		8F4418FE24B5711F0082F83C /* SportCellButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */; };
 		8F44190024B5842B0082F83C /* DismissSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FF24B5842B0082F83C /* DismissSheetButton.swift */; };
+		8F5BB8DD261EADB50019F32A /* League+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8DC261EADB50019F32A /* League+LatestScores.swift */; };
+		8F5BB8E3261EAE560019F32A /* SwiftUI+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */; };
+		8F5BB8EC261EB3570019F32A /* SwiftUI+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */; };
+		8F5BB8F1261EB35B0019F32A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F117B0C261EAB8200B77985 /* Assets.swift */; };
 		8F72CF3E24B4032A002CBCD9 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72CF3D24B4032A002CBCD9 /* GameTest.swift */; };
 		8FB59AC324B29C3900ECA2B5 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */; };
 		8FB7729F24BFED0D002B8CD4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB7729E24BFED0D002B8CD4 /* FooterView.swift */; };
@@ -97,6 +102,7 @@
 		8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetHeaderView.swift; sourceTree = "<group>"; };
 		8F09984F24B2B0A700B10AB3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8F09985124B2B10600B10AB3 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		8F117B0C261EAB8200B77985 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		8F2986FD25854A4A00EEE688 /* LatestScoresWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LatestScoresWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2986FF25854A4A00EEE688 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		8F29870125854A4A00EEE688 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -124,6 +130,8 @@
 		8F4418FA24B552DA0082F83C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCellButtonStyle.swift; sourceTree = "<group>"; };
 		8F4418FF24B5842B0082F83C /* DismissSheetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissSheetButton.swift; sourceTree = "<group>"; };
+		8F5BB8DC261EADB50019F32A /* League+LatestScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "League+LatestScores.swift"; sourceTree = "<group>"; };
+		8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+LatestScores.swift"; sourceTree = "<group>"; };
 		8F72CF3D24B4032A002CBCD9 /* GameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTest.swift; sourceTree = "<group>"; };
 		8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		8FB7729E24BFED0D002B8CD4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
@@ -177,6 +185,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F117B0B261EAB5800B77985 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8FEA7EB624B138240010FF91 /* Assets.xcassets */,
+				8F117B0C261EAB8200B77985 /* Assets.swift */,
+				8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		8F2986FE25854A4A00EEE688 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +264,7 @@
 			children = (
 				8F4418F624B552C30082F83C /* Game.swift */,
 				8F41F37D25BCAEE600AD50FA /* League.swift */,
+				8F5BB8DC261EADB50019F32A /* League+LatestScores.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,12 +338,12 @@
 		8FEA7EB124B138230010FF91 /* LatestScores */ = {
 			isa = PBXGroup;
 			children = (
+				8F117B0B261EAB5800B77985 /* Assets */,
 				8FA1FF0F24B5521400290496 /* State */,
 				8FEA7EE524B15A6A0010FF91 /* Service */,
 				8FEA7EDE24B158AD0010FF91 /* View */,
 				8F4418F524B552C30082F83C /* Model */,
 				8FEA7EB224B138230010FF91 /* LatestScoresApp.swift */,
-				8FEA7EB624B138240010FF91 /* Assets.xcassets */,
 				8FEA7EBB24B138240010FF91 /* Info.plist */,
 				8FEA7EB824B138240010FF91 /* Preview Content */,
 			);
@@ -560,6 +579,7 @@
 			files = (
 				8F41F39525BCC48F00AD50FA /* WidgetEntryView.swift in Sources */,
 				8F29870525854A4A00EEE688 /* LatestScoresWidget.swift in Sources */,
+				8F5BB8F1261EB35B0019F32A /* Assets.swift in Sources */,
 				8F41F38B25BCC45300AD50FA /* GameStatusEntry.swift in Sources */,
 				8F29870A25854A4F00EEE688 /* LatestScoresWidget.intentdefinition in Sources */,
 				8F41F43825BD1D2600AD50FA /* ConfigNFLTeam+StringValue.swift in Sources */,
@@ -575,6 +595,7 @@
 				8F41F42E25BD1CF000AD50FA /* ConfigLeague+League.swift in Sources */,
 				8F41F42825BD170C00AD50FA /* League.swift in Sources */,
 				8F41F3A125BCC4E100AD50FA /* WidgetConfigurationView.swift in Sources */,
+				8F5BB8EC261EB3570019F32A /* SwiftUI+LatestScores.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,8 +604,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F09984E24B2AF2900B10AB3 /* SheetHeaderView.swift in Sources */,
+				8F117B0D261EAB8200B77985 /* Assets.swift in Sources */,
 				8F41F3CE25BCC77300AD50FA /* AppAppearance.swift in Sources */,
 				8F29870B25854A4F00EEE688 /* LatestScoresWidget.intentdefinition in Sources */,
+				8F5BB8DD261EADB50019F32A /* League+LatestScores.swift in Sources */,
 				8FD828DE24B16CD8007D813A /* SportCell.swift in Sources */,
 				8F44190024B5842B0082F83C /* DismissSheetButton.swift in Sources */,
 				8F09985224B2B10600B10AB3 /* EmptyStateView.swift in Sources */,
@@ -597,6 +620,7 @@
 				8FEA7EB524B138230010FF91 /* SportsListView.swift in Sources */,
 				8F09984C24B2AEF400B10AB3 /* TitleView.swift in Sources */,
 				8F41F3C825BCC74300AD50FA /* AppAction.swift in Sources */,
+				8F5BB8E3261EAE560019F32A /* SwiftUI+LatestScores.swift in Sources */,
 				8FEA7EB324B138230010FF91 /* LatestScoresApp.swift in Sources */,
 				8F4418FE24B5711F0082F83C /* SportCellButtonStyle.swift in Sources */,
 				8F4418FB24B552DA0082F83C /* AppState.swift in Sources */,

@@ -31,8 +31,8 @@ struct GameCell: View {
             }
         }
         .padding()
-        .foregroundColor(Color("foreground"))
-        .background(isFavorite ? Color("background-special") : Color("background"))
+        .foregroundColor(Color(.foreground))
+        .background(isFavorite ? Color(.backgroundSpecial) : Color(.background))
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(
@@ -43,14 +43,15 @@ struct GameCell: View {
     }
 
     private func getLinkText() -> String {
+        // TODO: Localize me.
         if game.isUpcoming { return "See preview" }
         return "See box score"
     }
 
     private func getStroke() -> Color {
-        if game.isLive { return Color("accent-ongoing") }
-        if game.isUpcoming { return Color("accent-upcoming") }
-        return Color("accent-past")
+        if game.isLive { return Color(.accentOngoing) }
+        if game.isUpcoming { return Color(.accentUpcoming) }
+        return Color(.accentPast)
     }
 }
 

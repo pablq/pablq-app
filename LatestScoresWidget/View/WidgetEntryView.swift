@@ -15,7 +15,7 @@ struct WidgetEntryView: View {
     var body: some View {
         ZStack {
             if let game = entry.mostRelevantGame {
-                game.isLive ? Color("accent-ongoing") : Color("background")
+                game.isLive ? Color(.accentOngoing) : Color(.background)
                 VStack {
                     Spacer()
                     Text(game.headline)
@@ -35,10 +35,10 @@ struct WidgetEntryView: View {
                     )
                 }
                 .padding()
-                .foregroundColor(Color("foreground"))
+                .foregroundColor(Color(.foreground))
                 .widgetURL(entry.deepLinkUrl)
             } else {
-                Color("background")
+                Color(.background)
                 VStack {
                     Spacer()
                     Text(
@@ -56,7 +56,7 @@ struct WidgetEntryView: View {
                     )
                 }
                 .padding()
-                .foregroundColor(Color("foreground"))
+                .foregroundColor(Color(.foreground))
                 .widgetURL(entry.deepLinkUrl)
             }
         }
