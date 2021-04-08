@@ -28,6 +28,8 @@ struct GamesListView: View {
                                 comment: "Shown when games data is being fetched."
                             )
                         )
+                        Spacer()
+                        Spacer()
                     } else if appState.games.isEmpty {
                         EmptyStateView(
                             message: NSLocalizedString(
@@ -36,6 +38,8 @@ struct GamesListView: View {
                                 comment: "Shown when games data is not available."
                             )
                         )
+                        Spacer()
+                        Spacer()
                     } else {
                         List {
                             ForEach(appState.games) { game in
@@ -46,9 +50,6 @@ struct GamesListView: View {
                         }
                     }
                 }
-                Spacer()
-                Spacer()
-                Spacer()
             }
             .foregroundColor(Color(.foreground))
         }
@@ -77,23 +78,13 @@ struct GamesListView_Previews: PreviewProvider {
         case .loading:
             isLoading = true
         case .data:
-            games = [
+            games = (0...10).map {
                 Game(
-                    headline: "Headline 0",
+                    headline: "Headline \($0)",
                     link: "http://www.google.com",
                     lines: ["line1", "line2"]
-                ),
-                Game(
-                    headline: "Headline 1",
-                    link: "http://www.google.com",
-                    lines: ["line1", "line2", "line3"]
-                ),
-                Game(
-                    headline: "Headline 3",
-                    link: "http://www.google.com",
-                    lines: []
                 )
-            ]
+            }
         }
 
         let appState = TestAppState()
