@@ -46,6 +46,7 @@
 		8F5BB8E3261EAE560019F32A /* SwiftUI+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */; };
 		8F5BB8EC261EB3570019F32A /* SwiftUI+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */; };
 		8F5BB8F1261EB35B0019F32A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F117B0C261EAB8200B77985 /* Assets.swift */; };
+		8F5BB8FE261EC2050019F32A /* LatestScoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB224B138230010FF91 /* LatestScoresApp.swift */; };
 		8F72CF3E24B4032A002CBCD9 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72CF3D24B4032A002CBCD9 /* GameTest.swift */; };
 		8FB59AC324B29C3900ECA2B5 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */; };
 		8FD828DC24B16B6E007D813A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828DB24B16B6E007D813A /* GameCell.swift */; };
@@ -188,7 +189,6 @@
 			children = (
 				8F117B0C261EAB8200B77985 /* Assets.swift */,
 				8FEA7EB624B138240010FF91 /* Assets.xcassets */,
-				8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -219,9 +219,9 @@
 		8F41F38825BCC2F300AD50FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8F41F3A025BCC4E100AD50FA /* WidgetConfigurationView.swift */,
 				8F41F39425BCC48F00AD50FA /* WidgetEntryView.swift */,
 				8F41F39A25BCC4B300AD50FA /* WidgetFooterView.swift */,
-				8F41F3A025BCC4E100AD50FA /* WidgetConfigurationView.swift */,
 				8F41F3A625BCC52400AD50FA /* WidgetLastUpdatedView.swift */,
 			);
 			path = View;
@@ -248,9 +248,9 @@
 			children = (
 				8F41F42D25BD1CF000AD50FA /* ConfigLeague+League.swift */,
 				8F41F43D25BD1D5000AD50FA /* ConfigMLBTeam+StringValue.swift */,
+				8F41F42225BD16A600AD50FA /* ConfigNBATeam+StringValue.swift */,
 				8F41F43725BD1D2600AD50FA /* ConfigNFLTeam+StringValue.swift */,
 				8F41F44325BD1D7900AD50FA /* ConfigNHLTeam+StringValue.swift */,
-				8F41F42225BD16A600AD50FA /* ConfigNBATeam+StringValue.swift */,
 				8F41F46025BD1E3400AD50FA /* ConfigurationIntent+StringValues.swift */,
 				8F29870625854A4A00EEE688 /* LatestScoresWidget.intentdefinition */,
 			);
@@ -265,6 +265,14 @@
 				8F5BB8DC261EADB50019F32A /* League+LatestScores.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8F5BB907261EC2130019F32A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8FA1FF0F24B5521400290496 /* State */ = {
@@ -329,13 +337,13 @@
 			isa = PBXGroup;
 			children = (
 				8F117B0B261EAB5800B77985 /* Assets */,
-				8FA1FF0F24B5521400290496 /* State */,
-				8FEA7EE524B15A6A0010FF91 /* Service */,
-				8FEA7EDE24B158AD0010FF91 /* View */,
 				8F4418F524B552C30082F83C /* Model */,
+				8FEA7EB824B138240010FF91 /* Preview Content */,
+				8FEA7EE524B15A6A0010FF91 /* Service */,
+				8FA1FF0F24B5521400290496 /* State */,
+				8FEA7EDE24B158AD0010FF91 /* View */,
 				8FEA7EB224B138230010FF91 /* LatestScoresApp.swift */,
 				8FEA7EBB24B138240010FF91 /* Info.plist */,
-				8FEA7EB824B138240010FF91 /* Preview Content */,
 			);
 			path = LatestScores;
 			sourceTree = "<group>";
@@ -369,6 +377,7 @@
 		8FEA7EDE24B158AD0010FF91 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8F5BB907261EC2130019F32A /* Extensions */,
 				8FBD86D824B292EF00D0ED6C /* GamesList */,
 				8FBD86D724B292E600D0ED6C /* SportsList */,
 			);
@@ -579,6 +588,7 @@
 				8F41F3A725BCC52400AD50FA /* WidgetLastUpdatedView.swift in Sources */,
 				8F41F42325BD16A600AD50FA /* ConfigNBATeam+StringValue.swift in Sources */,
 				8F27AC4D258553C000A1C3C3 /* Game.swift in Sources */,
+				8F5BB8FE261EC2050019F32A /* LatestScoresApp.swift in Sources */,
 				8F41F46125BD1E3400AD50FA /* ConfigurationIntent+StringValues.swift in Sources */,
 				8F41F3AE25BCC54B00AD50FA /* WidgetTimelineProvider.swift in Sources */,
 				8F41F42E25BD1CF000AD50FA /* ConfigLeague+League.swift in Sources */,
