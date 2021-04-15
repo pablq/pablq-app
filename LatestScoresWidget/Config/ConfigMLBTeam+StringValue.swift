@@ -28,7 +28,7 @@ extension ConfigMLBTeam {
         case .yankees: return "ny yankees"
         case .rays: return "tampa"
         case .bluejays: return "toronto"
-        case .whitesox: return "chicago white sox"
+        case .whitesox: return "chicago sox"
         case .indians: return "cleveland"
         case .tigers: return "detroit"
         case .royals: return "kansas city"
