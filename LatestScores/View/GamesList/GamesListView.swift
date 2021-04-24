@@ -39,7 +39,7 @@ struct GamesListView: View {
                     } else {
                         List {
                             ForEach(appState.games) { game in
-                                GameCell(game: game, isFavorite: isFavorite(game: game))
+                                GameCell(game: game, isFavorite: false)
                                     .listRowBackground(Color(.background))
                             }
                             .padding(10)
@@ -50,11 +50,6 @@ struct GamesListView: View {
             .foregroundColor(Color(.foreground))
         }
         .onAppear { appState.dispatch(action: .gamesListAppeared) }
-    }
-
-    private func isFavorite(game: Game) -> Bool {
-        guard let teamName = appState.teamName else { return false }
-        return game.headline.lowercased().contains(teamName.lowercased())
     }
 }
 

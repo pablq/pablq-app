@@ -16,8 +16,6 @@ class AppState: ObservableObject {
 
     @Published fileprivate(set) var isLoading: Bool = false
 
-    @Published fileprivate(set) var teamName: String? = "chicago"
-
     /// Do not set directly, always use `dispatch` to update state.
     @Published var isGamesListPresented: Bool = false
 
@@ -47,7 +45,6 @@ class AppState: ObservableObject {
     private func handleAppLaunchedWithDeepLink(url: URL) {
         if let components = URLComponents(url: url, resolvingAgainstBaseURL: true) {
             if components.scheme == "pablq-widget" && components.host == "com.pablq.pablq-app.widget" {
-                teamName = components.queryItems?.first { $0.name == "team-name" }?.value
                 if let leagueString = components.queryItems?.first(where: { $0.name == "league"  })?.value,
                    let league = League(rawValue: leagueString) {
                     selectedLeague = league
@@ -82,9 +79,5 @@ class TestAppState: AppState {
 
     func setIsLoading(_ isLoading: Bool) {
         self.isLoading = isLoading
-    }
-
-    func setTeamName(_ teamName: String?) {
-        self.teamName = teamName
     }
 }

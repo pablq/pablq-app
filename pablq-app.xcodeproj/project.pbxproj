@@ -46,7 +46,6 @@
 		8F5BB8E3261EAE560019F32A /* SwiftUI+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */; };
 		8F5BB8EC261EB3570019F32A /* SwiftUI+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */; };
 		8F5BB8F1261EB35B0019F32A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F117B0C261EAB8200B77985 /* Assets.swift */; };
-		8F5BB8FE261EC2050019F32A /* LatestScoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB224B138230010FF91 /* LatestScoresApp.swift */; };
 		8F72CF3E24B4032A002CBCD9 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72CF3D24B4032A002CBCD9 /* GameTest.swift */; };
 		8FB59AC324B29C3900ECA2B5 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */; };
 		8FD828DC24B16B6E007D813A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828DB24B16B6E007D813A /* GameCell.swift */; };
@@ -588,7 +587,6 @@
 				8F41F3A725BCC52400AD50FA /* WidgetLastUpdatedView.swift in Sources */,
 				8F41F42325BD16A600AD50FA /* ConfigNBATeam+StringValue.swift in Sources */,
 				8F27AC4D258553C000A1C3C3 /* Game.swift in Sources */,
-				8F5BB8FE261EC2050019F32A /* LatestScoresApp.swift in Sources */,
 				8F41F46125BD1E3400AD50FA /* ConfigurationIntent+StringValues.swift in Sources */,
 				8F41F3AE25BCC54B00AD50FA /* WidgetTimelineProvider.swift in Sources */,
 				8F41F42E25BD1CF000AD50FA /* ConfigLeague+League.swift in Sources */,
