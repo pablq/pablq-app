@@ -56,6 +56,7 @@
 		8FEA7EBA24B138240010FF91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB924B138240010FF91 /* Preview Assets.xcassets */; };
 		8FEA7ED024B138250010FF91 /* LatestScoresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7ECF24B138250010FF91 /* LatestScoresUITests.swift */; };
 		8FEA7EE024B159340010FF91 /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EDF24B159340010FF91 /* GamesListView.swift */; };
+		8FEDB5B42633A49800BF35A6 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEDB5B32633A49800BF35A6 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		8FEA7ECF24B138250010FF91 /* LatestScoresUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestScoresUITests.swift; sourceTree = "<group>"; };
 		8FEA7ED124B138250010FF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FEA7EDF24B159340010FF91 /* GamesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
+		8FEDB5B32633A49800BF35A6 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			children = (
 				8F117B0C261EAB8200B77985 /* Assets.swift */,
 				8FEA7EB624B138240010FF91 /* Assets.xcassets */,
+				8FEDB5B32633A49800BF35A6 /* Strings.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				8FB59AC324B29C3900ECA2B5 /* HttpClient.swift in Sources */,
 				8FEA7EE024B159340010FF91 /* GamesListView.swift in Sources */,
 				8F4418F824B552C30082F83C /* Game.swift in Sources */,
+				8FEDB5B42633A49800BF35A6 /* Strings.swift in Sources */,
 				8F41F37E25BCAEE600AD50FA /* League.swift in Sources */,
 				8FEA7EB524B138230010FF91 /* SportsListView.swift in Sources */,
 				8F09984C24B2AEF400B10AB3 /* TitleView.swift in Sources */,

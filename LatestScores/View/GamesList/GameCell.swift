@@ -43,8 +43,8 @@ struct GameCell: View {
     }
 
     private func getLinkText() -> String {
-        if game.isUpcoming { return NSLocalizedString("gameCellPreviewText", value: "See preview", comment: "") }
-        return NSLocalizedString("gameCellBoxScoreText", value: "See box score", comment: "")
+        if game.isUpcoming { return String.seePreview }
+        return String.seeBoxScore
     }
 
     private func getStroke() -> Color {
@@ -52,6 +52,13 @@ struct GameCell: View {
         if game.isUpcoming { return Color(.accentUpcoming) }
         return Color(.accentPast)
     }
+}
+
+// MARK: - Strings
+
+fileprivate extension String {
+    static let seePreview = NSLocalizedString("gameCellPreviewText", value: "See preview", comment: "")
+    static let seeBoxScore = NSLocalizedString("gameCellBoxScoreText", value: "See box score", comment: "")
 }
 
 struct GameView_Previews: PreviewProvider {

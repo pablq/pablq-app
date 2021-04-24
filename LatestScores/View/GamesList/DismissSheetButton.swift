@@ -14,16 +14,18 @@ struct DismissSheetButton: View {
         Button(action: dismissAction) {
             Image(.xmark)
                 .renderingMode(.template)
-                .accessibility(label:
-                    Text(
-                        NSLocalizedString(
-                            "dismissSheetButtonAccessibilityLabel",
-                            value: "Dismiss",
-                            comment: "Describes the purpose of the dismiss sheet button"
-                        )
-                    )
-                )
+                .accessibility(label: Text(String.dismiss))
         }
         .padding()
     }
+}
+
+// MARK: - Strings
+
+fileprivate extension String {
+    static let dismiss = NSLocalizedString(
+        "dismissSheetButtonAccessibilityLabel",
+        value: "Dismiss",
+        comment: "Describes the purpose of the dismiss sheet button"
+    )
 }

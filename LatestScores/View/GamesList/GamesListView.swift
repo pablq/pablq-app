@@ -21,21 +21,9 @@ struct GamesListView: View {
                 Spacer()
                 Group {
                     if appState.isLoading {
-                        LoadingView(
-                            message: NSLocalizedString(
-                                "GamesListViewLoading",
-                                value: "Fetching games...",
-                                comment: "Shown when games data is being fetched."
-                            )
-                        )
+                        LoadingView(message: String.fetchingGames)
                     } else if appState.games.isEmpty {
-                        EmptyStateView(
-                            message: NSLocalizedString(
-                                "GamesListViewEmptyState",
-                                value: "No games today. :)",
-                                comment: "Shown when games data is not available."
-                            )
-                        )
+                        EmptyStateView(message: String.noGamesToday)
                     } else {
                         List {
                             ForEach(appState.games) { game in
@@ -52,6 +40,24 @@ struct GamesListView: View {
         .onAppear { appState.dispatch(action: .gamesListAppeared) }
     }
 }
+
+// MARK: - Strings
+
+fileprivate extension String {
+    static let fetchingGames = NSLocalizedString(
+        "GamesListViewLoading",
+        value: "Fetching games...",
+        comment: "Shown when games data is being fetched."
+    )
+
+    static let noGamesToday = NSLocalizedString(
+        "GamesListViewEmptyState",
+        value: "No games today. :)",
+        comment: "Shown when games data is not available."
+    )
+}
+
+// MARK: - Previews
 
 struct GamesListView_Previews: PreviewProvider {
     enum Mode {
