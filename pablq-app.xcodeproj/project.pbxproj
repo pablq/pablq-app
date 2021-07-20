@@ -46,6 +46,27 @@
 		8F5BB8E3261EAE560019F32A /* SwiftUI+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */; };
 		8F5BB8EC261EB3570019F32A /* SwiftUI+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */; };
 		8F5BB8F1261EB35B0019F32A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F117B0C261EAB8200B77985 /* Assets.swift */; };
+		8F6AA74226A6468C002AA376 /* LatestScoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB224B138230010FF91 /* LatestScoresApp.swift */; };
+		8F6AA74326A6469A002AA376 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FA24B552DA0082F83C /* AppState.swift */; };
+		8F6AA74426A6469F002AA376 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F3CD25BCC77300AD50FA /* AppAppearance.swift */; };
+		8F6AA74526A646A5002AA376 /* SportsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB424B138230010FF91 /* SportsListView.swift */; };
+		8F6AA74626A646B2002AA376 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F3C725BCC74200AD50FA /* AppAction.swift */; };
+		8F6AA74726A646C3002AA376 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F41F37D25BCAEE600AD50FA /* League.swift */; };
+		8F6AA74826A64765002AA376 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418F624B552C30082F83C /* Game.swift */; };
+		8F6AA74926A6476F002AA376 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB59AC224B29C3900ECA2B5 /* HttpClient.swift */; };
+		8F6AA74B26A64791002AA376 /* SheetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984D24B2AF2900B10AB3 /* SheetHeaderView.swift */; };
+		8F6AA74C26A6479D002AA376 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984B24B2AEF400B10AB3 /* TitleView.swift */; };
+		8F6AA74D26A647A3002AA376 /* SportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828DD24B16CD8007D813A /* SportCell.swift */; };
+		8F6AA74E26A647A9002AA376 /* SportCellButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FD24B5711F0082F83C /* SportCellButtonStyle.swift */; };
+		8F6AA74F26A647B0002AA376 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F117B0C261EAB8200B77985 /* Assets.swift */; };
+		8F6AA75026A647B9002AA376 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09984F24B2B0A700B10AB3 /* LoadingView.swift */; };
+		8F6AA75126A647BF002AA376 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09985124B2B10600B10AB3 /* EmptyStateView.swift */; };
+		8F6AA75226A647C5002AA376 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD828DB24B16B6E007D813A /* GameCell.swift */; };
+		8F6AA75326A64806002AA376 /* SwiftUI+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8E2261EAE560019F32A /* SwiftUI+LatestScores.swift */; };
+		8F6AA75426A64816002AA376 /* League+LatestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5BB8DC261EADB50019F32A /* League+LatestScores.swift */; };
+		8F6AA75526A6481A002AA376 /* DismissSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4418FF24B5842B0082F83C /* DismissSheetButton.swift */; };
+		8F6AA75626A6486C002AA376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEA7EB624B138240010FF91 /* Assets.xcassets */; };
+		8F6AA75A26A6520F002AA376 /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEA7EDF24B159340010FF91 /* GamesListView.swift */; };
 		8F72CF3E24B4032A002CBCD9 /* GameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72CF3D24B4032A002CBCD9 /* GameTest.swift */; };
 		8F857067268FEAA200000E67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F857066268FEAA200000E67 /* Assets.xcassets */; };
 		8F85706E268FEAA200000E67 /* LatestScoresWatchExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8F85706D268FEAA200000E67 /* LatestScoresWatchExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -672,6 +693,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F85707C268FEAA300000E67 /* Preview Assets.xcassets in Resources */,
+				8F6AA75626A6486C002AA376 /* Assets.xcassets in Resources */,
 				8F857079268FEAA300000E67 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,7 +775,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F6AA75A26A6520F002AA376 /* GamesListView.swift in Sources */,
+				8F6AA74726A646C3002AA376 /* League.swift in Sources */,
+				8F6AA74D26A647A3002AA376 /* SportCell.swift in Sources */,
+				8F6AA74B26A64791002AA376 /* SheetHeaderView.swift in Sources */,
+				8F6AA74326A6469A002AA376 /* AppState.swift in Sources */,
+				8F6AA75326A64806002AA376 /* SwiftUI+LatestScores.swift in Sources */,
+				8F6AA75126A647BF002AA376 /* EmptyStateView.swift in Sources */,
+				8F6AA75026A647B9002AA376 /* LoadingView.swift in Sources */,
+				8F6AA75526A6481A002AA376 /* DismissSheetButton.swift in Sources */,
+				8F6AA74626A646B2002AA376 /* AppAction.swift in Sources */,
 				8F857077268FEAA200000E67 /* ComplicationController.swift in Sources */,
+				8F6AA75426A64816002AA376 /* League+LatestScores.swift in Sources */,
+				8F6AA74926A6476F002AA376 /* HttpClient.swift in Sources */,
+				8F6AA74F26A647B0002AA376 /* Assets.swift in Sources */,
+				8F6AA75226A647C5002AA376 /* GameCell.swift in Sources */,
+				8F6AA74226A6468C002AA376 /* LatestScoresApp.swift in Sources */,
+				8F6AA74426A6469F002AA376 /* AppAppearance.swift in Sources */,
+				8F6AA74E26A647A9002AA376 /* SportCellButtonStyle.swift in Sources */,
+				8F6AA74526A646A5002AA376 /* SportsListView.swift in Sources */,
+				8F6AA74826A64765002AA376 /* Game.swift in Sources */,
+				8F6AA74C26A6479D002AA376 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,7 +882,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = LatestScoresWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
 				INFOPLIST_FILE = LatestScoresWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
@@ -849,7 +891,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pablq.PablqApp.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -865,7 +907,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = LatestScoresWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = QVTTLF22GX;
 				INFOPLIST_FILE = LatestScoresWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
@@ -874,7 +916,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pablq.PablqApp.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

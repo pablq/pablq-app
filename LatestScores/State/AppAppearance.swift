@@ -9,6 +9,8 @@ import UIKit
 
 class AppAppearance {
     init() {
+        #if os(iOS)
         UITableView.appearance().backgroundColor = UIColor.clear
+        #endif
     }
 }

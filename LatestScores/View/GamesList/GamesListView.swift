@@ -15,8 +15,10 @@ struct GamesListView: View {
         ZStack {
             Color(.background).edgesIgnoringSafeArea(.all)
             VStack {
-                SheetHeaderView(title: appState.selectedLeague?.rawValue.uppercased()) {
-                    appState.dispatch(action: .userDismissedLeague)
+                if !appState.isWatch {
+                    SheetHeaderView(title: appState.selectedLeague?.rawValue.uppercased()) {
+                        appState.dispatch(action: .userDismissedLeague)
+                    }
                 }
                 Spacer()
                 Group {

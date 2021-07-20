@@ -66,6 +66,13 @@ class AppState: ObservableObject {
             games = $0 ?? []
         }
     }
+
+    // TODO: Refactor so that watch gets its own custom views instead of overloading main views
+    #if os(watchOS)
+    let isWatch = true
+    #else
+    let isWatch = false
+    #endif
 }
 
 class TestAppState: AppState {
