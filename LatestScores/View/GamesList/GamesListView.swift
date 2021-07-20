@@ -29,8 +29,12 @@ struct GamesListView: View {
                     } else {
                         List {
                             ForEach(appState.games) { game in
-                                GameCell(game: game, isFavorite: false)
-                                    .listRowBackground(Color(.background))
+                                GameCell(
+                                    game: game,
+                                    isFavorite: false,
+                                    isWatch: appState.isWatch
+                                )
+                                .listRowBackground(Color(.background))
                             }
                             .padding(10)
                         }
