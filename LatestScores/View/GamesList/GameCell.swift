@@ -10,7 +10,7 @@ import SwiftUI
 struct GameCell: View {
     let game: Game
     let isFavorite: Bool
-    let isWatch: Bool
+    let showLink: Bool
     var body: some View {
         VStack {
             HStack {
@@ -24,7 +24,7 @@ struct GameCell: View {
                     .font(.body)
             }
             Spacer()
-            if let url = game.url, !isWatch {
+            if let url = game.url, showLink {
                 Link(destination: url) {
                     Text(getLinkText())
                         .font(.footnote)
@@ -70,6 +70,6 @@ struct GameView_Previews: PreviewProvider {
     )
 
     static var previews: some View {
-        GameCell(game: testGame, isFavorite: true, isWatch: false)
+        GameCell(game: testGame, isFavorite: true, showLink: true)
     }
 }

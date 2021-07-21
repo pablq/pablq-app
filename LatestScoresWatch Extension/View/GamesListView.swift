@@ -2,7 +2,7 @@
 //  GamesListView.swift
 //  LatestScores
 //
-//  Created by Pablo Philipps on 7/4/20.
+//  Created by Pablo Philipps on 7/21/21.
 //
 
 import SwiftUI
@@ -15,9 +15,6 @@ struct GamesListView: View {
         ZStack {
             Color(.background).edgesIgnoringSafeArea(.all)
             VStack {
-                SheetHeaderView(title: appState.selectedLeague?.rawValue.uppercased()) {
-                    appState.dispatch(action: .userDismissedLeague)
-                }
                 Spacer()
                 Group {
                     if appState.isLoading {
@@ -30,7 +27,7 @@ struct GamesListView: View {
                                 GameCell(
                                     game: game,
                                     isFavorite: false,
-                                    showLink: true
+                                    showLink: false
                                 )
                                 .listRowBackground(Color(.background))
                             }
