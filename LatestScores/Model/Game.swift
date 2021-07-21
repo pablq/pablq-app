@@ -14,23 +14,23 @@ struct Game: Identifiable, Decodable {
     private let lines: [String]
 
     var isLive: Bool {
-        return !isUpcoming && !isOver
+        !isUpcoming && !isOver
     }
 
     var isUpcoming: Bool {
-        return headline.lowercased().contains("et)") || headline.lowercased().contains("(delayed)")
+        headline.lowercased().contains("et)") || headline.lowercased().contains("(delayed")
     }
 
     var isOver: Bool {
-        return headline.lowercased().contains("(final")
+        headline.lowercased().contains("(final") || headline.lowercased().contains("(postponed")
     }
 
     var description: String {
-        return lines.joined(separator: "\n")
+        lines.joined(separator: "\n")
     }
 
     var url: URL? {
-        return URL(string: link)
+        URL(string: link)
     }
 
     struct CodingKeys: CodingKey {
