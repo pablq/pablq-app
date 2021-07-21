@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "favicon copy 14.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -8,6 +9,7 @@
       "subtype" : "38mm"
     },
     {
+      "filename" : "favicon copy 12.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -15,12 +17,14 @@
       "subtype" : "42mm"
     },
     {
+      "filename" : "favicon copy 13.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "favicon copy 15.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "3x",
